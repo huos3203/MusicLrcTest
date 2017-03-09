@@ -41,7 +41,8 @@
 @property(nonatomic, retain) NSMutableArray *arrayItemList;
 @property (weak, nonatomic) id<MusicLrcDelegate> lrcDelegate;
 
++(MusicLrcView *)shared;
 
--(id)initWithLrcLocalPath:(NSString *)localPath currentPlayer:(AVPlayer *)player;
+-(void)switchLrcOfMusic:(NSString *)lrcPath player:(AVPlayer *)player lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
 
 @end
