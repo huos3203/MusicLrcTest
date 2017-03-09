@@ -50,17 +50,10 @@
     [btnPause setTitle:@"暂停" forState:UIControlStateNormal];
     [btnPause setFrame:CGRectMake(200, 420, 60, 35)];
     [btnPause addTarget:self action:@selector(pauseAudio:) forControlEvents:UIControlEventTouchUpInside];
+    self.view.userInteractionEnabled = true;
     [self.view addSubview:btnPause];//100, 420, 60, 25
    
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"mp3"];
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    [self setupAVPlayerForURL:url];
-    
-    //添加音频路径
-    NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"lrc"];
-    MusicLrcView *lrcView = [MusicLrcView shared];
-    [lrcView switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
-    [self.view addSubview:lrcView];
+   
 }
 
 //播放音频文件
@@ -72,7 +65,7 @@
     _player = [AVPlayer playerWithPlayerItem:anItem];
     
     //添加KVO事件监听状态
-    [_player addObserver:self forKeyPath:@"status" options:0 context:nil];
+//    [_player addObserver:self forKeyPath:@"status" options:0 context:nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -97,7 +90,18 @@
 
 -(void) playAudio:(id) sender
 {
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"mp3"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+    [self setupAVPlayerForURL:url];
+    
+    //添加音频路径
+    NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"lrc"];
+    MusicLrcView *lrcView = [MusicLrcView shared];
+    [lrcView switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
+    [self.view addSubview:lrcView];
+    
     [_player play];
+    
 }
 -(void) pauseAudio:(id) sender
 {
