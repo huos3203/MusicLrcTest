@@ -52,6 +52,7 @@
 		148BFF691E700A6200E674D3 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicLrcView.m; path = Model/MusicLrcView.m; sourceTree = "<group>"; };
 		148BFF6B1E70F33400E674D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		148BFF6C1E70F98D00E674D3 /* daotuu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daotuu.jpg; sourceTree = "<group>"; };
+		148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
+				148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* LrcTest */,
 				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
 				148BFF301E6FCE9300E674D3 /* Products */,
@@ -384,6 +386,7 @@
 		148BFF521E6FCE9500E674D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTest/Info.plist;
@@ -396,6 +399,7 @@
 		148BFF531E6FCE9500E674D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTest/Info.plist;
