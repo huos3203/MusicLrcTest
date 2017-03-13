@@ -28,6 +28,8 @@ static MusicLrcView *instance;
     if (self)
     {
         self.userInteractionEnabled = true;
+        //如果为YES，在AutoLayout中则会自动将view的frame和bounds属性转换为约束。
+        self.translatesAutoresizingMaskIntoConstraints = NO;
         if (!_timerPlay)
         {
             _timerPlay = [NSTimer scheduledTimerWithTimeInterval:0.5
@@ -37,22 +39,42 @@ static MusicLrcView *instance;
                                                          repeats:YES];
         }
         //歌词列表使用tableView来显示
-        if (!_tableView)
-        {
-            _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 420)];
-            [_tableView setDelegate:self];
-            [_tableView setDataSource:self];
-            [self addSubview:_tableView];
-        }
+        [self setDelegate:self];
+        [self setDataSource:self];
     }
     return self;
 }
+
+-(void)updateConstraints
+{
+//    [_tableView setTranslatesAutoresizingMaskIntoConstraints:false];
+    NSArray *h = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[tableview]-0-|"
+                                                         options:0 metrics:nil
+                                                           views:@{@"tableview":self}];
+    NSArray *v = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableview]-0-|"
+                                                         options:0 metrics:nil
+                                                           views:@{@"tableview":self}];
+    [[self superview] addConstraints:h];
+    [[self superview] addConstraints:v];
+    [super updateConstraints];
+    
+}
+
+//固有内容大小
+-(CGSize)intrinsicContentSize
+{
+    return CGSizeMake(320, 420);
+}
+
 
 -(void)switchLrcOfMusic:(NSString *)lrcPath
                  player:(AVPlayer *)player
             lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
 {
-    [_tableView reloadData];
+//    [self invalidateIntrinsicContentSize];
+    [self setNeedsUpdateConstraints];
+//    [self layoutIfNeeded];
+    [self reloadData];
     if(lrcPath != nil && player != nil && lrcDelegate != nil)
     {
         _player = player;
@@ -79,14 +101,14 @@ static MusicLrcView *instance;
         int currentIndex = [self currentPlayIndex:[NSString stringWithFormat:@"%f",fCurrentTime]];
         
         NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:(NSUInteger )currentIndex inSection:0];
-        UITableViewCell *cell  = [_tableView cellForRowAtIndexPath:cellIndexPath];
+        UITableViewCell *cell  = [self cellForRowAtIndexPath:cellIndexPath];
         cell.textLabel.textColor = [_lrcDelegate setHighlightLrcColor];
-        [_tableView selectRowAtIndexPath:cellIndexPath
+        [self selectRowAtIndexPath:cellIndexPath
                                 animated:YES
                           scrollPosition:UITableViewScrollPositionMiddle];
         //重置上一个cell文本颜色
         NSIndexPath *preCellIndexPath = [NSIndexPath indexPathForRow:(NSUInteger )currentIndex-1 inSection:0];
-        UITableViewCell *preCell  = [_tableView cellForRowAtIndexPath:preCellIndexPath];
+        UITableViewCell *preCell  = [self cellForRowAtIndexPath:preCellIndexPath];
         preCell.textLabel.textColor = [_lrcDelegate setLrcColor];
         NSLog(@"currentIndex = %d",currentIndex);
         return fCurrentTime;
