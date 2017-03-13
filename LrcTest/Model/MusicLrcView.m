@@ -39,6 +39,7 @@ static MusicLrcView *instance;
                                                          repeats:YES];
         }
         //歌词列表使用tableView来显示
+        self.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self setDelegate:self];
         [self setDataSource:self];
     }
@@ -68,12 +69,33 @@ static MusicLrcView *instance;
 
 
 -(void)switchLrcOfMusic:(NSString *)lrcPath
-                 player:(AVPlayer *)player
+            audioPlayer:(AVAudioPlayer *)player
             lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
 {
 //    [self invalidateIntrinsicContentSize];
     [self setNeedsUpdateConstraints];
 //    [self layoutIfNeeded];
+    [self reloadData];
+    if(lrcPath != nil && player != nil && lrcDelegate != nil)
+    {
+//        _player = player;
+        _audioPlayer = player;
+        _lrcLocalPath = lrcPath;
+        _lrcDelegate = lrcDelegate;
+        //解析数据
+        _arrayItemList = [[MusicLrcParser shared] parseLrcLocalPath:_lrcLocalPath];
+    }
+    else
+    {
+        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
+    }
+}
+
+-(void)switchLrcOfMusic:(NSString *)lrcPath
+                 player:(AVPlayer *)player
+            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
+{
+    [self setNeedsUpdateConstraints];
     [self reloadData];
     if(lrcPath != nil && player != nil && lrcDelegate != nil)
     {
@@ -87,33 +109,48 @@ static MusicLrcView *instance;
     {
         NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
     }
+
 }
 
 //model解析lrc歌词文件
 //获取音频当前时间点，秒单位，并定位到当前的单元格
 -(Float64) currentPlayTime
 {
+    
+    if (!(_player || _audioPlayer))
+    {
+        return -1.0f;
+    }
+    
+    int currentIndex = 0;
     if (_player)
     {
         CMTime currentTime = _player.currentItem.currentTime;
         Float64 fCurrentTime = CMTimeGetSeconds(currentTime);
-        //        NSLog(@"fCurrentPlayTime = %f",fCurrentTime);
-        int currentIndex = [self currentPlayIndex:[NSString stringWithFormat:@"%f",fCurrentTime]];
-        
-        NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:(NSUInteger )currentIndex inSection:0];
-        UITableViewCell *cell  = [self cellForRowAtIndexPath:cellIndexPath];
-        cell.textLabel.textColor = [_lrcDelegate setHighlightLrcColor];
-        [self selectRowAtIndexPath:cellIndexPath
-                                animated:YES
-                          scrollPosition:UITableViewScrollPositionMiddle];
-        //重置上一个cell文本颜色
-        NSIndexPath *preCellIndexPath = [NSIndexPath indexPathForRow:(NSUInteger )currentIndex-1 inSection:0];
-        UITableViewCell *preCell  = [self cellForRowAtIndexPath:preCellIndexPath];
-        preCell.textLabel.textColor = [_lrcDelegate setLrcColor];
-        NSLog(@"currentIndex = %d",currentIndex);
-        return fCurrentTime;
+        NSLog(@"fCurrentPlayTime = %f",fCurrentTime);
+        currentIndex = [self currentPlayIndex:[NSString stringWithFormat:@"%f",fCurrentTime]];
     }
-    return -1.0f;
+    
+    if (_audioPlayer)
+    {
+        NSTimeInterval timeseconds = _audioPlayer.currentTime;
+        NSLog(@"fCurrentAVAudioPlayTime = %f",timeseconds);
+        currentIndex = [self currentPlayIndex:[NSString stringWithFormat:@"%f",timeseconds]];
+    }
+    
+    NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:(NSUInteger )currentIndex inSection:0];
+    UITableViewCell *cell  = [self cellForRowAtIndexPath:cellIndexPath];
+    cell.textLabel.textColor = [_lrcDelegate musicLrcHighlightColor];
+    [self selectRowAtIndexPath:cellIndexPath
+                      animated:YES
+                scrollPosition:UITableViewScrollPositionMiddle];
+    //重置上一个cell文本颜色
+    NSIndexPath *preCellIndexPath = [NSIndexPath indexPathForRow:(NSUInteger )currentIndex-1 inSection:0];
+    UITableViewCell *preCell  = [self cellForRowAtIndexPath:preCellIndexPath];
+    preCell.textLabel.textColor = [_lrcDelegate musicLrcColor];
+    NSLog(@"currentIndex = %d",currentIndex);
+    
+    return (Float64)currentIndex;
 }
 
 -(int) currentPlayIndex:(NSString*) currentPlaySecond
@@ -154,8 +191,12 @@ static MusicLrcView *instance;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellI];
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellI];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:cellI];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.backgroundColor = [UIColor yellowColor];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     
     if (cell)
     {
@@ -167,8 +208,8 @@ static MusicLrcView *instance;
             key = [dic.allKeys objectAtIndex:0];
             value = [dic objectForKey:key];
             cell.textLabel.text = value;//字体颜色
-            cell.textLabel.textColor = [_lrcDelegate setLrcColor];
-            cell.detailTextLabel.text  = key;
+            cell.textLabel.textColor = [_lrcDelegate musicLrcColor];
+//            cell.detailTextLabel.text  = key;
         }
     }
     return cell;

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140885811E76916D008B9466 /* MusicLRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408857F1E76916D008B9466 /* MusicLRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1408858A1E76918A008B9466 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF591E6FCECE00E674D3 /* MusicLrcParser.m */; };
+		1408858B1E76918C008B9466 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF691E700A6200E674D3 /* MusicLrcView.m */; };
+		1408858E1E7693A0008B9466 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; };
+		140886221E76A1ED008B9466 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 148BFF681E700A6200E674D3 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -14,13 +19,18 @@
 		148BFF3F1E6FCE9400E674D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */; };
 		148BFF421E6FCE9400E674D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */; };
 		148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */; };
-		148BFF5A1E6FCECE00E674D3 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF591E6FCECE00E674D3 /* MusicLrcParser.m */; };
 		148BFF5D1E6FE54100E674D3 /* qbd.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5B1E6FE54100E674D3 /* qbd.lrc */; };
 		148BFF5E1E6FE54100E674D3 /* qbd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5C1E6FE54100E674D3 /* qbd.mp3 */; };
-		148BFF6A1E700A6200E674D3 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF691E700A6200E674D3 /* MusicLrcView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1408858C1E769396008B9466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 148BFF271E6FCE9200E674D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1408857C1E76916A008B9466;
+			remoteInfo = MusicLRC;
+		};
 		148BFF491E6FCE9500E674D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 148BFF271E6FCE9200E674D3 /* Project object */;
@@ -30,7 +40,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		140885891E76916D008B9466 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1408857D1E76916A008B9466 /* MusicLRC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicLRC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1408857F1E76916D008B9466 /* MusicLRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicLRC.h; sourceTree = "<group>"; };
+		140885801E76916D008B9466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,10 +82,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		140885791E76916A008B9466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148BFF2C1E6FCE9300E674D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1408858E1E7693A0008B9466 /* MusicLRC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +107,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1408857E1E76916D008B9466 /* MusicLRC */ = {
+			isa = PBXGroup;
+			children = (
+				1408857F1E76916D008B9466 /* MusicLRC.h */,
+				140885801E76916D008B9466 /* Info.plist */,
+			);
+			path = MusicLRC;
+			sourceTree = "<group>";
+		};
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
 				148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* LrcTest */,
 				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
+				1408857E1E76916D008B9466 /* MusicLRC */,
 				148BFF301E6FCE9300E674D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +132,7 @@
 			children = (
 				148BFF2F1E6FCE9300E674D3 /* LrcTest.app */,
 				148BFF481E6FCE9500E674D3 /* LrcTestTests.xctest */,
+				1408857D1E76916A008B9466 /* MusicLRC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +188,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1408857A1E76916A008B9466 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140885811E76916D008B9466 /* MusicLRC.h in Headers */,
+				140886221E76A1ED008B9466 /* MusicLrcView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1408857C1E76916A008B9466 /* MusicLRC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 140885881E76916D008B9466 /* Build configuration list for PBXNativeTarget "MusicLRC" */;
+			buildPhases = (
+				140885781E76916A008B9466 /* Sources */,
+				140885791E76916A008B9466 /* Frameworks */,
+				1408857A1E76916A008B9466 /* Headers */,
+				1408857B1E76916A008B9466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicLRC;
+			productName = MusicLRC;
+			productReference = 1408857D1E76916A008B9466 /* MusicLRC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		148BFF2E1E6FCE9300E674D3 /* LrcTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 148BFF511E6FCE9500E674D3 /* Build configuration list for PBXNativeTarget "LrcTest" */;
@@ -151,10 +226,12 @@
 				148BFF2B1E6FCE9300E674D3 /* Sources */,
 				148BFF2C1E6FCE9300E674D3 /* Frameworks */,
 				148BFF2D1E6FCE9300E674D3 /* Resources */,
+				140885891E76916D008B9466 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1408858D1E769396008B9466 /* PBXTargetDependency */,
 			);
 			name = LrcTest;
 			productName = LrcTest;
@@ -188,6 +265,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = PBBReader;
 				TargetAttributes = {
+					1408857C1E76916A008B9466 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FA78T6VRG8;
+						ProvisioningStyle = Automatic;
+					};
 					148BFF2E1E6FCE9300E674D3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FA78T6VRG8;
@@ -216,11 +298,19 @@
 			targets = (
 				148BFF2E1E6FCE9300E674D3 /* LrcTest */,
 				148BFF471E6FCE9500E674D3 /* LrcTestTests */,
+				1408857C1E76916A008B9466 /* MusicLRC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1408857B1E76916A008B9466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148BFF2D1E6FCE9300E674D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,13 +333,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		140885781E76916A008B9466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1408858B1E76918C008B9466 /* MusicLrcView.m in Sources */,
+				1408858A1E76918A008B9466 /* MusicLrcParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148BFF2B1E6FCE9300E674D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148BFF6A1E700A6200E674D3 /* MusicLrcView.m in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
-				148BFF5A1E6FCECE00E674D3 /* MusicLrcParser.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
 			);
@@ -266,6 +363,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1408858D1E769396008B9466 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1408857C1E76916A008B9466 /* MusicLRC */;
+			targetProxy = 1408858C1E769396008B9466 /* PBXContainerItemProxy */;
+		};
 		148BFF4A1E6FCE9500E674D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 148BFF2E1E6FCE9300E674D3 /* LrcTest */;
@@ -293,6 +395,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		140885861E76916D008B9466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MusicLRC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.MusicLRC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		140885871E76916D008B9466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MusicLRC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.MusicLRC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		148BFF4F1E6FCE9500E674D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -438,6 +584,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		140885881E76916D008B9466 /* Build configuration list for PBXNativeTarget "MusicLRC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				140885861E76916D008B9466 /* Debug */,
+				140885871E76916D008B9466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "LrcTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -454,6 +609,7 @@
 				148BFF531E6FCE9500E674D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		148BFF541E6FCE9500E674D3 /* Build configuration list for PBXNativeTarget "LrcTestTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +618,7 @@
 				148BFF561E6FCE9500E674D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
