@@ -34,6 +34,9 @@
 		1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886661E77ABEA008B9466 /* CLLrcTool.m */; };
 		1408866E1E77ABEA008B9466 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886661E77ABEA008B9466 /* CLLrcTool.m */; };
 		140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
+		140886781E77DBFD008B9466 /* EffectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886761E77DBFD008B9466 /* EffectView.h */; };
+		140886791E77DBFD008B9466 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886771E77DBFD008B9466 /* EffectView.m */; };
+		1408867A1E77DBFD008B9466 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886771E77DBFD008B9466 /* EffectView.m */; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -98,6 +101,8 @@
 		140886671E77ABEA008B9466 /* CLMusicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMusicTool.h; sourceTree = "<group>"; };
 		140886681E77ABEA008B9466 /* CLMusicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMusicTool.m; sourceTree = "<group>"; };
 		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
+		140886761E77DBFD008B9466 /* EffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectView.h; sourceTree = "<group>"; };
+		140886771E77DBFD008B9466 /* EffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectView.m; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +191,8 @@
 				140886471E77AB58008B9466 /* MusicLrcCell.m */,
 				140886481E77AB58008B9466 /* MusicLrcLabel.h */,
 				140886491E77AB58008B9466 /* MusicLrcLabel.m */,
+				140886761E77DBFD008B9466 /* EffectView.h */,
+				140886771E77DBFD008B9466 /* EffectView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -275,6 +282,7 @@
 				140886601E77AB96008B9466 /* CLMusicModel.h in Headers */,
 				140886691E77ABEA008B9466 /* CLAVdioTool.h in Headers */,
 				140885811E76916D008B9466 /* MusicLRC.h in Headers */,
+				140886781E77DBFD008B9466 /* EffectView.h in Headers */,
 				1408866C1E77ABEA008B9466 /* CLLrcTool.h in Headers */,
 				140886501E77AB58008B9466 /* MusicLrcCell.h in Headers */,
 				1408865D1E77AB96008B9466 /* CLLrcLine.h in Headers */,
@@ -424,6 +432,7 @@
 				140886581E77AB58008B9466 /* MusicLrcView.m in Sources */,
 				140886551E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
 				1408865F1E77AB96008B9466 /* CLLrcLine.m in Sources */,
+				1408867A1E77DBFD008B9466 /* EffectView.m in Sources */,
 				1408866B1E77ABEA008B9466 /* CLAVdioTool.m in Sources */,
 				1408866E1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
 				1408864F1E77AB58008B9466 /* MusicLrcParser.m in Sources */,
@@ -439,6 +448,7 @@
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
 				140886611E77AB96008B9466 /* CLMusicModel.m in Sources */,
 				140886511E77AB58008B9466 /* MusicLrcCell.m in Sources */,
+				140886791E77DBFD008B9466 /* EffectView.m in Sources */,
 				1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				140886541E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
