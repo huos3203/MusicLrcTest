@@ -7,6 +7,12 @@
 核心代码只有`MusicLrcView.h/m`和`MusicLrcParser.h/m`四个文件
 将直接拷贝到项目中，然后`import "MusicLrcView.h"`使用即可
 
+### 第二种动态框架
+直接下载`MusicLRC.framework`，导入到项目中。
+```
+#import <MusicLRC/MusicLrcView.h>
+```
+
 ### 两种pod方式 
 
 直接在Podfile文件使用pod方法
@@ -51,17 +57,16 @@ $ pod install
 [self.view addSubview:[MusicLrcView shared]];
 ```
 ### 切换歌词实例方法
--(void)switchLrcOfMusic:(NSString *)lrcPath player:(AVPlayer *)player lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
 功能：
 1. 用于初始化界面之后，加载歌词到歌词界面上。
 2. 在切换歌曲时，同步切换歌词
 调用方式：
 ```objc
-[[MusicLrcView shared] switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
+-(void)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
 ```
 `lrcPath`: lrc格式歌词路径
-`_player`:播放器实例
-`self`:遵循`MusicLrcDelegate`协议类自身
+`audioPlayer`:`AVAudioPlayer`播放器实例
+`lrcDelegate`:遵循`MusicLrcDelegate`协议的类
 ## 两个代理
 自定义外观样式
 ```objc
@@ -69,10 +74,15 @@ $ pod install
 @protocol MusicLrcDelegate <NSObject>
 
 //重设高亮歌词颜色
--(UIColor *)setHighlightLrcColor;
+-(UIColor *)musicLrcHighlightColor;
 
--(UIColor *)setLrcColor;
+-(UIColor *)musicLrcColor;
 
+-(UIImage *)visualEffectImage;
+
+-(BOOL)refreshAllLrcColor;
+
+-(void)refreshFinish;
 @end
 ```
 
@@ -80,9 +90,8 @@ $ pod install
 具体过程：
 ```objc
 //添加音频路径
-NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"lrc"];
 MusicLrcView *lrcView = [MusicLrcView shared];
-[lrcView switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
+[[MusicLrcView shared] loadLrcBy:@"荷塘月色" audioPlayer:_audioPlayer lrcDedegate:self];
 [self.view addSubview:lrcView];
 
 ```

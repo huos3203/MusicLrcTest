@@ -37,6 +37,8 @@
 		140886781E77DBFD008B9466 /* EffectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886761E77DBFD008B9466 /* EffectView.h */; };
 		140886791E77DBFD008B9466 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886771E77DBFD008B9466 /* EffectView.m */; };
 		1408867A1E77DBFD008B9466 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886771E77DBFD008B9466 /* EffectView.m */; };
+		140886831E77EDD8008B9466 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 140886821E77EDD8008B9466 /* README.md */; };
+		140886841E77EDD8008B9466 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 140886821E77EDD8008B9466 /* README.md */; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -103,6 +105,8 @@
 		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
 		140886761E77DBFD008B9466 /* EffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectView.h; sourceTree = "<group>"; };
 		140886771E77DBFD008B9466 /* EffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectView.m; sourceTree = "<group>"; };
+		1408867E1E77ED92008B9466 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
+		140886821E77EDD8008B9466 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,7 +122,6 @@
 		148BFF4E1E6FCE9500E674D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148BFF5B1E6FE54100E674D3 /* qbd.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qbd.lrc; sourceTree = "<group>"; };
 		148BFF5C1E6FE54100E674D3 /* qbd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qbd.mp3; sourceTree = "<group>"; };
-		148BFF6B1E70F33400E674D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		148BFF6C1E70F98D00E674D3 /* daotuu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daotuu.jpg; sourceTree = "<group>"; };
 		148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,9 +207,19 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1408867D1E77ED92008B9466 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				140886821E77EDD8008B9466 /* README.md */,
+				1408867E1E77ED92008B9466 /* MusicLRC.framework */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
+				1408867D1E77ED92008B9466 /* release */,
 				148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* LrcTest */,
 				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
@@ -243,7 +256,6 @@
 				148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */,
 				148BFF431E6FCE9400E674D3 /* Info.plist */,
 				148BFF321E6FCE9300E674D3 /* Supporting Files */,
-				148BFF6B1E70F33400E674D3 /* README.md */,
 			);
 			path = LrcTest;
 			sourceTree = "<group>";
@@ -448,6 +460,7 @@
 			files = (
 				140886581E77AB58008B9466 /* MusicLrcView.m in Sources */,
 				140886551E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
+				140886841E77EDD8008B9466 /* README.md in Sources */,
 				1408865F1E77AB96008B9466 /* CLLrcLine.m in Sources */,
 				1408867A1E77DBFD008B9466 /* EffectView.m in Sources */,
 				1408866B1E77ABEA008B9466 /* CLAVdioTool.m in Sources */,
@@ -466,6 +479,7 @@
 				140886611E77AB96008B9466 /* CLMusicModel.m in Sources */,
 				140886511E77AB58008B9466 /* MusicLrcCell.m in Sources */,
 				140886791E77DBFD008B9466 /* EffectView.m in Sources */,
+				140886831E77EDD8008B9466 /* README.md in Sources */,
 				1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				140886541E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
