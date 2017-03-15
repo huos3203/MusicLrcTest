@@ -13,6 +13,15 @@
 # Sets the target folders and the final framework product.
 #FMK_NAME=${PROJECT_NAME}
 FMK_NAME=MusicLRC
+DRM_DIR="${HOME}/git-svn/DRM2.X/DRM/Libs/MusicLRCSDK/${FMK_NAME}.framework"
+if  [ -d "${DRM_DIR}" ]
+then
+    echo "当前在pengyucheng主机上"
+else
+    echo "仅支持在pengyucheng主机上更新MusicLRCSDK"
+    exit 0
+fi
+
 # Install dir will be the final output to the framework.
 # The following line create it in the root folder of the current project.
 INSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework
@@ -40,6 +49,8 @@ cp -R "${DEVICE_DIR}/" "${INSTALL_DIR}/"
 # Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.
 lipo -create "${DEVICE_DIR}/${FMK_NAME}" "${SIMULATOR_DIR}/${FMK_NAME}" -output "${INSTALL_DIR}/${FMK_NAME}"
 
-cp -R 
+# 拷贝至DRM项目中，更新动态包
+echo "cp -R ${INSTALL_DIR}/ ${DRM_DIR}/"
+cp -R "${INSTALL_DIR}/" "${DRM_DIR}"
 
 rm -r "${WRK_DIR}"
