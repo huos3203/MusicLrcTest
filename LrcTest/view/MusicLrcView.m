@@ -90,7 +90,8 @@ static MusicLrcView *instance;
     // 1. 记录歌词名
     _lrcName = lrcName;
     // 解析歌词 使用自己创建歌词解析工具
-    self.lrcList = [CLLrcTool lrcToolWithLrcName:lrcName];
+//    self.lrcList = [CLLrcTool lrcToolWithLrcName:lrcName];
+    self.lrcList = [CLLrcTool lrcToolWithLrcPath:lrcName];
     if (self.lrcList == nil)
     {
         [self removeLrcTimer];
@@ -99,32 +100,43 @@ static MusicLrcView *instance;
     self.lrcLabel.text = lrcLine.text;
 }
 
--(void)loadLrcBy:(NSString *)lrcPath
+-(BOOL)loadLrcBy:(NSString *)lrcPath
      audioPlayer:(AVAudioPlayer *)player
      lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
-    [self removeLrcTimer];
-    [self addLrcTimer];
-    [self setNeedsUpdateConstraints];
-    if ([_lrcDelegate respondsToSelector:@selector(visualEffectImage)])
-    {
-        EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
-        [self.backgroundView addSubview:effView];
-    }
 
-    if(lrcPath != nil && player != nil && lrcDelegate != nil)
+    if(lrcPath != nil
+       && player != nil
+       && lrcDelegate != nil
+       && [[NSFileManager defaultManager] fileExistsAtPath:lrcPath])
     {
+        
         _audioPlayer = player;
         _lrcDelegate = lrcDelegate;
         //解析数据
         self.lrcName = lrcPath;
         [self reloadData];
+        
+        [self removeLrcTimer];
+        [self addLrcTimer];
+        [self setNeedsUpdateConstraints];
     }
     else
     {
         [self removeLrcTimer];
         NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
+        return false;
     }
+    
+    //毛玻璃
+    if ([_lrcDelegate respondsToSelector:@selector(visualEffectImage)])
+    {
+        EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
+        [self.backgroundView addSubview:effView];
+    }
+    
+    return true;
+
 
 }
 

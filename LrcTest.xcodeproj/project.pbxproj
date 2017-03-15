@@ -150,6 +150,7 @@
 		14AF06401E78FF870029DD34 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
 		14AF06411E78FF870029DD34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		14AF06421E78FF870029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
+		14AF06581E7935E50029DD34 /* buildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = buildNumber.sh; path = Products/buildNumber.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				14AF063E1E78FF870029DD34 /* Products */,
+				14AF06581E7935E50029DD34 /* buildNumber.sh */,
 				148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* LrcTest */,
 				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
@@ -337,6 +339,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 140885881E76916D008B9466 /* Build configuration list for PBXNativeTarget "MusicLRC" */;
 			buildPhases = (
+				14AF06591E7936180029DD34 /* 更新build版本 */,
 				140885781E76916A008B9466 /* Sources */,
 				140885791E76916A008B9466 /* Frameworks */,
 				1408857A1E76916A008B9466 /* Headers */,
@@ -474,6 +477,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		14AF06591E7936180029DD34 /* 更新build版本 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "更新build版本";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pwd\nsh Products/buildNumber.sh";
+		};
 		14EF59F71E78DDE2005ED979 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
