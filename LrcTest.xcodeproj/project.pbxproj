@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		14EF59F31E78DDD9005ED979 /* CommonDylib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 14EF59F61E78DDDA005ED979 /* Build configuration list for PBXAggregateTarget "CommonDylib" */;
+			buildPhases = (
+				14EF59F71E78DDE2005ED979 /* ShellScript */,
+			);
+			dependencies = (
+				14EF59FA1E78DE65005ED979 /* PBXTargetDependency */,
+			);
+			name = CommonDylib;
+			productName = CommonDylib;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		140885811E76916D008B9466 /* MusicLRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408857F1E76916D008B9466 /* MusicLRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1408858E1E7693A0008B9466 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; };
@@ -37,8 +52,6 @@
 		140886781E77DBFD008B9466 /* EffectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886761E77DBFD008B9466 /* EffectView.h */; };
 		140886791E77DBFD008B9466 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886771E77DBFD008B9466 /* EffectView.m */; };
 		1408867A1E77DBFD008B9466 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886771E77DBFD008B9466 /* EffectView.m */; };
-		140886831E77EDD8008B9466 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 140886821E77EDD8008B9466 /* README.md */; };
-		140886841E77EDD8008B9466 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 140886821E77EDD8008B9466 /* README.md */; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -64,6 +77,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 148BFF2E1E6FCE9300E674D3;
 			remoteInfo = LrcTest;
+		};
+		14EF59F91E78DE65005ED979 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 148BFF271E6FCE9200E674D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1408857C1E76916A008B9466;
+			remoteInfo = MusicLRC;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -105,8 +125,6 @@
 		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
 		140886761E77DBFD008B9466 /* EffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectView.h; sourceTree = "<group>"; };
 		140886771E77DBFD008B9466 /* EffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectView.m; sourceTree = "<group>"; };
-		1408867E1E77ED92008B9466 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
-		140886821E77EDD8008B9466 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +142,9 @@
 		148BFF5C1E6FE54100E674D3 /* qbd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qbd.mp3; sourceTree = "<group>"; };
 		148BFF6C1E70F98D00E674D3 /* daotuu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daotuu.jpg; sourceTree = "<group>"; };
 		148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
+		14AF06341E78F2980029DD34 /* CommonDylib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CommonDylib.sh; sourceTree = "<group>"; };
+		14AF06351E78F2980029DD34 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
+		14AF06361E78F2980029DD34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,19 +228,10 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1408867D1E77ED92008B9466 /* release */ = {
-			isa = PBXGroup;
-			children = (
-				140886821E77EDD8008B9466 /* README.md */,
-				1408867E1E77ED92008B9466 /* MusicLRC.framework */,
-			);
-			path = release;
-			sourceTree = "<group>";
-		};
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
-				1408867D1E77ED92008B9466 /* release */,
+				14AF06331E78F2980029DD34 /* Products */,
 				148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* LrcTest */,
 				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
@@ -279,6 +291,16 @@
 				148BFF4E1E6FCE9500E674D3 /* Info.plist */,
 			);
 			path = LrcTestTests;
+			sourceTree = "<group>";
+		};
+		14AF06331E78F2980029DD34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14AF06341E78F2980029DD34 /* CommonDylib.sh */,
+				14AF06351E78F2980029DD34 /* MusicLRC.framework */,
+				14AF06361E78F2980029DD34 /* README.md */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +407,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 148BFF2E1E6FCE9300E674D3;
 					};
+					14EF59F31E78DDD9005ED979 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FA78T6VRG8;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "LrcTest" */;
@@ -403,6 +430,7 @@
 				148BFF2E1E6FCE9300E674D3 /* LrcTest */,
 				148BFF471E6FCE9500E674D3 /* LrcTestTests */,
 				1408857C1E76916A008B9466 /* MusicLRC */,
+				14EF59F31E78DDD9005ED979 /* CommonDylib */,
 			);
 		};
 /* End PBXProject section */
@@ -451,6 +479,19 @@
 			shellPath = /bin/sh;
 			shellScript = "ProductPath=\"$TARGET_BUILD_DIR/${PRODUCT_NAME}.framework\"\nRelease=\"$PROJECT_DIR/release\"\npwd\nif [ -d \"$Release\" ]; then\necho 'Release目录已存在'\nelse\necho '新建Release目录'\nmkdir $Release\nfi\necho \"cp -rf $ProductPath ${Release}/${PRODUCT_NAME}.framework\"\ncp -rf \"$ProductPath\" \"${Release}/${PRODUCT_NAME}.framework\"";
 		};
+		14EF59F71E78DDE2005ED979 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pwd\nsh MusicLRC/CommonDylib.sh";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -460,7 +501,6 @@
 			files = (
 				140886581E77AB58008B9466 /* MusicLrcView.m in Sources */,
 				140886551E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
-				140886841E77EDD8008B9466 /* README.md in Sources */,
 				1408865F1E77AB96008B9466 /* CLLrcLine.m in Sources */,
 				1408867A1E77DBFD008B9466 /* EffectView.m in Sources */,
 				1408866B1E77ABEA008B9466 /* CLAVdioTool.m in Sources */,
@@ -479,7 +519,6 @@
 				140886611E77AB96008B9466 /* CLMusicModel.m in Sources */,
 				140886511E77AB58008B9466 /* MusicLrcCell.m in Sources */,
 				140886791E77DBFD008B9466 /* EffectView.m in Sources */,
-				140886831E77EDD8008B9466 /* README.md in Sources */,
 				1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				140886541E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
@@ -511,6 +550,11 @@
 			isa = PBXTargetDependency;
 			target = 148BFF2E1E6FCE9300E674D3 /* LrcTest */;
 			targetProxy = 148BFF491E6FCE9500E674D3 /* PBXContainerItemProxy */;
+		};
+		14EF59FA1E78DE65005ED979 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1408857C1E76916A008B9466 /* MusicLRC */;
+			targetProxy = 14EF59F91E78DE65005ED979 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -674,6 +718,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Products",
+				);
 				INFOPLIST_FILE = LrcTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
@@ -687,6 +735,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Products",
+				);
 				INFOPLIST_FILE = LrcTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
@@ -717,6 +769,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LrcTest.app/LrcTest";
+			};
+			name = Release;
+		};
+		14EF59F41E78DDDA005ED979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14EF59F51E78DDDA005ED979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -755,6 +823,15 @@
 			buildConfigurations = (
 				148BFF551E6FCE9500E674D3 /* Debug */,
 				148BFF561E6FCE9500E674D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EF59F61E78DDDA005ED979 /* Build configuration list for PBXAggregateTarget "CommonDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EF59F41E78DDDA005ED979 /* Debug */,
+				14EF59F51E78DDDA005ED979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
