@@ -97,3 +97,15 @@ MusicLrcView *lrcView = [MusicLrcView shared];
 [self.view addSubview:lrcView];
 
 ```
+
+
+## xcode 常用命令
+
+## lldb 常用命令
+
+## git 常用命令
+
+## swift 命令
+## lldb命令
+
+
