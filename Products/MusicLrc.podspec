@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MusicLrc"
-  s.version      = "0.0.2"
-  s.summary      = "Just Testing."
+  s.version      = "2.0"
+  s.summary      = "优化歌词同步"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                        Just Testing.Just Testing.Just Testing.
+                        同步歌词高亮色渐变显示。
                    DESC
 
   s.homepage     = "https://github.com/huos3203/MusicLrcTest"
@@ -53,10 +53,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "布衣男儿" => "email@address.com" }
+  s.author             = { "布衣男儿" => "724987481@qq.com" }
   # Or just: s.author    = "布衣男儿"
   # s.authors            = { "布衣男儿" => "email@address.com" }
-  # s.social_media_url   = "http://twitter.com/布衣男儿"
+  s.social_media_url   = "https://huos3203.github.io"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
