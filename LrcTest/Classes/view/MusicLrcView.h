@@ -70,11 +70,4 @@
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
 
--(void)switchLrcOfMusic:(NSString *)lrcPath
-            audioPlayer:(AVAudioPlayer *)player
-            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
-
--(void)switchLrcOfMusic:(NSString *)lrcPath
-                 player:(AVPlayer *)player
-            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
 @end
