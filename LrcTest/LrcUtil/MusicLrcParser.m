@@ -55,11 +55,11 @@ static MusicLrcParser *instance;
         }
         if (_arrayItemList && _arrayItemList.count > 0)
         {
-//            [self sortAllItem:_arrayItemList];
+            [self sortAllItemByLineModel:_arrayItemList];
             return _arrayItemList;
+            
         }
     }
-    
     return nil;
 }
 
@@ -68,6 +68,7 @@ static MusicLrcParser *instance;
 {
     if (!sourceLineText || sourceLineText.length <= 0)
         return;
+    
     NSRange range = [sourceLineText rangeOfString:@"]"];
     if (range.length > 0)
     {
@@ -77,7 +78,7 @@ static MusicLrcParser *instance;
         NSLog(@"other = %@",other);
         if (time && time.length > 0)
             [_arrayTemp addObject:time];
-        if (other)  //迭代
+        if (other && ![other isEqualToString:@"\r"])  //迭代
             [self parseLrcLineWithLineText:other];
     }
     else
@@ -101,10 +102,7 @@ static MusicLrcParser *instance;
     {
         NSString * key = [tempArray objectAtIndex:(NSUInteger)i];
         // 将字符串转化为模型
-//        CLLrcLine *lrcLine = [[CLLrcLine alloc] initWithText:value andTime:key];
-        CLLrcLine *lrcLine = [CLLrcLine new];
-        lrcLine.text = value;
-        lrcLine.time = [self timeToSecond:key];
+        CLLrcLine *lrcLine = [[CLLrcLine alloc] initWithText:value andTime:key];
         [_arrayItemList addObject:lrcLine];
         
 //        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
@@ -129,6 +127,44 @@ static MusicLrcParser *instance;
     return minutes.floatValue * 60 + second.floatValue;
 //    return [NSString stringWithFormat:@"%f",finishSecond];
 }
+
+
+// 以时间顺序进行排序
+-(void)sortAllItemByLineModel:(NSMutableArray *)array
+{
+    if (!array || array.count <= 0)
+        return;
+    for (int i = 0; i < array.count - 1; i++)
+    {
+        for (int j = i + 1; j < array.count; j++)
+        {
+            
+            
+            id firstLine = [array objectAtIndex:(NSUInteger )i];
+            id secondLine = [array objectAtIndex:(NSUInteger)j];
+            if (firstLine && [firstLine isKindOfClass:[CLLrcLine class]]
+                &&
+                secondLine && [secondLine isKindOfClass:[CLLrcLine class]]
+                )
+            {
+                CLLrcLine * linei = (CLLrcLine *)firstLine;
+                CLLrcLine * linej = (CLLrcLine *)secondLine;
+                BOOL b = linei.time > linej.time;
+                if (b)
+                {
+                    [array replaceObjectAtIndex:(NSUInteger )i withObject:secondLine];
+                    [array replaceObjectAtIndex:(NSUInteger )j withObject:firstLine];
+                }
+            }
+        }
+    }
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        //
+        CLLrcLine * linei = (CLLrcLine *)obj;
+        NSLog(@"%f",linei.time);
+    }];
+}
+
 
 // 以时间顺序进行排序
 -(void)sortAllItem:(NSMutableArray *)array
