@@ -27,6 +27,7 @@ static MusicLrcView *instance;
     self = [super init];
     if (self)
     {
+        self.userInteractionEnabled = true;
         if (!_timerPlay)
         {
             _timerPlay = [NSTimer scheduledTimerWithTimeInterval:0.5
@@ -47,9 +48,12 @@ static MusicLrcView *instance;
     return self;
 }
 
--(void)switchLrcOfMusic:(NSString *)lrcPath player:(AVPlayer *)player lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
+-(void)switchLrcOfMusic:(NSString *)lrcPath
+                 player:(AVPlayer *)player
+            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
 {
-    if(_player != nil && _lrcLocalPath != nil && _lrcDelegate != nil)
+    [_tableView reloadData];
+    if(lrcPath != nil && player != nil && lrcDelegate != nil)
     {
         _player = player;
         _lrcLocalPath = lrcPath;
