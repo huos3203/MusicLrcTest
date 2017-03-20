@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MusicLrc"
-  s.version      = "2.0"
-  s.summary      = "优化歌词同步"
+  s.version      = "3.0"
+  s.summary      = "使用正则表达式，重新定义解析歌词的算法"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                        同步歌词高亮色渐变显示。
+                        使用正则表达式，重新定义解析歌词的算法，解决在以前版本在解析时，由于lrc格式多样化，很容易导致异常等问题。
                    DESC
 
   s.homepage     = "https://github.com/huos3203/MusicLrcTest"
@@ -89,9 +89,9 @@ Pod::Spec.new do |s|
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
-  #
+  ##代码源文件地址，**/*表示Classes目录及其子目录下所有文件，如果有多个目录下则用逗号分开，如果需要在项目中分组显示，这里也要做相应的设置
 
-  s.source_files  = "LrcTest/Model", "LrcTest/Model/*.{h,m}"
+s.source_files  = "LrcTest/Classes/**/*" #, "LrcTest/Classes/*.{h,m}"
 #  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
