@@ -8,6 +8,7 @@
 
 #import "LrcViewController.h"
 #import "MusicLrcView.h"
+#import "LrcTest-Swift.h"
 
 @interface LrcViewController (private)
 -(void) setupAVPlayerForURL: (NSURL*) url;
@@ -114,6 +115,8 @@
 -(void) pauseAudio:(id) sender
 {
     [_player pause];
+    SleepClockView *sleep = [[SleepClockView shareInstance] setupBy:@[@1,@2,@3] toTarget:self];
+    [self presentViewController:sleep animated:YES completion:nil];
 }
 
 
@@ -128,5 +131,13 @@
     return [UIColor greenColor];
 }
 
+-(void)setDelayToPerformCloseOperation
+{
+    NSLog(@"设置时间");
+}
 
+-(void)cancelPerformCloseOperation
+{
+    NSLog(@"取消定时器");
+}
 @end
