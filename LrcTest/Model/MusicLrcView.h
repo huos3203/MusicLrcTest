@@ -29,12 +29,12 @@
 @end
 
 
-@interface MusicLrcView : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface MusicLrcView : UITableView<UITableViewDataSource,UITableViewDelegate>
 {
     AVPlayer * _player;
     NSString * _lrcLocalPath;
     NSTimer * _timerPlay;
-    UITableView* _tableView;
+//    UITableView* _tableView;
     NSMutableArray *_arrayItemList;
 }
 

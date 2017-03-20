@@ -19,7 +19,9 @@
 @end
 
 @implementation LrcViewController
-
+{
+    UIView *_lrcView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -50,7 +52,10 @@
     [btnPause setTitle:@"暂停" forState:UIControlStateNormal];
     [btnPause setFrame:CGRectMake(200, 420, 60, 35)];
     [btnPause addTarget:self action:@selector(pauseAudio:) forControlEvents:UIControlEventTouchUpInside];
-    self.view.userInteractionEnabled = true;
+    
+    _lrcView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 340, 400)];
+    [self.view addSubview:_lrcView];
+    
     [self.view addSubview:btnPause];//100, 420, 60, 25
    
    
@@ -98,7 +103,9 @@
     NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"lrc"];
     MusicLrcView *lrcView = [MusicLrcView shared];
     [lrcView switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
-    [self.view addSubview:lrcView];
+    [_lrcView addSubview:lrcView];
+    
+    
     
     [_player play];
     
