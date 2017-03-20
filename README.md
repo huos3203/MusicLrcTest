@@ -31,9 +31,9 @@ $ pod install
     -> MusicLrc (0.0.2)
     Just Testing.
     pod 'MusicLrc', '~> 0.0.2'
-    - Homepage: https://github.com/huos3203/MusicLrcTest
-    - Source:   https://github.com/huos3203/MusicLrcTest.git
-    - Versions: 0.0.2 [PodRepo repo]
+    -- Homepage: https://github.com/huos3203/MusicLrcTest
+    -- Source:   https://github.com/huos3203/MusicLrcTest.git
+    -- Versions: 0.0.2 [PodRepo repo]
 3. 在Podfile文件中配置：
 
     $ pod 'MusicLrc', '~> 0.0.2'
