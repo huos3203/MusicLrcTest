@@ -64,11 +64,12 @@
 //播放音频文件
 -(void) setupAVPlayerForURL: (NSURL*) url
 {
-    AVAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
-    AVPlayerItem *anItem = [AVPlayerItem playerItemWithAsset:asset];
+//    AVAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
+//    AVPlayerItem *anItem = [AVPlayerItem playerItemWithAsset:asset];
     
-    _player = [AVPlayer playerWithPlayerItem:anItem];
+//    _player = [AVPlayer playerWithPlayerItem:anItem];
     
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     //添加KVO事件监听状态
 //    [_player addObserver:self forKeyPath:@"status" options:0 context:nil];
 }
@@ -102,12 +103,12 @@
     //添加音频路径
     NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"lrc"];
     MusicLrcView *lrcView = [MusicLrcView shared];
-    [lrcView switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
+    [lrcView switchLrcOfMusic:lrcPath audioPlayer:_audioPlayer lrcDelegate:self];
+    
+    
     [_lrcView addSubview:lrcView];
-    
-    
-    
-    [_player play];
+
+    [_audioPlayer play];
     
 }
 -(void) pauseAudio:(id) sender
@@ -117,12 +118,12 @@
 
 
 
--(UIColor *)setHighlightLrcColor
+-(UIColor *)musicLrcHighlightColor
 {
     return [UIColor redColor];
 }
 
--(UIColor *)setLrcColor
+-(UIColor *)musicLrcColor
 {
     return [UIColor greenColor];
 }
