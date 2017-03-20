@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
+#import "MusicLrcLabel.h"
 /*
  实现要求
  1、实现类为视图，可以直接嵌入其他视图
@@ -26,6 +27,10 @@
 
 -(UIColor *)musicLrcColor;
 
+-(BOOL)refreshAllLrcColor;
+
+-(void)refreshFinish;
+
 @end
 
 
@@ -42,7 +47,25 @@
 @property(nonatomic, retain) NSMutableArray *arrayItemList;
 @property (weak, nonatomic) id<MusicLrcDelegate> lrcDelegate;
 
+
+@property (strong, nonatomic) NSString *lrcName;
+/** 歌词数组 */
+@property(nonatomic,strong)NSArray *lrcList;
+/** 歌词的Label */
+@property (nonatomic, weak) MusicLrcLabel *lrcLabel;
+/** 当前歌词的下标 */
+@property (nonatomic,assign) NSInteger currentIndex;
+/** 当前播放的时间 */
+@property (nonatomic,assign) NSTimeInterval currentTime;
+
+/** 当前音乐的总时间 */
+@property (nonatomic,assign) NSTimeInterval duration;
+/** 歌词的定时器 */
+@property (nonatomic,strong) CADisplayLink *lrcTiemr;
+
 +(MusicLrcView *)shared;
+
+-(void)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
 
 -(void)switchLrcOfMusic:(NSString *)lrcPath
             audioPlayer:(AVAudioPlayer *)player

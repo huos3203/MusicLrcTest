@@ -8,10 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		140885811E76916D008B9466 /* MusicLRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408857F1E76916D008B9466 /* MusicLRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1408858A1E76918A008B9466 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF591E6FCECE00E674D3 /* MusicLrcParser.m */; };
-		1408858B1E76918C008B9466 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF691E700A6200E674D3 /* MusicLrcView.m */; };
 		1408858E1E7693A0008B9466 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; };
-		140886221E76A1ED008B9466 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 148BFF681E700A6200E674D3 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1408864D1E77AB58008B9466 /* MusicLrcParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886421E77AB58008B9466 /* MusicLrcParser.h */; };
+		1408864E1E77AB58008B9466 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886431E77AB58008B9466 /* MusicLrcParser.m */; };
+		1408864F1E77AB58008B9466 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886431E77AB58008B9466 /* MusicLrcParser.m */; };
+		140886501E77AB58008B9466 /* MusicLrcCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886461E77AB58008B9466 /* MusicLrcCell.h */; };
+		140886511E77AB58008B9466 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886471E77AB58008B9466 /* MusicLrcCell.m */; };
+		140886521E77AB58008B9466 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886471E77AB58008B9466 /* MusicLrcCell.m */; };
+		140886531E77AB58008B9466 /* MusicLrcLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886481E77AB58008B9466 /* MusicLrcLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		140886541E77AB58008B9466 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886491E77AB58008B9466 /* MusicLrcLabel.m */; };
+		140886551E77AB58008B9466 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886491E77AB58008B9466 /* MusicLrcLabel.m */; };
+		140886561E77AB58008B9466 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408864A1E77AB58008B9466 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		140886571E77AB58008B9466 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1408864B1E77AB58008B9466 /* MusicLrcView.m */; };
+		140886581E77AB58008B9466 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1408864B1E77AB58008B9466 /* MusicLrcView.m */; };
+		1408865D1E77AB96008B9466 /* CLLrcLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886591E77AB96008B9466 /* CLLrcLine.h */; };
+		1408865E1E77AB96008B9466 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1408865A1E77AB96008B9466 /* CLLrcLine.m */; };
+		1408865F1E77AB96008B9466 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1408865A1E77AB96008B9466 /* CLLrcLine.m */; };
+		140886601E77AB96008B9466 /* CLMusicModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408865B1E77AB96008B9466 /* CLMusicModel.h */; };
+		140886611E77AB96008B9466 /* CLMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1408865C1E77AB96008B9466 /* CLMusicModel.m */; };
+		140886621E77AB96008B9466 /* CLMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1408865C1E77AB96008B9466 /* CLMusicModel.m */; };
+		140886691E77ABEA008B9466 /* CLAVdioTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886631E77ABEA008B9466 /* CLAVdioTool.h */; };
+		1408866A1E77ABEA008B9466 /* CLAVdioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886641E77ABEA008B9466 /* CLAVdioTool.m */; };
+		1408866B1E77ABEA008B9466 /* CLAVdioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886641E77ABEA008B9466 /* CLAVdioTool.m */; };
+		1408866C1E77ABEA008B9466 /* CLLrcTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 140886651E77ABEA008B9466 /* CLLrcTool.h */; };
+		1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886661E77ABEA008B9466 /* CLLrcTool.m */; };
+		1408866E1E77ABEA008B9466 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140886661E77ABEA008B9466 /* CLLrcTool.m */; };
+		140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -57,6 +79,25 @@
 		1408857D1E76916A008B9466 /* MusicLRC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicLRC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1408857F1E76916D008B9466 /* MusicLRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicLRC.h; sourceTree = "<group>"; };
 		140885801E76916D008B9466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		140886421E77AB58008B9466 /* MusicLrcParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcParser.h; sourceTree = "<group>"; };
+		140886431E77AB58008B9466 /* MusicLrcParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcParser.m; sourceTree = "<group>"; };
+		140886461E77AB58008B9466 /* MusicLrcCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcCell.h; sourceTree = "<group>"; };
+		140886471E77AB58008B9466 /* MusicLrcCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcCell.m; sourceTree = "<group>"; };
+		140886481E77AB58008B9466 /* MusicLrcLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcLabel.h; sourceTree = "<group>"; };
+		140886491E77AB58008B9466 /* MusicLrcLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcLabel.m; sourceTree = "<group>"; };
+		1408864A1E77AB58008B9466 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicLrcView.h; path = view/MusicLrcView.h; sourceTree = "<group>"; };
+		1408864B1E77AB58008B9466 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicLrcView.m; path = view/MusicLrcView.m; sourceTree = "<group>"; };
+		140886591E77AB96008B9466 /* CLLrcLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLrcLine.h; sourceTree = "<group>"; };
+		1408865A1E77AB96008B9466 /* CLLrcLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLrcLine.m; sourceTree = "<group>"; };
+		1408865B1E77AB96008B9466 /* CLMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMusicModel.h; sourceTree = "<group>"; };
+		1408865C1E77AB96008B9466 /* CLMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMusicModel.m; sourceTree = "<group>"; };
+		140886631E77ABEA008B9466 /* CLAVdioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAVdioTool.h; sourceTree = "<group>"; };
+		140886641E77ABEA008B9466 /* CLAVdioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAVdioTool.m; sourceTree = "<group>"; };
+		140886651E77ABEA008B9466 /* CLLrcTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLrcTool.h; sourceTree = "<group>"; };
+		140886661E77ABEA008B9466 /* CLLrcTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLrcTool.m; sourceTree = "<group>"; };
+		140886671E77ABEA008B9466 /* CLMusicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMusicTool.h; sourceTree = "<group>"; };
+		140886681E77ABEA008B9466 /* CLMusicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMusicTool.m; sourceTree = "<group>"; };
+		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,12 +111,8 @@
 		148BFF481E6FCE9500E674D3 /* LrcTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LrcTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LrcTestTests.m; sourceTree = "<group>"; };
 		148BFF4E1E6FCE9500E674D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		148BFF581E6FCECE00E674D3 /* MusicLrcParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicLrcParser.h; path = Model/MusicLrcParser.h; sourceTree = "<group>"; };
-		148BFF591E6FCECE00E674D3 /* MusicLrcParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicLrcParser.m; path = Model/MusicLrcParser.m; sourceTree = "<group>"; };
 		148BFF5B1E6FE54100E674D3 /* qbd.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qbd.lrc; sourceTree = "<group>"; };
 		148BFF5C1E6FE54100E674D3 /* qbd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qbd.mp3; sourceTree = "<group>"; };
-		148BFF681E700A6200E674D3 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicLrcView.h; path = Model/MusicLrcView.h; sourceTree = "<group>"; };
-		148BFF691E700A6200E674D3 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicLrcView.m; path = Model/MusicLrcView.m; sourceTree = "<group>"; };
 		148BFF6B1E70F33400E674D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		148BFF6C1E70F98D00E674D3 /* daotuu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daotuu.jpg; sourceTree = "<group>"; };
 		148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
@@ -116,6 +153,50 @@
 			path = MusicLRC;
 			sourceTree = "<group>";
 		};
+		140886411E77AB58008B9466 /* LrcUtil */ = {
+			isa = PBXGroup;
+			children = (
+				140886421E77AB58008B9466 /* MusicLrcParser.h */,
+				140886431E77AB58008B9466 /* MusicLrcParser.m */,
+				140886631E77ABEA008B9466 /* CLAVdioTool.h */,
+				140886641E77ABEA008B9466 /* CLAVdioTool.m */,
+				140886651E77ABEA008B9466 /* CLLrcTool.h */,
+				140886661E77ABEA008B9466 /* CLLrcTool.m */,
+				140886671E77ABEA008B9466 /* CLMusicTool.h */,
+				140886681E77ABEA008B9466 /* CLMusicTool.m */,
+			);
+			path = LrcUtil;
+			sourceTree = "<group>";
+		};
+		140886441E77AB58008B9466 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				140886591E77AB96008B9466 /* CLLrcLine.h */,
+				1408865A1E77AB96008B9466 /* CLLrcLine.m */,
+				1408865B1E77AB96008B9466 /* CLMusicModel.h */,
+				1408865C1E77AB96008B9466 /* CLMusicModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		140886451E77AB58008B9466 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				140886461E77AB58008B9466 /* MusicLrcCell.h */,
+				140886471E77AB58008B9466 /* MusicLrcCell.m */,
+				140886481E77AB58008B9466 /* MusicLrcLabel.h */,
+				140886491E77AB58008B9466 /* MusicLrcLabel.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1408864C1E77AB58008B9466 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +221,12 @@
 		148BFF311E6FCE9300E674D3 /* LrcTest */ = {
 			isa = PBXGroup;
 			children = (
-				148BFF571E6FCEA200E674D3 /* Model */,
+				1408864A1E77AB58008B9466 /* MusicLrcView.h */,
+				1408864B1E77AB58008B9466 /* MusicLrcView.m */,
+				140886411E77AB58008B9466 /* LrcUtil */,
+				140886441E77AB58008B9466 /* Model */,
+				140886451E77AB58008B9466 /* view */,
+				1408864C1E77AB58008B9466 /* ViewModel */,
 				148BFF351E6FCE9300E674D3 /* AppDelegate.h */,
 				148BFF361E6FCE9300E674D3 /* AppDelegate.m */,
 				148BFF381E6FCE9300E674D3 /* LrcViewController.h */,
@@ -160,6 +246,7 @@
 			children = (
 				148BFF6C1E70F98D00E674D3 /* daotuu.jpg */,
 				148BFF5B1E6FE54100E674D3 /* qbd.lrc */,
+				140886721E77C048008B9466 /* 荷塘月色.lrc */,
 				148BFF5C1E6FE54100E674D3 /* qbd.mp3 */,
 				148BFF331E6FCE9300E674D3 /* main.m */,
 			);
@@ -175,17 +262,6 @@
 			path = LrcTestTests;
 			sourceTree = "<group>";
 		};
-		148BFF571E6FCEA200E674D3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				148BFF581E6FCECE00E674D3 /* MusicLrcParser.h */,
-				148BFF591E6FCECE00E674D3 /* MusicLrcParser.m */,
-				148BFF681E700A6200E674D3 /* MusicLrcView.h */,
-				148BFF691E700A6200E674D3 /* MusicLrcView.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -193,8 +269,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1408864D1E77AB58008B9466 /* MusicLrcParser.h in Headers */,
+				140886561E77AB58008B9466 /* MusicLrcView.h in Headers */,
+				140886531E77AB58008B9466 /* MusicLrcLabel.h in Headers */,
+				140886601E77AB96008B9466 /* CLMusicModel.h in Headers */,
+				140886691E77ABEA008B9466 /* CLAVdioTool.h in Headers */,
 				140885811E76916D008B9466 /* MusicLRC.h in Headers */,
-				140886221E76A1ED008B9466 /* MusicLrcView.h in Headers */,
+				1408866C1E77ABEA008B9466 /* CLLrcTool.h in Headers */,
+				140886501E77AB58008B9466 /* MusicLrcCell.h in Headers */,
+				1408865D1E77AB96008B9466 /* CLLrcLine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */,
 				148BFF421E6FCE9400E674D3 /* LaunchScreen.storyboard in Resources */,
 				148BFF5D1E6FE54100E674D3 /* qbd.lrc in Resources */,
 				148BFF3F1E6FCE9400E674D3 /* Assets.xcassets in Resources */,
@@ -337,8 +421,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1408858B1E76918C008B9466 /* MusicLrcView.m in Sources */,
-				1408858A1E76918A008B9466 /* MusicLrcParser.m in Sources */,
+				140886581E77AB58008B9466 /* MusicLrcView.m in Sources */,
+				140886551E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
+				1408865F1E77AB96008B9466 /* CLLrcLine.m in Sources */,
+				1408866B1E77ABEA008B9466 /* CLAVdioTool.m in Sources */,
+				1408866E1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
+				1408864F1E77AB58008B9466 /* MusicLrcParser.m in Sources */,
+				140886621E77AB96008B9466 /* CLMusicModel.m in Sources */,
+				140886521E77AB58008B9466 /* MusicLrcCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +437,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
+				140886611E77AB96008B9466 /* CLMusicModel.m in Sources */,
+				140886511E77AB58008B9466 /* MusicLrcCell.m in Sources */,
+				1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
+				140886541E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
+				140886571E77AB58008B9466 /* MusicLrcView.m in Sources */,
+				1408865E1E77AB96008B9466 /* CLLrcLine.m in Sources */,
+				1408866A1E77ABEA008B9466 /* CLAVdioTool.m in Sources */,
+				1408864E1E77AB58008B9466 /* MusicLrcParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

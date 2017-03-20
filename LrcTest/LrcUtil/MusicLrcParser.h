@@ -10,9 +10,6 @@
 
 @interface MusicLrcParser : NSObject
 
-
-
-
 -(NSMutableArray *)parseLrcLocalPath:(NSString *)localPath;
 +(MusicLrcParser *)shared ;
 @end
