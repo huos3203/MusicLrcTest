@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		14AF06661E7A4B920029DD34 /* PushPodSpec */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 14AF06671E7A4B920029DD34 /* Build configuration list for PBXAggregateTarget "PushPodSpec" */;
+			buildPhases = (
+				14AF066A1E7A4B9D0029DD34 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = PushPodSpec;
+			productName = PushPodSpec;
+		};
 		14EF59F31E78DDD9005ED979 /* CommonDylib */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 14EF59F61E78DDDA005ED979 /* Build configuration list for PBXAggregateTarget "CommonDylib" */;
@@ -147,6 +158,7 @@
 		14AF06621E7A40A80029DD34 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
 		14AF06631E7A40A80029DD34 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = MusicLrc.podspec; path = ../Products/MusicLrc.podspec; sourceTree = "<group>"; };
 		14AF06641E7A40A80029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
+		14AF06651E7A48E70029DD34 /* pushPodSpec.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pushPodSpec.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +315,7 @@
 				14AF06611E7A40A80029DD34 /* CommonDylib.sh */,
 				14AF06621E7A40A80029DD34 /* MusicLRC.framework */,
 				14AF06641E7A40A80029DD34 /* 全局变量.sh */,
+				14AF06651E7A48E70029DD34 /* pushPodSpec.sh */,
 			);
 			path = Products;
 			sourceTree = SOURCE_ROOT;
@@ -411,6 +424,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 148BFF2E1E6FCE9300E674D3;
 					};
+					14AF06661E7A4B920029DD34 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FA78T6VRG8;
+						ProvisioningStyle = Automatic;
+					};
 					14EF59F31E78DDD9005ED979 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FA78T6VRG8;
@@ -435,6 +453,7 @@
 				148BFF471E6FCE9500E674D3 /* LrcTestTests */,
 				1408857C1E76916A008B9466 /* MusicLRC */,
 				14EF59F31E78DDD9005ED979 /* CommonDylib */,
+				14AF06661E7A4B920029DD34 /* PushPodSpec */,
 			);
 		};
 /* End PBXProject section */
@@ -483,6 +502,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "pwd\nsh Products/buildNumber.sh";
+		};
+		14AF066A1E7A4B9D0029DD34 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pwd\nsh Products/pushPodSpec.sh";
 		};
 		14EF59F71E78DDE2005ED979 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -777,6 +809,22 @@
 			};
 			name = Release;
 		};
+		14AF06681E7A4B920029DD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14AF06691E7A4B920029DD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		14EF59F41E78DDDA005ED979 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -831,6 +879,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		14AF06671E7A4B920029DD34 /* Build configuration list for PBXAggregateTarget "PushPodSpec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AF06681E7A4B920029DD34 /* Debug */,
+				14AF06691E7A4B920029DD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		14EF59F61E78DDDA005ED979 /* Build configuration list for PBXAggregateTarget "CommonDylib" */ = {
 			isa = XCConfigurationList;
