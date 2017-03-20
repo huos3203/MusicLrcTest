@@ -3,6 +3,8 @@
 ![](LrcTest/daotuu.jpg)
 ## 安装
 
+
+
 ### 第一种方法
 核心代码只有`MusicLrcView.h/m`和`MusicLrcParser.h/m`四个文件
 将直接拷贝到项目中，然后`import "MusicLrcView.h"`使用即可

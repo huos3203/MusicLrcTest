@@ -14,7 +14,10 @@
 {
     // 1. 获取路径
     NSString *lrcFilePath = [[NSBundle mainBundle]pathForResource:lrcName ofType:@"lrc"];
-    
+    if (!lrcFilePath)
+    {
+        return  nil;
+    }
     // 2. 获取歌词
     NSString *lrcString = [NSString stringWithContentsOfFile:lrcFilePath encoding:NSUTF8StringEncoding error:nil];
     

@@ -104,7 +104,7 @@
 //    NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"荷塘月色" ofType:@"lrc"];
     MusicLrcView *lrcView = [MusicLrcView shared];
 //    [lrcView switchLrcOfMusic:lrcPath audioPlayer:_audioPlayer lrcDelegate:self];
-    [lrcView loadLrcBy:@"荷塘月色" audioPlayer:_audioPlayer lrcDedegate:self];
+    [lrcView loadLrcBy:@"荷塘月" audioPlayer:_audioPlayer lrcDedegate:self];
     
     [_lrcView addSubview:lrcView];
 

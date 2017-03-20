@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CommonDylib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>LrcTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>148BFF471E6FCE9500E674D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>14EF59F31E78DDD9005ED979</key>
 		<dict>
 			<key>primary</key>
 			<true/>
