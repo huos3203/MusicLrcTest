@@ -23,11 +23,22 @@
     return self;
     
 }
+-(instancetype)initWithText:(NSString *)text andTime:(NSString *)time
+{
+    if (self = [super init])
+    {
+        self.text = text;
+        self.time = [self timeWithString:time];
+    }
+    return self;
+}
 
 + (instancetype)LrcLineString:(NSString *)lrcLineString
 {
     return [[self alloc] initWithLrcLineString:lrcLineString];
 }
+
+
 
 - (NSTimeInterval)timeWithString:(NSString *)timeString
 {
@@ -37,5 +48,6 @@
     NSInteger hs = [[timeString componentsSeparatedByString:@"."][1] integerValue];
     return min * 60 + sec + hs * 0.01;
 }
+
 
 @end

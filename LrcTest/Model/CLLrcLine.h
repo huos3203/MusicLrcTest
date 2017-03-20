@@ -15,6 +15,6 @@
 
 - (instancetype)initWithLrcLineString:(NSString *)lrcLineString;
 + (instancetype)LrcLineString:(NSString *)lrcLineString;
-
+-(instancetype)initWithText:(NSString *)text andTime:(NSString*)time;
 
 @end

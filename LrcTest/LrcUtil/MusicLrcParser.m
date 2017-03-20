@@ -7,6 +7,7 @@
 //
 
 #import "MusicLrcParser.h"
+#import "CLLrcLine.h"
 
 static MusicLrcParser *instance;
 
@@ -54,7 +55,7 @@ static MusicLrcParser *instance;
         }
         if (_arrayItemList && _arrayItemList.count > 0)
         {
-            [self sortAllItem:_arrayItemList];
+//            [self sortAllItem:_arrayItemList];
             return _arrayItemList;
         }
     }
@@ -98,26 +99,35 @@ static MusicLrcParser *instance;
     
     for (int i = 0; i < tempArray.count - 1; i++)
     {
-        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
         NSString * key = [tempArray objectAtIndex:(NSUInteger)i];
-        NSString *secondKey = [self timeToSecond:key]; // 转换成以秒为单位的时间计数器
-        [dic setObject:value forKey:secondKey];  //设置时间和歌词的键值对
-        [_arrayItemList addObject:dic];
+        // 将字符串转化为模型
+//        CLLrcLine *lrcLine = [[CLLrcLine alloc] initWithText:value andTime:key];
+        CLLrcLine *lrcLine = [CLLrcLine new];
+        lrcLine.text = value;
+        lrcLine.time = [self timeToSecond:key];
+        [_arrayItemList addObject:lrcLine];
+        
+//        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        
+//        NSString *secondKey = [self timeToSecond:key]; // 转换成以秒为单位的时间计数器
+//        [dic setObject:value forKey:secondKey];  //设置时间和歌词的键值对
+//        [_arrayItemList addObject:dic];
+        
     }
     [_arrayTemp removeAllObjects];
 }
 
 // 转换成以秒为单位的时间计数器
--(NSString *)timeToSecond:(NSString *)formatTime
+-(NSTimeInterval)timeToSecond:(NSString *)formatTime
 {
     if (!formatTime || formatTime.length <= 0)
-        return nil;
+        return 0;
     if ([formatTime rangeOfString:@"["].length <= 0 && [formatTime rangeOfString:@"]"].length <= 0)
-        return nil;
+        return 0;
     NSString * minutes = [formatTime substringWithRange:NSMakeRange(1, 2)];
     NSString * second = [formatTime substringWithRange:NSMakeRange(4, 5)];
-    float finishSecond = minutes.floatValue * 60 + second.floatValue;
-    return [NSString stringWithFormat:@"%f",finishSecond];
+    return minutes.floatValue * 60 + second.floatValue;
+//    return [NSString stringWithFormat:@"%f",finishSecond];
 }
 
 // 以时间顺序进行排序
