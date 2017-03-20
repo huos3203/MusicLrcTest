@@ -1,14 +1,20 @@
 # 使用帮助
 原理：
 ![](LrcTest/daotuu.jpg)
-## 安装：
-核心代码只有两个`MusicLrcView`和`MusicLrcParser`文件：
-第一种方法直接拷贝到项目中，import "MusicLrcView.h"即可
-第二种：直接在Podfile文件使用pod方法：
+## 安装
+
+### 第一种方法
+核心代码只有`MusicLrcView.h/m`和`MusicLrcParser.h/m`四个文件
+将直接拷贝到项目中，然后`import "MusicLrcView.h"`使用即可
+
+### 两种pod方式 
+1. 直接在Podfile文件使用pod方法
+---
 {% codeblock lang:git %}
 pod 'MusicLrc', :git => 'https://github.com/huos3203/MusicLrcTest.git'
 {% endcodeblock %}
-第三种：
+2. 通过私库集成
+---
 1. 加入你的pod本地私有库中：
 {% codeblock lang:ruby %}
 pod repo add PodRepo https://github.com/huos3203/PodRepo.git
