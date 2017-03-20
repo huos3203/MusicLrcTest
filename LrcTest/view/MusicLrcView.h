@@ -68,7 +68,7 @@
 
 +(MusicLrcView *)shared;
 
--(void)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
+-(BOOL)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
 
 -(void)switchLrcOfMusic:(NSString *)lrcPath
             audioPlayer:(AVAudioPlayer *)player

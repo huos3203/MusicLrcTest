@@ -10,6 +10,5 @@
 
 @interface CLLrcTool : NSObject
 
-+(NSArray *)lrcToolWithLrcName:(NSString *)lrcName;
-
++(NSArray *)lrcToolWithLrcPath:(NSString *)lrcFilePath;
 @end
