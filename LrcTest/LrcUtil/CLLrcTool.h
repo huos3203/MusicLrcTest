@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface CLLrcTool : NSObject
 
 +(NSArray *)lrcToolWithLrcPath:(NSString *)lrcFilePath;
+
++(CLLrcTool *)shared;
+-(NSArray *)ParserLrcWithPath:(NSString *)lrcFilePath;
 @end

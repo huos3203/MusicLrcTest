@@ -1,9 +1,21 @@
+# 使用正则表达式，重新定义解析歌词的算法
+以前版本使用字符串截取来解析歌词。在解析时，由于lrc格式多样化，很容易导致异常。
+只需一行日期正则表达式，即可解决一切问题：
+```
+\\d{1,2}:\\d{2}.\\d{2}"
+```
+当行匹配到有日期格式，就断定为合法行：
+```
+NSRange lastRange = [[matchs lastObject] rangeAtIndex:0];
+NSString *lrcc = [lineText substringFromIndex:lastRange.location + lastRange.length + 1];
+```
+通过以上代码就可获取到当前行的歌词内容。
+
 # 使用帮助
 原理：
 ![](LrcTest/daotuu.jpg)
+
 ## 安装
-
-
 
 ### 第一种方法
 核心代码只有`MusicLrcView.h/m`和`MusicLrcParser.h/m`四个文件
@@ -87,7 +99,6 @@ $ pod install
 -(void)refreshFinish;
 @end
 ```
-
 
 具体过程：
 ```objc
