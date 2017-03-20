@@ -51,6 +51,7 @@
 		148BFF681E700A6200E674D3 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicLrcView.h; path = Model/MusicLrcView.h; sourceTree = "<group>"; };
 		148BFF691E700A6200E674D3 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicLrcView.m; path = Model/MusicLrcView.m; sourceTree = "<group>"; };
 		148BFF6B1E70F33400E674D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		148BFF6C1E70F98D00E674D3 /* daotuu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daotuu.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 		148BFF321E6FCE9300E674D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				148BFF6C1E70F98D00E674D3 /* daotuu.jpg */,
 				148BFF5B1E6FE54100E674D3 /* qbd.lrc */,
 				148BFF5C1E6FE54100E674D3 /* qbd.mp3 */,
 				148BFF331E6FCE9300E674D3 /* main.m */,
