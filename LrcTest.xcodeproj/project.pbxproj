@@ -300,6 +300,7 @@
 				140885791E76916A008B9466 /* Frameworks */,
 				1408857A1E76916A008B9466 /* Headers */,
 				1408857B1E76916A008B9466 /* Resources */,
+				1408867C1E77E9D4008B9466 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -423,6 +424,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1408867C1E77E9D4008B9466 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ProductPath=\"$TARGET_BUILD_DIR/${PRODUCT_NAME}.framework\"\nRelease=\"$PROJECT_DIR/release\"\npwd\nif [ -d \"$Release\" ]; then\necho 'Release目录已存在'\nelse\necho '新建Release目录'\nmkdir $Release\nfi\necho \"cp -rf $ProductPath ${Release}/${PRODUCT_NAME}.framework\"\ncp -rf \"$ProductPath\" \"${Release}/${PRODUCT_NAME}.framework\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		140885781E76916A008B9466 /* Sources */ = {

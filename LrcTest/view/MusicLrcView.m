@@ -102,8 +102,13 @@ static MusicLrcView *instance;
 {
     [self setNeedsUpdateConstraints];
     [self reloadData];
-    EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
-//    [self.backgroundView addSubview:effView];
+    
+    if ([_lrcDelegate respondsToSelector:@selector(visualEffectImage)])
+    {
+        EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
+        //  [self.backgroundView addSubview:effView];
+    }
+
     if(lrcPath != nil && player != nil && lrcDelegate != nil)
     {
         _audioPlayer = player;
@@ -176,7 +181,10 @@ static MusicLrcView *instance;
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MusicLrcCell *cell = [MusicLrcCell lrcCellWithTableView:tableView];
-    cell.lrcColor = [_lrcDelegate musicLrcColor];
+    if ([_lrcDelegate respondsToSelector:@selector(musicLrcColor)])
+    {
+        cell.lrcColor = [_lrcDelegate musicLrcColor];
+    }
     if (self.currentIndex == indexPath.row)
     {
         cell.lrcLabel.font = [UIFont systemFontOfSize:20];
@@ -241,9 +249,12 @@ static MusicLrcView *instance;
             
             // 将当前播放的歌词移动到中间
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-            [self scrollToRowAtIndexPath:indexPath
-                        atScrollPosition:UITableViewScrollPositionMiddle
-                                animated:YES];
+//            [self scrollToRowAtIndexPath:indexPath
+//                        atScrollPosition:UITableViewScrollPositionMiddle
+//                                animated:YES];
+            [self selectRowAtIndexPath:indexPath
+                              animated:YES
+                        scrollPosition:UITableViewScrollPositionMiddle];
             
             // 记录上一句位置，当移动到下一句时，上一句和当前这一句都需要进行更新行
             NSIndexPath *previousPath = [NSIndexPath indexPathForRow:self.currentIndex inSection:0];
@@ -260,7 +271,10 @@ static MusicLrcView *instance;
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
             MusicLrcCell *lrccell = [self cellForRowAtIndexPath:indexPath];
             lrccell.lrcLabel.progress = progress;
-            lrccell.lrcLabel.fillColor = [_lrcDelegate musicLrcHighlightColor];
+            if ([_lrcDelegate respondsToSelector:@selector(musicLrcHighlightColor)])
+            {
+                lrccell.lrcLabel.fillColor = [_lrcDelegate musicLrcHighlightColor];
+            }
             self.lrcLabel.progress = progress;
         }
     }
@@ -300,12 +314,22 @@ static MusicLrcView *instance;
     UITableViewCell *cell  = [self cellForRowAtIndexPath:cellIndexPath];
     if (cell)
     {
-        if ([_lrcDelegate refreshAllLrcColor])
+        if ([_lrcDelegate respondsToSelector:@selector(refreshAllLrcColor)]
+            && [_lrcDelegate refreshAllLrcColor])
         {
             [self reloadData];
-            [_lrcDelegate refreshFinish];
+            if ([_lrcDelegate respondsToSelector:@selector(refreshFinish)])
+            {
+                [_lrcDelegate refreshFinish];
+            }
+            
         }
-        cell.textLabel.textColor = [_lrcDelegate musicLrcHighlightColor];
+    
+        if ([_lrcDelegate respondsToSelector:@selector(musicLrcHighlightColor)])
+        {
+            cell.textLabel.textColor = [_lrcDelegate musicLrcHighlightColor];
+        }
+        
         [self selectRowAtIndexPath:cellIndexPath
                           animated:YES
                     scrollPosition:UITableViewScrollPositionMiddle];
@@ -314,7 +338,11 @@ static MusicLrcView *instance;
         UITableViewCell *preCell  = [self cellForRowAtIndexPath:preCellIndexPath];
         if (preCell)
         {
-            preCell.textLabel.textColor = [_lrcDelegate musicLrcColor];
+            if ([_lrcDelegate respondsToSelector:@selector(musicLrcColor)])
+            {
+                preCell.textLabel.textColor = [_lrcDelegate musicLrcColor];
+            }
+            
         }
         
         NSLog(@"currentIndex = %d",currentIndex);
