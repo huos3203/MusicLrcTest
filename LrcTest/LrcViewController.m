@@ -176,4 +176,14 @@
 {
     NSLog(@"取消定时器");
 }
+
+-(void)CountingDownRefreshSencondWithTime:(NSString *)time
+{
+    NSLog(@"标签刷新倒计时：%@",time);
+}
+
+-(NSInteger)currentMusicTime
+{
+    return 15;
+}
 @end
