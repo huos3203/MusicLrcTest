@@ -38,6 +38,14 @@
 		140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
 		1444AD721E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */; };
 		1444AD731E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */; };
+		1483B7B91E80FFCE009D8C42 /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */; };
+		1483B7BA1E80FFCE009D8C42 /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */; };
+		1483B7BC1E81024E009D8C42 /* ClockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */; };
+		1483B7BD1E81024E009D8C42 /* ClockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */; };
+		1483B7C71E811370009D8C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3B1E6FCE9400E674D3 /* Main.storyboard */; };
+		1483B7C91E8119C9009D8C42 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
+		1483B7CA1E8119CA009D8C42 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
+		1483B7CB1E812190009D8C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -115,8 +123,10 @@
 		1408857F1E76916D008B9466 /* MusicLRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicLRC.h; sourceTree = "<group>"; };
 		140885801E76916D008B9466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
-		1444AD701E7FD6DC00F1AC76 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepClockView.swift; sourceTree = "<group>"; };
+		1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitioningDelegate.swift; sourceTree = "<group>"; };
+		1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTableViewController.swift; sourceTree = "<group>"; };
+		1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTableViewCell.swift; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 		14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcLabel.m; sourceTree = "<group>"; };
 		14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcView.h; sourceTree = "<group>"; };
 		14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcView.m; sourceTree = "<group>"; };
+		14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +239,7 @@
 				148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */,
 				148BFF431E6FCE9400E674D3 /* Info.plist */,
 				14AF06631E7A40A80029DD34 /* MusicLrc.podspec */,
+				14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */,
 				148BFF321E6FCE9300E674D3 /* Supporting Files */,
 			);
 			path = LrcTest;
@@ -311,7 +323,9 @@
 				14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */,
 				14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */,
 				1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */,
-				1444AD701E7FD6DC00F1AC76 /* LrcTest-Bridging-Header.h */,
+				1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */,
+				1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */,
+				1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -466,6 +480,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1483B7CB1E812190009D8C42 /* Assets.xcassets in Resources */,
+				1483B7C71E811370009D8C42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +562,10 @@
 				14AF06E01E7BE6C00029DD34 /* MusicLrcView.m in Sources */,
 				14AF06D11E7BE6C00029DD34 /* MusicLrcParser.m in Sources */,
 				14AF06CE1E7BE6C00029DD34 /* CLLrcTool.m in Sources */,
+				1483B7CA1E8119CA009D8C42 /* ClockTableViewCell.swift in Sources */,
 				14AF06D41E7BE6C00029DD34 /* CLLrcLine.m in Sources */,
+				1483B7BA1E80FFCE009D8C42 /* TransitioningDelegate.swift in Sources */,
+				1483B7BD1E81024E009D8C42 /* ClockTableViewController.swift in Sources */,
 				14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */,
 				14AF06D71E7BE6C00029DD34 /* EffectView.m in Sources */,
 				1444AD731E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */,
@@ -557,9 +576,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1483B7C91E8119C9009D8C42 /* ClockTableViewCell.swift in Sources */,
 				14AF06DF1E7BE6C00029DD34 /* MusicLrcView.m in Sources */,
 				14AF06CD1E7BE6C00029DD34 /* CLLrcTool.m in Sources */,
 				1444AD721E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */,
+				1483B7BC1E81024E009D8C42 /* ClockTableViewController.swift in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
 				14AF06D31E7BE6C00029DD34 /* CLLrcLine.m in Sources */,
 				14AF06D91E7BE6C00029DD34 /* MusicLrcCell.m in Sources */,
@@ -568,6 +589,7 @@
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				14AF06D61E7BE6C00029DD34 /* EffectView.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
+				1483B7B91E80FFCE009D8C42 /* TransitioningDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,7 +795,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/Classes/view/LrcTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/LrcTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -794,7 +816,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/Classes/view/LrcTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/LrcTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

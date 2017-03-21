@@ -10,10 +10,13 @@
 #import "AVFoundation/AVFoundation.h"
 #import "MusicLrcView.h"
 #import "LrcTest-Swift.h"
-@interface LrcViewController : UIViewController<MusicLrcDelegate,DelayDelegate>
+@interface LrcViewController : UIViewController<MusicLrcDelegate,DelayClockDelegate>
 {
     AVPlayer * _player;
     AVAudioPlayer *_audioPlayer;
 }
+
+@property (strong, nonatomic) ExampleTransitioningDelegate *exampleTransitionDelegate;
+ //[ExampleTransitioningDelegate new]
 @end
 

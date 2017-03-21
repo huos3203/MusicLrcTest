@@ -27,6 +27,8 @@ class SleepClockView: UIAlertController {
     {
         struct Singleton{
             static let instance = SleepClockView()
+                //SleepClockView()//UIAlertController.init(title: "定时关闭", message: "", preferredStyle:.actionSheet)
+            
         }
         return Singleton.instance
     }
@@ -40,24 +42,38 @@ class SleepClockView: UIAlertController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     //根据给定数组，定制View
     private var delayDelegate:DelayDelegate?
     private var delayTime:TimeInterval = 0.0
     @objc(setupBy:toTarget:)
     func setup(clockArr:[Int] = [1,2,3,4] ,toTarget Delgate:DelayDelegate)
     {
+        self.view.addSubview(UIView.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 200)))
+        self.title = "定时关闭"
         self.delayDelegate = Delgate
         //
-        let cancelAction = UIAlertAction.init(title: "暂时不取消设置", style: .default) { (acion) in
+        let cancelAction = UIAlertAction.init(title: "不开启", style: .default) { (acion) in
                 self.delayTime = 0.0
                 self.cancelClock()
         }
+//        let viewr = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 50, height: 40))
+//        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 40))
+//        label.backgroundColor = UIColor.red
+//        viewr.addSubview(label)
+//        cancelAction.setValue(viewr, forKey: "UIAlertControllerActionView")
         self.addAction(cancelAction)
+        
+        let musicTime = UIAlertAction.init(title: "播完当前音乐", style: .default) { (action) in
+            //
+            self.delayTime = 1000.0
+        }
+        self.addAction(musicTime)
+        
         let clock = clockArr.sorted(by: >)
         for(index,clock) in clock.enumerated()
         {
-            let action = UIAlertAction.init(title: "\(clock) 分钟)",
+            let action = UIAlertAction.init(title: "\(clock) 分钟后",
                 style: .default, handler: { (action) in
                     //事件
                     self.delayTime = TimeInterval(clockArr[index])

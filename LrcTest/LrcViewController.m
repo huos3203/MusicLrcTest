@@ -112,11 +112,47 @@
     [_audioPlayer play];
     
 }
+
+
 -(void) pauseAudio:(id) sender
 {
-    [_player pause];
-    SleepClockView *sleep = [[SleepClockView shareInstance] setupBy:@[@1,@2,@3] toTarget:self];
-    [self presentViewController:sleep animated:YES completion:nil];
+    
+//    [_player pause];
+//    SleepClockView *clockView = [SleepClockView shareInstance];
+//    [clockView setupBy:@[@1,@2,@3] toTarget:self];
+//    [self presentViewController:clockView animated:YES completion:nil];
+    
+    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"333" message:@"dddd" preferredStyle:UIAlertControllerStyleActionSheet];
+////    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
+////    [alertView.view addSubview:view];
+//    UIAlertAction *action = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        //
+//    }];
+//    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        //
+//    }];
+//    UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        //
+//    }];
+//    UIAlertAction *action5 = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        //
+//    }];
+//    [alertView addAction:action];
+//    [alertView addAction:action3];
+//    [alertView addAction:action4];
+//    [alertView addAction:action5];
+//    alertView.view.frame = CGRectMake(0, 0, 800, 800);
+//    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(-20, -20, 800, 800)];
+//    [alertView.view addSubview:tableview];
+//    [self presentViewController:alertView animated:NO completion:nil];
+    
+    self.exampleTransitionDelegate = [ExampleTransitioningDelegate new];
+    self.transitioningDelegate = self.exampleTransitionDelegate;
+    ClockTableViewController *tableView = [ClockTableViewController shareInstance];
+    tableView.delayClockDelegate = self;
+    tableView.transitioningDelegate = self.exampleTransitionDelegate;
+    tableView.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:tableView animated:NO completion:nil];
 }
 
 
