@@ -4,3 +4,7 @@ framework module MusicLRC {
   export *
   module * { export * }
 }
+
+module MusicLRC.Swift {
+    header "MusicLRC-Swift.h"
+}

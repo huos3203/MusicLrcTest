@@ -8,7 +8,6 @@
 
 #import "LrcViewController.h"
 #import "MusicLrcView.h"
-#import "LrcTest-Swift.h"
 
 @interface LrcViewController (private)
 -(void) setupAVPlayerForURL: (NSURL*) url;
@@ -146,7 +145,7 @@
 //    [alertView.view addSubview:tableview];
 //    [self presentViewController:alertView animated:NO completion:nil];
     
-    self.exampleTransitionDelegate = [ExampleTransitioningDelegate new];
+    self.exampleTransitionDelegate = [ClockTransitioningDelegate new];
     self.transitioningDelegate = self.exampleTransitionDelegate;
     ClockTableViewController *tableView = [ClockTableViewController shareInstance];
     tableView.delayClockDelegate = self;

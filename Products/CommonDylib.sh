@@ -50,7 +50,7 @@ cp -R "${DEVICE_DIR}/" "${INSTALL_DIR}/"
 lipo -create "${DEVICE_DIR}/${FMK_NAME}" "${SIMULATOR_DIR}/${FMK_NAME}" -output "${INSTALL_DIR}/${FMK_NAME}"
 
 # 拷贝至DRM项目中，更新动态包
-echo "cp -R ${INSTALL_DIR}/ ${DRM_DIR}/"
-cp -R "${INSTALL_DIR}/" "${DRM_DIR}"
+#echo "cp -R ${INSTALL_DIR}/ ${DRM_DIR}/"
+#cp -R "${INSTALL_DIR}/" "${DRM_DIR}"
 
 rm -r "${WRK_DIR}"
