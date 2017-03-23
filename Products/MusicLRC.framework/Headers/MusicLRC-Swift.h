@@ -127,7 +127,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC8MusicLRC24ClockTableViewController")
+SWIFT_CLASS_NAMED("ClockTableViewController")
 @interface ClockTableViewController : UITableViewController
 @property (nonatomic, strong) id <DelayClockDelegate> _Null_unspecified delayClockDelegate;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ClockTableViewController * _Nonnull shareInstance;)
@@ -144,7 +144,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ClockTableVi
 @class UIPresentationController;
 @protocol UIViewControllerAnimatedTransitioning;
 
-SWIFT_CLASS("_TtC8MusicLRC26ClockTransitioningDelegate")
+SWIFT_CLASS_NAMED("ClockTransitioningDelegate")
 @interface ClockTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate>
 - (UIPresentationController * _Nullable)presentationControllerForPresentedViewController:(UIViewController * _Nonnull)presented presentingViewController:(UIViewController * _Nullable)presenting sourceViewController:(UIViewController * _Nonnull)source;
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source;
@@ -153,7 +153,7 @@ SWIFT_CLASS("_TtC8MusicLRC26ClockTransitioningDelegate")
 @end
 
 
-SWIFT_PROTOCOL("_TtP8MusicLRC18DelayClockDelegate_")
+SWIFT_PROTOCOL_NAMED("DelayClockDelegate")
 @protocol DelayClockDelegate
 - (void)setDelayToPerformCloseOperation;
 - (void)startCountingDownUntilExecution;
