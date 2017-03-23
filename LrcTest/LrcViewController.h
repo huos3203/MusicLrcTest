@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
-#import "MusicLrcView.h"
+#import <MusicLRC/MusicLrcView.h>
 #import <MusicLRC/MusicLRC-Swift.h>
 @interface LrcViewController : UIViewController<MusicLrcDelegate,DelayClockDelegate>
 {

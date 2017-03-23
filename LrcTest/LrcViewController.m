@@ -7,7 +7,6 @@
 //
 
 #import "LrcViewController.h"
-#import "MusicLrcView.h"
 
 @interface LrcViewController (private)
 -(void) setupAVPlayerForURL: (NSURL*) url;
