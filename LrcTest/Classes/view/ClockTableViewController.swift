@@ -13,7 +13,7 @@ public protocol DelayClockDelegate
 {
     //设置delay
     func setDelayToPerformCloseOperation()
-    //开始
+    //开始倒计时
     func startCountingDownUntilExecution()
     //取消
     func cancelPerformCloseOperation()
@@ -57,6 +57,7 @@ public class ClockTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
         switch indexPath.row
@@ -88,7 +89,7 @@ public class ClockTableViewController: UITableViewController {
     
     
     //创建定时器
-    func createClock()
+    func closeClock()
     {
         
         if timer != nil
@@ -102,7 +103,7 @@ public class ClockTableViewController: UITableViewController {
     //定时事件：开启定时器，到时间关闭播放器
     func startClock()
     {
-        self.perform(#selector(SleepClockView.createClock), with:nil, afterDelay: TimeInterval(self.delayTime))
+        self.perform(#selector(ClockTableViewController.closeClock), with:nil, afterDelay: TimeInterval(self.delayTime))
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ClockTableViewController.refresh), userInfo: nil, repeats: true)
         // 将定时器添加到运行循环
@@ -115,7 +116,7 @@ public class ClockTableViewController: UITableViewController {
         if timer != nil {
             timer.invalidate()
         }
-//        cancelPreviousPerformRequestsWithTarget(
+        cancelByClock()
         NSObject.cancelPreviousPerformRequests(withTarget: self)
 //        NSObject.cancelPreviousPerformRequests(withTarget: self,
 //                                               selector: #selector(SleepClockView.createClock),

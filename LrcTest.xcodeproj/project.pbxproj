@@ -35,7 +35,6 @@
 /* Begin PBXBuildFile section */
 		140885811E76916D008B9466 /* MusicLRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408857F1E76916D008B9466 /* MusicLRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
-		1444AD731E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */; };
 		1483B7BA1E80FFCE009D8C42 /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */; };
 		1483B7BD1E81024E009D8C42 /* ClockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */; };
 		1483B7C71E811370009D8C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3B1E6FCE9400E674D3 /* Main.storyboard */; };
@@ -84,25 +83,18 @@
 		14AF068F1E7BDA720029DD34 /* 01爱与痛的边缘.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 14AF068C1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc */; };
 		14AF06901E7BDA770029DD34 /* qbd.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5B1E6FE54100E674D3 /* qbd.lrc */; };
 		14AF06CC1E7BE6C00029DD34 /* CLLrcTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06BB1E7BE6C00029DD34 /* CLLrcTool.h */; };
-		14AF06CD1E7BE6C00029DD34 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */; };
 		14AF06CE1E7BE6C00029DD34 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */; };
 		14AF06CF1E7BE6C00029DD34 /* MusicLrcParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06BD1E7BE6C00029DD34 /* MusicLrcParser.h */; };
-		14AF06D01E7BE6C00029DD34 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BE1E7BE6C00029DD34 /* MusicLrcParser.m */; };
 		14AF06D11E7BE6C00029DD34 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BE1E7BE6C00029DD34 /* MusicLrcParser.m */; };
 		14AF06D21E7BE6C00029DD34 /* CLLrcLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C01E7BE6C00029DD34 /* CLLrcLine.h */; };
-		14AF06D31E7BE6C00029DD34 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C11E7BE6C00029DD34 /* CLLrcLine.m */; };
 		14AF06D41E7BE6C00029DD34 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C11E7BE6C00029DD34 /* CLLrcLine.m */; };
 		14AF06D51E7BE6C00029DD34 /* EffectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C31E7BE6C00029DD34 /* EffectView.h */; };
-		14AF06D61E7BE6C00029DD34 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C41E7BE6C00029DD34 /* EffectView.m */; };
 		14AF06D71E7BE6C00029DD34 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C41E7BE6C00029DD34 /* EffectView.m */; };
 		14AF06D81E7BE6C00029DD34 /* MusicLrcCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C51E7BE6C00029DD34 /* MusicLrcCell.h */; };
-		14AF06D91E7BE6C00029DD34 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C61E7BE6C00029DD34 /* MusicLrcCell.m */; };
 		14AF06DA1E7BE6C00029DD34 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C61E7BE6C00029DD34 /* MusicLrcCell.m */; };
 		14AF06DB1E7BE6C00029DD34 /* MusicLrcLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C71E7BE6C00029DD34 /* MusicLrcLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14AF06DC1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
 		14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
 		14AF06DE1E7BE6C00029DD34 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14AF06DF1E7BE6C00029DD34 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
 		14AF06E01E7BE6C00029DD34 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
 /* End PBXBuildFile section */
 
@@ -694,7 +686,6 @@
 				14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */,
 				1483B7DE1E822AE5009D8C42 /* VerifyAppVersionModel.swift in Sources */,
 				14AF06D71E7BE6C00029DD34 /* EffectView.m in Sources */,
-				1444AD731E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,15 +710,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14AF06DF1E7BE6C00029DD34 /* MusicLrcView.m in Sources */,
-				14AF06CD1E7BE6C00029DD34 /* CLLrcTool.m in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
-				14AF06D31E7BE6C00029DD34 /* CLLrcLine.m in Sources */,
-				14AF06D91E7BE6C00029DD34 /* MusicLrcCell.m in Sources */,
-				14AF06DC1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */,
-				14AF06D01E7BE6C00029DD34 /* MusicLrcParser.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
-				14AF06D61E7BE6C00029DD34 /* EffectView.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
