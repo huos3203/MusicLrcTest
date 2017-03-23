@@ -14,7 +14,7 @@
 ```ruby
 pod 'MusicLrc', :git => 'https://github.com/huos3203/MusicLrcTest.git'
 ```
-2. 在项目目录pod安装
+然后，在项目目录pod安装
 ```ruby 
 $ pod install
 ```
@@ -22,28 +22,28 @@ $ pod install
 通过私库集成
 ---
 1. 加入你的pod本地私有库中：
-```ruby
-$ pod repo add PodRepo https://github.com/huos3203/PodRepo.git
-```
+    ```ruby
+    $ pod repo add PodRepo https://github.com/huos3203/PodRepo.git
+    ```
 2. 在终端查询`MusicLrc`
-```ruby
-$ pod search MusicLrc
+    ```ruby
+    $ pod search MusicLrc
 
--> MusicLrc (0.0.2)
-Just Testing.
-pod 'MusicLrc', '~> 0.0.2'
-- Homepage: https://github.com/huos3203/MusicLrcTest
-- Source:   https://github.com/huos3203/MusicLrcTest.git
-- Versions: 0.0.2 [PodRepo repo]
-```
+    -> MusicLrc (0.0.2)
+    Just Testing.
+    pod 'MusicLrc', '~> 0.0.2'
+    - Homepage: https://github.com/huos3203/MusicLrcTest
+    - Source:   https://github.com/huos3203/MusicLrcTest.git
+    - Versions: 0.0.2 [PodRepo repo]
+    ```
 3. 在Podfile文件中配置：
-```ruby
-$ pod 'MusicLrc', '~> 0.0.2'
-```
+    ```ruby
+    $ pod 'MusicLrc', '~> 0.0.2'
+    ```
 4. 在项目目录pod安装
-```ruby 
-$ pod install
-```
+    ```ruby 
+    $ pod install
+    ```
 
 ## 保留两个接口：
 ### 类方法
