@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MusicLrcParser : NSObject
+@interface MusicLrcParser :NSObject
 
 -(NSMutableArray *)parseLrcLocalPath:(NSString *)localPath;
 +(MusicLrcParser *)shared ;
