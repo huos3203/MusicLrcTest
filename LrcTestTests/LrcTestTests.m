@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "CLLrcTool.h"
 #import "CLLrcLine.h"
+//#import "LrcTestTests-Swift.h"
+
 @interface LrcTestTests : XCTestCase
 
 @end
