@@ -145,7 +145,7 @@
 		14AF06601E7A40A80029DD34 /* buildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildNumber.sh; sourceTree = "<group>"; };
 		14AF06611E7A40A80029DD34 /* CommonDylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CommonDylib.sh; sourceTree = "<group>"; };
 		14AF06621E7A40A80029DD34 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
-		14AF06631E7A40A80029DD34 /* MusicLrc.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = MusicLrc.podspec; path = ../Products/MusicLrc.podspec; sourceTree = "<group>"; };
+		14AF06631E7A40A80029DD34 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = MusicLrc.podspec; path = ../Products/MusicLrc.podspec; sourceTree = "<group>"; };
 		14AF06641E7A40A80029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
