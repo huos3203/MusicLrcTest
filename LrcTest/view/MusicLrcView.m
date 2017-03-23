@@ -106,7 +106,7 @@ static MusicLrcView *instance;
     if ([_lrcDelegate respondsToSelector:@selector(visualEffectImage)])
     {
         EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
-        //  [self.backgroundView addSubview:effView];
+        [self.backgroundView addSubview:effView];
     }
 
     if(lrcPath != nil && player != nil && lrcDelegate != nil)

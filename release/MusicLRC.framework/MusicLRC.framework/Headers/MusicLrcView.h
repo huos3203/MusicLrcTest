@@ -23,15 +23,16 @@
 @protocol MusicLrcDelegate <NSObject>
 
 //重设高亮歌词颜色
--(UIColor *)musicLrcHighlightColor;
-
--(UIColor *)musicLrcColor;
-
--(UIImage *)visualEffectImage;
-
--(BOOL)refreshAllLrcColor;
-
--(void)refreshFinish;
+@required
+-(UIColor *)musicLrcHighlightColor; //自定义高亮色
+@required
+-(UIColor *)musicLrcColor;  //自定义默认颜色
+@optional
+-(UIImage *)visualEffectImage;  //自定义毛玻璃背景
+@optional
+-(BOOL)refreshAllLrcColor; //: 在快进音乐时，定位当前歌词之前先重制tableView状态
+@optional
+-(void)refreshFinish;  //: 在快进音乐时，重制tableView状态完成
 
 @end
 
