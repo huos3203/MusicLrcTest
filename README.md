@@ -1,5 +1,5 @@
 # 使用帮助
-
+![](LrcTest/daotuu.jpg)
 ## 保留两个接口：
 ### 类方法
 ```objc
@@ -23,7 +23,7 @@
 `self`:遵循`MusicLrcDelegate`协议类自身
 ## 两个代理
 自定义外观样式
-```
+```objc
 //代理
 @protocol MusicLrcDelegate <NSObject>
 
