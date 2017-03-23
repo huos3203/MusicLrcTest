@@ -61,10 +61,6 @@
 		148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */; };
 		148BFF5D1E6FE54100E674D3 /* qbd.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5B1E6FE54100E674D3 /* qbd.lrc */; };
 		148BFF5E1E6FE54100E674D3 /* qbd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5C1E6FE54100E674D3 /* qbd.mp3 */; };
-		14AF06431E78FF870029DD34 /* CommonDylib.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14AF063F1E78FF870029DD34 /* CommonDylib.sh */; };
-		14AF06441E78FF870029DD34 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF06401E78FF870029DD34 /* MusicLRC.framework */; };
-		14AF06451E78FF870029DD34 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06411E78FF870029DD34 /* README.md */; };
-		14AF06461E78FF870029DD34 /* 全局变量.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14AF06421E78FF870029DD34 /* 全局变量.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,12 +141,12 @@
 		148BFF5B1E6FE54100E674D3 /* qbd.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qbd.lrc; sourceTree = "<group>"; };
 		148BFF5C1E6FE54100E674D3 /* qbd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qbd.mp3; sourceTree = "<group>"; };
 		148BFF6C1E70F98D00E674D3 /* daotuu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daotuu.jpg; sourceTree = "<group>"; };
-		148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
-		14AF063F1E78FF870029DD34 /* CommonDylib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CommonDylib.sh; sourceTree = "<group>"; };
-		14AF06401E78FF870029DD34 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
-		14AF06411E78FF870029DD34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		14AF06421E78FF870029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
-		14AF06581E7935E50029DD34 /* buildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = buildNumber.sh; path = Products/buildNumber.sh; sourceTree = "<group>"; };
+		14AF065E1E7A408D0029DD34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		14AF06601E7A40A80029DD34 /* buildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildNumber.sh; sourceTree = "<group>"; };
+		14AF06611E7A40A80029DD34 /* CommonDylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CommonDylib.sh; sourceTree = "<group>"; };
+		14AF06621E7A40A80029DD34 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
+		14AF06631E7A40A80029DD34 /* MusicLrc.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = MusicLrc.podspec; path = ../Products/MusicLrc.podspec; sourceTree = "<group>"; };
+		14AF06641E7A40A80029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14AF06441E78FF870029DD34 /* MusicLRC.framework in Frameworks */,
 				1408858E1E7693A0008B9466 /* MusicLRC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,8 +178,10 @@
 		1408857E1E76916D008B9466 /* MusicLRC */ = {
 			isa = PBXGroup;
 			children = (
+				14AF065F1E7A40A80029DD34 /* Products */,
 				1408857F1E76916D008B9466 /* MusicLRC.h */,
 				140885801E76916D008B9466 /* Info.plist */,
+				14AF065E1E7A408D0029DD34 /* README.md */,
 			);
 			path = MusicLRC;
 			sourceTree = "<group>";
@@ -238,9 +235,6 @@
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
-				14AF063E1E78FF870029DD34 /* Products */,
-				14AF06581E7935E50029DD34 /* buildNumber.sh */,
-				148BFF6D1E70FC7800E674D3 /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* LrcTest */,
 				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
 				1408857E1E76916D008B9466 /* MusicLRC */,
@@ -275,6 +269,7 @@
 				148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */,
 				148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */,
 				148BFF431E6FCE9400E674D3 /* Info.plist */,
+				14AF06631E7A40A80029DD34 /* MusicLrc.podspec */,
 				148BFF321E6FCE9300E674D3 /* Supporting Files */,
 			);
 			path = LrcTest;
@@ -301,16 +296,16 @@
 			path = LrcTestTests;
 			sourceTree = "<group>";
 		};
-		14AF063E1E78FF870029DD34 /* Products */ = {
+		14AF065F1E7A40A80029DD34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14AF063F1E78FF870029DD34 /* CommonDylib.sh */,
-				14AF06401E78FF870029DD34 /* MusicLRC.framework */,
-				14AF06411E78FF870029DD34 /* README.md */,
-				14AF06421E78FF870029DD34 /* 全局变量.sh */,
+				14AF06601E7A40A80029DD34 /* buildNumber.sh */,
+				14AF06611E7A40A80029DD34 /* CommonDylib.sh */,
+				14AF06621E7A40A80029DD34 /* MusicLRC.framework */,
+				14AF06641E7A40A80029DD34 /* 全局变量.sh */,
 			);
 			path = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -456,11 +451,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14AF06461E78FF870029DD34 /* 全局变量.sh in Resources */,
 				140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */,
 				148BFF421E6FCE9400E674D3 /* LaunchScreen.storyboard in Resources */,
 				148BFF5D1E6FE54100E674D3 /* qbd.lrc in Resources */,
-				14AF06431E78FF870029DD34 /* CommonDylib.sh in Resources */,
 				148BFF3F1E6FCE9400E674D3 /* Assets.xcassets in Resources */,
 				148BFF5E1E6FE54100E674D3 /* qbd.mp3 in Resources */,
 				148BFF3D1E6FCE9400E674D3 /* Main.storyboard in Resources */,
@@ -531,7 +524,6 @@
 				140886611E77AB96008B9466 /* CLMusicModel.m in Sources */,
 				140886511E77AB58008B9466 /* MusicLrcCell.m in Sources */,
 				140886791E77DBFD008B9466 /* EffectView.m in Sources */,
-				14AF06451E78FF870029DD34 /* README.md in Sources */,
 				1408866D1E77ABEA008B9466 /* CLLrcTool.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				140886541E77AB58008B9466 /* MusicLrcLabel.m in Sources */,
