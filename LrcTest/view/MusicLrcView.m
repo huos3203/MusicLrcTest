@@ -45,13 +45,13 @@ static MusicLrcView *instance;
 //                                                         repeats:YES];
 //        }
         
-        if(!_lrcTiemr)
-        {
-            self.lrcTiemr = [CADisplayLink displayLinkWithTarget:self
-                                                        selector:@selector(updateLrcPregress)];
-            [self.lrcTiemr addToRunLoop:[NSRunLoop mainRunLoop]
-                                forMode:NSRunLoopCommonModes];
-        }
+//        if(!_lrcTiemr)
+//        {
+//            self.lrcTiemr = [CADisplayLink displayLinkWithTarget:self
+//                                                        selector:@selector(updateLrcPregress)];
+//            [self.lrcTiemr addToRunLoop:[NSRunLoop mainRunLoop]
+//                                forMode:NSRunLoopCommonModes];
+//        }
         //歌词列表使用tableView来显示
         self.backgroundColor = [UIColor clearColor];
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -91,7 +91,10 @@ static MusicLrcView *instance;
     _lrcName = lrcName;
     // 解析歌词 使用自己创建歌词解析工具
     self.lrcList = [CLLrcTool lrcToolWithLrcName:lrcName];
-    
+    if (self.lrcList == nil)
+    {
+        [self removeLrcTimer];
+    }
     CLLrcLine *lrcLine = self.lrcList[0];
     self.lrcLabel.text = lrcLine.text;
 }
@@ -100,9 +103,9 @@ static MusicLrcView *instance;
      audioPlayer:(AVAudioPlayer *)player
      lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
+    [self removeLrcTimer];
+    [self addLrcTimer];
     [self setNeedsUpdateConstraints];
-    [self reloadData];
-    
     if ([_lrcDelegate respondsToSelector:@selector(visualEffectImage)])
     {
         EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
@@ -119,6 +122,7 @@ static MusicLrcView *instance;
     }
     else
     {
+        [self removeLrcTimer];
         NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
     }
 
@@ -147,10 +151,24 @@ static MusicLrcView *instance;
     }
 }
 
+#pragma mark - 歌词定时器
+- (void)addLrcTimer
+{
+    self.lrcTiemr = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrcPregress)];
+    [self.lrcTiemr addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+- (void)removeLrcTimer
+{
+    [self.lrcTiemr invalidate];
+    self.lrcTiemr = nil;
+}
+
 -(void)switchLrcOfMusic:(NSString *)lrcPath
                  player:(AVPlayer *)player
             lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
 {
+
     [self setNeedsUpdateConstraints];
     [self reloadData];
     if(lrcPath != nil && player != nil && lrcDelegate != nil)
