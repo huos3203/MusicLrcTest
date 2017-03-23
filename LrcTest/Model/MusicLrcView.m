@@ -9,16 +9,24 @@
 #import "MusicLrcView.h"
 #import "MusicLrcParser.h"
 
+static MusicLrcView *instance;
 @implementation MusicLrcView
 
-- (id)initWithLrcLocalPath:(NSString *)localPath currentPlayer:(AVPlayer *)player
+
++(MusicLrcView *)shared
+{
+    if (!instance)
+    {
+        instance = [[MusicLrcView alloc] init];
+    }
+    return instance;
+}
+
+-(instancetype)init
 {
     self = [super init];
     if (self)
     {
-        _player = player;
-        _lrcLocalPath = localPath;
-        
         if (!_timerPlay)
         {
             _timerPlay = [NSTimer scheduledTimerWithTimeInterval:0.5
@@ -35,11 +43,24 @@
             [_tableView setDataSource:self];
             [self addSubview:_tableView];
         }
-        
+    }
+    return self;
+}
+
+-(void)switchLrcOfMusic:(NSString *)lrcPath player:(AVPlayer *)player lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
+{
+    if(_player != nil && _lrcLocalPath != nil && _lrcDelegate != nil)
+    {
+        _player = player;
+        _lrcLocalPath = lrcPath;
+        _lrcDelegate = lrcDelegate;
         //解析数据
         _arrayItemList = [[MusicLrcParser shared] parseLrcLocalPath:_lrcLocalPath];
     }
-    return self;
+    else
+    {
+        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
+    }
 }
 
 //model解析lrc歌词文件

@@ -58,9 +58,8 @@
     
     //添加音频路径
     NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"qbd" ofType:@"lrc"];
-    MusicLrcView *lrcView = [[MusicLrcView alloc] initWithLrcLocalPath:lrcPath
-                                                   currentPlayer:_player];
-    lrcView.lrcDelegate = self;
+    MusicLrcView *lrcView = [MusicLrcView shared];
+    [lrcView switchLrcOfMusic:lrcPath player:_player lrcDelegate:self];
     [self.view addSubview:lrcView];
 }
 
