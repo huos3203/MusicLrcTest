@@ -48,9 +48,13 @@ class ClockPresentationViewController: UIPresentationController,UIAdaptivePresen
     
     //返回登场控制器内容页面的大小，在这里设置为屏幕高度的三分之一款
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+<<<<<<< HEAD
         
         return CGSize.init(width:parentSize.width, height: 352.0)
 //        return CGSize.init(width:parentSize.width, height: CGFloat(floorf(Float(parentSize.height/2.0))))
+=======
+        return CGSize.init(width:parentSize.width, height: CGFloat(floorf(Float(parentSize.height/2.0))))
+>>>>>>> a09fa8ad66fd015df745089afa58f2fc9298ed5e
     }
     
     /*
