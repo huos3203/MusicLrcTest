@@ -23,7 +23,7 @@ public protocol DelayClockDelegate
     
     func currentMusicTime() -> Int
 }
-@objc(ClockTableViewController)
+//@objc(ClockTableViewController)
 public class ClockTableViewController: UITableViewController {
 
     public var delayClockDelegate:DelayClockDelegate!
@@ -38,7 +38,7 @@ public class ClockTableViewController: UITableViewController {
     {
         struct Singleton{
             
-           public static let instance = { () -> ClockTableViewController in
+        public static let instance = { () -> ClockTableViewController in
             let bundle = Bundle.init(for: ClockTableViewController.self)
                 let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
                 return board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
