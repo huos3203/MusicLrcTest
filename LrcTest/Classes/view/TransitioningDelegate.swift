@@ -48,7 +48,9 @@ class ClockPresentationViewController: UIPresentationController,UIAdaptivePresen
     
     //返回登场控制器内容页面的大小，在这里设置为屏幕高度的三分之一款
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        return CGSize.init(width:parentSize.width, height: CGFloat(floorf(Float(parentSize.height/2.0))))
+        
+        return CGSize.init(width:parentSize.width, height: 352.0)
+//        return CGSize.init(width:parentSize.width, height: CGFloat(floorf(Float(parentSize.height/2.0))))
     }
     
     /*
@@ -181,7 +183,9 @@ class ClockAnimatedTransitioning: NSObject,UIViewControllerAnimatedTransitioning
         let finalFrameForVC = transitionContext.finalFrame(for: animatingVC!)
         var initialFrameForVC = finalFrameForVC
         //This will animate the view from right to left during a presentation and vice versa during dismissal.
-        initialFrameForVC.origin.x += initialFrameForVC.size.width
+//        initialFrameForVC.origin.x += initialFrameForVC.size.width
+        //定义由下向上
+        initialFrameForVC.origin.y += initialFrameForVC.size.height
         
         let initialFrame = isPresentation ? initialFrameForVC : finalFrameForVC
         let finalFrame = isPresentation ? finalFrameForVC : initialFrameForVC
