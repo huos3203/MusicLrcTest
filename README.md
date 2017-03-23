@@ -8,31 +8,42 @@
 将直接拷贝到项目中，然后`import "MusicLrcView.h"`使用即可
 
 ### 两种pod方式 
-1. 直接在Podfile文件使用pod方法
+
+直接在Podfile文件使用pod方法
 ---
-{% codeblock lang:git %}
+```ruby
 pod 'MusicLrc', :git => 'https://github.com/huos3203/MusicLrcTest.git'
-{% endcodeblock %}
-2. 通过私库集成
+```
+2. 在项目目录pod安装
+```ruby 
+$ pod install
+```
+
+通过私库集成
 ---
 1. 加入你的pod本地私有库中：
-{% codeblock lang:ruby %}
-pod repo add PodRepo https://github.com/huos3203/PodRepo.git
-{% endcodeblock %}
+```ruby
+$ pod repo add PodRepo https://github.com/huos3203/PodRepo.git
+```
 2. 在终端查询`MusicLrc`
-{% codeblock lang:ruby %}
-pod search MusicLrc
+```ruby
+$ pod search MusicLrc
+
 -> MusicLrc (0.0.2)
 Just Testing.
 pod 'MusicLrc', '~> 0.0.2'
 - Homepage: https://github.com/huos3203/MusicLrcTest
 - Source:   https://github.com/huos3203/MusicLrcTest.git
 - Versions: 0.0.2 [PodRepo repo]
-{% endcodeblock %}
+```
 3. 在Podfile文件中配置：
-{% codeblock lang:ruby %}
-pod 'MusicLrc', '~> 0.0.2'
-{% endcodeblock %}
+```ruby
+$ pod 'MusicLrc', '~> 0.0.2'
+```
+4. 在项目目录pod安装
+```ruby 
+$ pod install
+```
 
 ## 保留两个接口：
 ### 类方法
