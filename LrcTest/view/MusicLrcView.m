@@ -36,22 +36,6 @@ static MusicLrcView *instance;
         self.userInteractionEnabled = true;
         //如果为YES，在AutoLayout中则会自动将view的frame和bounds属性转换为约束。
         self.translatesAutoresizingMaskIntoConstraints = NO;
-//        if (!_timerPlay)
-//        {
-//            _timerPlay = [NSTimer scheduledTimerWithTimeInterval:0.5
-//                                                          target:self
-//                                                        selector:@selector(currentPlayTime)
-//                                                        userInfo:nil
-//                                                         repeats:YES];
-//        }
-        
-//        if(!_lrcTiemr)
-//        {
-//            self.lrcTiemr = [CADisplayLink displayLinkWithTarget:self
-//                                                        selector:@selector(updateLrcPregress)];
-//            [self.lrcTiemr addToRunLoop:[NSRunLoop mainRunLoop]
-//                                forMode:NSRunLoopCommonModes];
-//        }
         //歌词列表使用tableView来显示
         self.backgroundColor = [UIColor clearColor];
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -59,6 +43,50 @@ static MusicLrcView *instance;
         [self setDataSource:self];
     }
     return self;
+}
+-(void)switchLrcOfMusic:(NSString *)lrcPath
+            audioPlayer:(AVAudioPlayer *)player
+            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
+{
+    //    [self invalidateIntrinsicContentSize];
+    [self setNeedsUpdateConstraints];
+    //    [self layoutIfNeeded];
+    [self reloadData];
+    if(lrcPath != nil && player != nil && lrcDelegate != nil)
+    {
+        //        _player = player;
+        _audioPlayer = player;
+        _lrcDelegate = lrcDelegate;
+        //解析数据
+        _lrcLocalPath = lrcPath;
+        _arrayItemList = [[MusicLrcParser shared] parseLrcLocalPath:_lrcLocalPath];
+    }
+    else
+    {
+        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
+    }
+}
+
+
+-(void)switchLrcOfMusic:(NSString *)lrcPath
+                 player:(AVPlayer *)player
+            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
+{
+    
+    [self setNeedsUpdateConstraints];
+    [self reloadData];
+    if(lrcPath != nil && player != nil && lrcDelegate != nil)
+    {
+        _player = player;
+        _lrcLocalPath = lrcPath;
+        _lrcDelegate = lrcDelegate;
+        //解析数据
+        _arrayItemList = [[MusicLrcParser shared] parseLrcLocalPath:_lrcLocalPath];
+    }
+    else
+    {
+        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
+    }
 }
 
 -(void)updateConstraints
@@ -91,13 +119,18 @@ static MusicLrcView *instance;
     _lrcName = lrcName;
     // 解析歌词 使用自己创建歌词解析工具
 //    self.lrcList = [CLLrcTool lrcToolWithLrcName:lrcName];
-    self.lrcList = [CLLrcTool lrcToolWithLrcPath:lrcName];
-    if (self.lrcList == nil)
+//    self.lrcList = [CLLrcTool lrcToolWithLrcPath:lrcName];
+    self.lrcList = [[MusicLrcParser shared] parseLrcLocalPath:lrcName];
+    if (self.lrcList == nil || [self.lrcList count] == 0)
     {
         [self removeLrcTimer];
     }
-    CLLrcLine *lrcLine = self.lrcList[0];
-    self.lrcLabel.text = lrcLine.text;
+    else
+    {
+        CLLrcLine *lrcLine = self.lrcList[0];
+        self.lrcLabel.text = lrcLine.text;
+    }
+    
 }
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath
@@ -124,7 +157,6 @@ static MusicLrcView *instance;
     else
     {
         [self removeLrcTimer];
-        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
         return false;
     }
     
@@ -140,28 +172,6 @@ static MusicLrcView *instance;
 
 }
 
--(void)switchLrcOfMusic:(NSString *)lrcPath
-            audioPlayer:(AVAudioPlayer *)player
-            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
-{
-//    [self invalidateIntrinsicContentSize];
-    [self setNeedsUpdateConstraints];
-//    [self layoutIfNeeded];
-    [self reloadData];
-    if(lrcPath != nil && player != nil && lrcDelegate != nil)
-    {
-//        _player = player;
-        _audioPlayer = player;
-        _lrcDelegate = lrcDelegate;
-        //解析数据
-        _lrcLocalPath = lrcPath;
-        _arrayItemList = [[MusicLrcParser shared] parseLrcLocalPath:_lrcLocalPath];
-    }
-    else
-    {
-        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
-    }
-}
 
 #pragma mark - 歌词定时器
 - (void)addLrcTimer
@@ -174,27 +184,6 @@ static MusicLrcView *instance;
 {
     [self.lrcTiemr invalidate];
     self.lrcTiemr = nil;
-}
-
--(void)switchLrcOfMusic:(NSString *)lrcPath
-                 player:(AVPlayer *)player
-            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate
-{
-
-    [self setNeedsUpdateConstraints];
-    [self reloadData];
-    if(lrcPath != nil && player != nil && lrcDelegate != nil)
-    {
-        _player = player;
-        _lrcLocalPath = lrcPath;
-        _lrcDelegate = lrcDelegate;
-        //解析数据
-        _arrayItemList = [[MusicLrcParser shared] parseLrcLocalPath:_lrcLocalPath];
-    }
-    else
-    {
-        NSLog(@"--调用switchLrcOfMusic方法中缺少初始化参数--");
-    }
 }
 
 #pragma mark uitableViewDelegate回调
