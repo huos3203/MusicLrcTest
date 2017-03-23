@@ -36,6 +36,8 @@
 		140885811E76916D008B9466 /* MusicLRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408857F1E76916D008B9466 /* MusicLRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1408858E1E7693A0008B9466 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; };
 		140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
+		1444AD721E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */; };
+		1444AD731E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -113,6 +115,8 @@
 		1408857F1E76916D008B9466 /* MusicLRC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicLRC.h; sourceTree = "<group>"; };
 		140885801E76916D008B9466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
+		1444AD701E7FD6DC00F1AC76 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepClockView.swift; sourceTree = "<group>"; };
 		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */,
 				14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */,
 				14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */,
+				1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */,
+				1444AD701E7FD6DC00F1AC76 /* LrcTest-Bridging-Header.h */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -406,11 +412,13 @@
 					1408857C1E76916A008B9466 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FA78T6VRG8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					148BFF2E1E6FCE9300E674D3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FA78T6VRG8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					148BFF471E6FCE9500E674D3 = {
@@ -541,6 +549,7 @@
 				14AF06D41E7BE6C00029DD34 /* CLLrcLine.m in Sources */,
 				14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */,
 				14AF06D71E7BE6C00029DD34 /* EffectView.m in Sources */,
+				1444AD731E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +559,7 @@
 			files = (
 				14AF06DF1E7BE6C00029DD34 /* MusicLrcView.m in Sources */,
 				14AF06CD1E7BE6C00029DD34 /* CLLrcTool.m in Sources */,
+				1444AD721E7FD6DD00F1AC76 /* SleepClockView.swift in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
 				14AF06D31E7BE6C00029DD34 /* CLLrcLine.m in Sources */,
 				14AF06D91E7BE6C00029DD34 /* MusicLrcCell.m in Sources */,
@@ -612,6 +622,7 @@
 		140885861E76916D008B9466 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -626,6 +637,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.MusicLRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -634,6 +647,7 @@
 		140885871E76916D008B9466 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -648,6 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.MusicLRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -748,6 +763,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -757,6 +773,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/Classes/view/LrcTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -765,6 +784,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -774,12 +794,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/Classes/view/LrcTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		148BFF551E6FCE9500E674D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTestTests/Info.plist;
@@ -793,6 +816,7 @@
 		148BFF561E6FCE9500E674D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTestTests/Info.plist;
