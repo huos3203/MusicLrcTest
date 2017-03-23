@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>LrcTest copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>LrcTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1408857C1E76916A008B9466</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>148879561E839E70002A3C04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
