@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
 #import "MusicLrcView.h"
-@interface LrcViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,MusicLrcDelegate>
+@interface LrcViewController : UIViewController<MusicLrcDelegate>
 {
     AVPlayer * _player;
+    AVAudioPlayer *_audioPlayer;
 }
 @end
 

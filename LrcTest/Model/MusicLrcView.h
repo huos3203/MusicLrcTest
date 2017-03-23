@@ -22,9 +22,9 @@
 @protocol MusicLrcDelegate <NSObject>
 
 //重设高亮歌词颜色
--(UIColor *)setHighlightLrcColor;
+-(UIColor *)musicLrcHighlightColor;
 
--(UIColor *)setLrcColor;
+-(UIColor *)musicLrcColor;
 
 @end
 
@@ -32,6 +32,7 @@
 @interface MusicLrcView : UITableView<UITableViewDataSource,UITableViewDelegate>
 {
     AVPlayer * _player;
+    AVAudioPlayer * _audioPlayer;
     NSString * _lrcLocalPath;
     NSTimer * _timerPlay;
 //    UITableView* _tableView;
@@ -43,6 +44,11 @@
 
 +(MusicLrcView *)shared;
 
--(void)switchLrcOfMusic:(NSString *)lrcPath player:(AVPlayer *)player lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
+-(void)switchLrcOfMusic:(NSString *)lrcPath
+            audioPlayer:(AVAudioPlayer *)player
+            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
 
+-(void)switchLrcOfMusic:(NSString *)lrcPath
+                 player:(AVPlayer *)player
+            lrcDelegate:(id<MusicLrcDelegate>)lrcDelegate;
 @end

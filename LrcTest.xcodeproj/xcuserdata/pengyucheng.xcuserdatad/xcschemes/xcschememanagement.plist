@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MusicLRC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1408857C1E76916A008B9466</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>148BFF2E1E6FCE9300E674D3</key>
 		<dict>
 			<key>primary</key>
