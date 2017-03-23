@@ -13,6 +13,7 @@
 #import "CLLrcLine.h"
 #import "MusicLrcCell.h"
 #import "MusicLrcLabel.h"
+#import "EffectView.h"
 
 static MusicLrcView *instance;
 @implementation MusicLrcView
@@ -52,6 +53,7 @@ static MusicLrcView *instance;
                                 forMode:NSRunLoopCommonModes];
         }
         //歌词列表使用tableView来显示
+        self.backgroundColor = [UIColor clearColor];
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self setDelegate:self];
         [self setDataSource:self];
@@ -100,6 +102,8 @@ static MusicLrcView *instance;
 {
     [self setNeedsUpdateConstraints];
     [self reloadData];
+    EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
+//    [self.backgroundView addSubview:effView];
     if(lrcPath != nil && player != nil && lrcDelegate != nil)
     {
         _audioPlayer = player;
@@ -203,7 +207,6 @@ static MusicLrcView *instance;
     if (_audioPlayer)
     {
         self.currentTime = _audioPlayer.currentTime;
-        NSLog(@"fCurrentAVAudioPlayTime = %f",self.currentTime);
     }
 }
 
@@ -234,7 +237,7 @@ static MusicLrcView *instance;
         {
             // 2.8设置主页上的歌词
             self.lrcLabel.text = currentLrcLine.text;
-            
+            self.lrcLabel.alpha = 1.0;
             
             // 将当前播放的歌词移动到中间
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];

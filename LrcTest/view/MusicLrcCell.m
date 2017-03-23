@@ -22,6 +22,11 @@
 }
 
 
+-(void)setLrcColor:(UIColor *)lrcColor
+{
+    _lrcLabel.textColor = lrcColor;
+}
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
               reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -34,8 +39,8 @@
         MusicLrcLabel *lrcLabel = [[MusicLrcLabel alloc]init];
         [self.contentView addSubview:lrcLabel];
         _lrcLabel = lrcLabel;
-        lrcLabel.textColor = _lrcColor;
-        lrcLabel.font = [UIFont systemFontOfSize:14];
+        lrcLabel.alpha = 0.7;
+        lrcLabel.font = [UIFont systemFontOfSize:16];
         lrcLabel.textAlignment = NSTextAlignmentCenter;
         //约束
         lrcLabel.translatesAutoresizingMaskIntoConstraints = NO;

@@ -27,6 +27,8 @@
 
 -(UIColor *)musicLrcColor;
 
+-(UIImage *)visualEffectImage;
+
 -(BOOL)refreshAllLrcColor;
 
 -(void)refreshFinish;
