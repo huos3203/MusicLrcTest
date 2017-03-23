@@ -120,7 +120,8 @@ static MusicLrcView *instance;
     // 解析歌词 使用自己创建歌词解析工具
 //    self.lrcList = [CLLrcTool lrcToolWithLrcName:lrcName];
 //    self.lrcList = [CLLrcTool lrcToolWithLrcPath:lrcName];
-    self.lrcList = [[MusicLrcParser shared] parseLrcLocalPath:lrcName];
+//    self.lrcList = [[MusicLrcParser shared] parseLrcLocalPath:lrcName];
+    self.lrcList = [[CLLrcTool shared]ParserLrcWithPath:lrcName];
     if (self.lrcList == nil || [self.lrcList count] == 0)
     {
         [self removeLrcTimer];
@@ -166,10 +167,7 @@ static MusicLrcView *instance;
         EffectView *effView = [[EffectView alloc] initWithImage:[_lrcDelegate visualEffectImage]];
         [self.backgroundView addSubview:effView];
     }
-    
     return true;
-
-
 }
 
 

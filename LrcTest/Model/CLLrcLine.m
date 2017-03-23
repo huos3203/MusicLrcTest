@@ -29,6 +29,8 @@
     {
         self.text = text;
         self.time = [self timeWithString:time];
+//        NSArray *lrcArray = [time componentsSeparatedByString:@"]"];
+//        self.time = [self timeWithString:[lrcArray[0] substringFromIndex:1]];
     }
     return self;
 }
@@ -49,5 +51,8 @@
     return min * 60 + sec + hs * 0.01;
 }
 
-
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"%f---%@",self.time,self.text];
+}
 @end

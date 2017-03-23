@@ -100,11 +100,11 @@
     NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
     [self setupAVPlayerForURL:url];
     
-    //添加音频路径
-//    NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"荷塘月色" ofType:@"lrc"];
+    //添加音频路径 01爱与痛的边缘
+    NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"01爱与痛的边缘" ofType:@"lrc"];
     MusicLrcView *lrcView = [MusicLrcView shared];
 //    [lrcView switchLrcOfMusic:lrcPath audioPlayer:_audioPlayer lrcDelegate:self];
-    [lrcView loadLrcBy:@"荷塘月" audioPlayer:_audioPlayer lrcDedegate:self];
+    [lrcView loadLrcBy:lrcPath audioPlayer:_audioPlayer lrcDedegate:self];
     
     [_lrcView addSubview:lrcView];
 
