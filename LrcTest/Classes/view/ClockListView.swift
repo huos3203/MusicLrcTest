@@ -1,65 +1,41 @@
 //
-//  ClockTableViewController.swift
+//  ClockListView.swift
 //  LrcTest
 //
-//  Created by pengyucheng on 21/03/2017.
-//  Copyright © 2017 PBBReader. All rights reserved.
+//  Created by Xcode Server on 2017/3/24.
+//  Copyright © 2017年 PBBReader. All rights reserved.
 //
 
 import UIKit
-//委托延迟设置，取消延迟
-@objc(DelayClockDelegate)
-public protocol DelayClockDelegate
-{
-    //设置delay
-    func setDelayToPerformCloseOperation()
-    //开始倒计时
-    func startCountingDownUntilExecution()
-    //取消
-    func cancelPerformCloseOperation()
-    
-    //刷新View倒计时
-    func CountingDownRefreshSencond(time:String)
-    
-    func currentMusicTime() -> Int
-}
-//@objc(ClockTableViewController)
-public class ClockTableViewController: UITableViewController {
+
+public class ClockListView: UITableView,UITableViewDelegate{
 
     public var delayClockDelegate:DelayClockDelegate!
     private var delayTime:Int = 0
-    @IBOutlet var clockListView: ClockListView!
     
     var min = 0
     var seconds = 0
     
     var timer:Timer!
     
-    public class var shareInstance:ClockTableViewController
+    public class var shareInstance:ClockListView
     {
         struct Singleton{
             
-        public static let instance = { () -> ClockTableViewController in
-            let bundle = Bundle.init(for: ClockTableViewController.self)
+            public static let instance = { () -> UITableView in
+                let bundle = Bundle.init(for: ClockListView.self)
                 let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
-                return board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
+                let VC = board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
+                return VC.clockListView
             }()
             
         }
-        return Singleton.instance
+        return Singleton.instance as! ClockListView
     }
-
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override public func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
-    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
         switch indexPath.row
         {
@@ -121,9 +97,9 @@ public class ClockTableViewController: UITableViewController {
         }
         cancelByClock()
         NSObject.cancelPreviousPerformRequests(withTarget: self)
-//        NSObject.cancelPreviousPerformRequests(withTarget: self,
-//                                               selector: #selector(SleepClockView.createClock),
-//                                               object: nil)
+        //        NSObject.cancelPreviousPerformRequests(withTarget: self,
+        //                                               selector: #selector(SleepClockView.createClock),
+        //                                               object: nil)
     }
     
     //代理协议：宿主程序中代理关闭播放器事件
@@ -149,13 +125,13 @@ public class ClockTableViewController: UITableViewController {
         {
             time = "\(seconds)"
         }
-//        print("=============\(time)")
+        //        print("=============\(time)")
         
-//        if self.delayClockDelegate.responds {
-//            <#code#>
-//        }
-//        self.responds(to: <#T##Selector!#>)
- 
+        //        if self.delayClockDelegate.responds {
+        //            <#code#>
+        //        }
+        //        self.responds(to: <#T##Selector!#>)
+        
         self.delayClockDelegate.CountingDownRefreshSencond(time: time)
     }
 }

@@ -69,7 +69,7 @@
 -(void)pushAnimate:(NSString *)nnn
 {
     ClockViewController *clock = [ClockViewController new];
-    clock.modalPresentationStyle = UIModalPresentationPopover;
+    //clock.modalPresentationStyle = UIModalPresentationPopover;
     if (clock.modalPresentationStyle == UIModalPresentationPopover) {
         //
         UIPopoverPresentationController *popover = clock.popoverPresentationController;
@@ -173,7 +173,18 @@
 
 
 #pragma mark --model
--presentation
+-(UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style
+{
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[controller presentedViewController]];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
+    nav.topViewController.navigationItem.rightBarButtonItem = item;
+    return [controller presentedViewController];
+}
+
+-(void)dismiss
+{
+    [super dismissViewControllerAnimated:true completion:nil];
+}
 
 
 

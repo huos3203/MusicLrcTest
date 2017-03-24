@@ -31,7 +31,7 @@
         <scene sceneID="yyf-19-o7h">
             <objects>
                 <tableViewController storyboardIdentifier="ClockTableViewController" id="5HO-ix-y2D" customClass="ClockTableViewController" customModule="LrcSDK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qk9-MF-SnI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qk9-MF-SnI" customClass="ClockListView" customModule="LrcTest">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,10 +294,13 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="5HO-ix-y2D" id="Dcc-4C-Moq"/>
-                            <outlet property="delegate" destination="5HO-ix-y2D" id="0lj-We-2NO"/>
+                            <outlet property="dataSource" destination="5HO-ix-y2D" id="jf1-zq-kqg"/>
+                            <outlet property="delegate" destination="5HO-ix-y2D" id="prO-fZ-gbh"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="clockListView" destination="Qk9-MF-SnI" id="CpV-BJ-DAa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eQ-Vi-HU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

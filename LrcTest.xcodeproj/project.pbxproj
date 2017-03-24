@@ -93,6 +93,8 @@
 		14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
 		14AF06DE1E7BE6C00029DD34 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AF06E01E7BE6C00029DD34 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
+		D221DBA21E852BB600444AE3 /* ClockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DB9F1E85282700444AE3 /* ClockListView.swift */; };
+		D221DBA31E852BB800444AE3 /* ClockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DB9F1E85282700444AE3 /* ClockListView.swift */; };
 		D2C9A7AE1E84CFE600ED0C80 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
 		D2C9A7AF1E84CFE600ED0C80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		D2C9A7B01E84CFE600ED0C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
@@ -237,6 +239,7 @@
 		14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcView.h; sourceTree = "<group>"; };
 		14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcView.m; sourceTree = "<group>"; };
 		14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		D221DB9F1E85282700444AE3 /* ClockListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockListView.swift; sourceTree = "<group>"; };
 		D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9A7C11E84CFE900ED0C80 /* LrcTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LrcTest copy-Info.plist"; path = "/Users/xcodeserver/MusicLrcTest/LrcTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
@@ -431,6 +434,7 @@
 				1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */,
 				1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */,
 				1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */,
+				D221DB9F1E85282700444AE3 /* ClockListView.swift */,
 				1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */,
 			);
 			path = view;
@@ -765,6 +769,7 @@
 				1483B7DB1E822A9E009D8C42 /* HttpClientManager.swift in Sources */,
 				14AF06D41E7BE6C00029DD34 /* CLLrcLine.m in Sources */,
 				1483B7BA1E80FFCE009D8C42 /* TransitioningDelegate.swift in Sources */,
+				D221DBA31E852BB800444AE3 /* ClockListView.swift in Sources */,
 				1483B7BD1E81024E009D8C42 /* ClockTableViewController.swift in Sources */,
 				14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */,
 				1483B7DE1E822AE5009D8C42 /* VerifyAppVersionModel.swift in Sources */,
@@ -796,6 +801,7 @@
 				D2C9A7C21E84D02A00ED0C80 /* ConvertToDictionary.swift in Sources */,
 				D2C9A7C31E84D02A00ED0C80 /* HttpClientManager.swift in Sources */,
 				D2C9A7D11E84D0F600ED0C80 /* CLLrcLine.m in Sources */,
+				D221DBA21E852BB600444AE3 /* ClockListView.swift in Sources */,
 				D2C9A7C41E84D02A00ED0C80 /* VerifyAppVersionModel.swift in Sources */,
 				D2C9A7D31E84D10000ED0C80 /* MusicLrcParser.m in Sources */,
 				D2C9A7D21E84D0FC00ED0C80 /* CLLrcTool.m in Sources */,
