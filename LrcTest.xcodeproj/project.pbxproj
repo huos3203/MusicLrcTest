@@ -118,8 +118,8 @@
 		D2C9A7D11E84D0F600ED0C80 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C11E7BE6C00029DD34 /* CLLrcLine.m */; };
 		D2C9A7D21E84D0FC00ED0C80 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */; };
 		D2C9A7D31E84D10000ED0C80 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BE1E7BE6C00029DD34 /* MusicLrcParser.m */; };
-		D2C9A7D41E84DA6B00ED0C80 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
 		D2C9A7D61E84EA2E00ED0C80 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */; };
+		D2E45CD51E84F50300674BA9 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -805,9 +805,9 @@
 				D2C9A7D61E84EA2E00ED0C80 /* ClockViewController.swift in Sources */,
 				D2C9A7CC1E84D02A00ED0C80 /* MusicLrcView.m in Sources */,
 				D2C9A7CD1E84D02A00ED0C80 /* SleepClockView.swift in Sources */,
+				D2E45CD51E84F50300674BA9 /* ClockTableViewCell.swift in Sources */,
 				D2C9A7CE1E84D02A00ED0C80 /* TransitioningDelegate.swift in Sources */,
 				D2C9A7CF1E84D02A00ED0C80 /* ClockTableViewController.swift in Sources */,
-				D2C9A7D41E84DA6B00ED0C80 /* ClockTableViewCell.swift in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
