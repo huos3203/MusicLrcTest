@@ -108,7 +108,7 @@ class ClockPresentationViewController: UIPresentationController,UIAdaptivePresen
     //设置整个转场动画是否将覆盖全屏幕
     override var shouldPresentInFullscreen: Bool
     {
-        return true
+        return false
     }
     
     /*
@@ -119,10 +119,24 @@ class ClockPresentationViewController: UIPresentationController,UIAdaptivePresen
     
     override var adaptivePresentationStyle: UIModalPresentationStyle
     {
-        return UIModalPresentationStyle.fullScreen
+        return UIModalPresentationStyle.custom
     }
 }
 
+public class nav:NSObject,UINavigationControllerDelegate
+{
+    public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        //
+        return nil
+        
+    }
+    
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+        return nil
+    }
+    
+}
 @objc(ClockTransitioningDelegate)
 public class ClockTransitioningDelegate: NSObject,UIViewControllerTransitioningDelegate
 {
@@ -135,14 +149,14 @@ public class ClockTransitioningDelegate: NSObject,UIViewControllerTransitioningD
     }
     //returns an animator object that will be used when a view controller is being presented
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        //自定义的动画控制器
+        //开始登场
         let animationController = ClockAnimatedTransitioning()
         animationController.isPresentation = true
         return animationController
         
     }
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        //
+        //退场开始
         let animationController = ClockAnimatedTransitioning()
         animationController.isPresentation = false
         return animationController
@@ -181,10 +195,10 @@ class ClockAnimatedTransitioning: NSObject,UIViewControllerAnimatedTransitioning
         let animatingView = animatingVC?.view
         
         let finalFrameForVC = transitionContext.finalFrame(for: animatingVC!)
-        var initialFrameForVC = finalFrameForVC
         //This will animate the view from right to left during a presentation and vice versa during dismissal.
 //        initialFrameForVC.origin.x += initialFrameForVC.size.width
         //定义由下向上
+        var initialFrameForVC = finalFrameForVC
         initialFrameForVC.origin.y += initialFrameForVC.size.height
         
         let initialFrame = isPresentation ? initialFrameForVC : finalFrameForVC
@@ -200,9 +214,10 @@ class ClockAnimatedTransitioning: NSObject,UIViewControllerAnimatedTransitioning
             
         }, completion:{ (value: Bool) in
             
+            //在退场结束时，从操场移除toView（退场时为fromView）
             if !self.isPresentation {
                 //If the transition is a dismissal, we remove the view.
-                fromView?.removeFromSuperview()
+//                fromView?.removeFromSuperview()
             }
             //we complete the transition by calling transitionContext.completeTransition()
             transitionContext.completeTransition(true)

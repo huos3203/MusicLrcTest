@@ -88,7 +88,7 @@ public class ClockTableViewController: UITableViewController {
     }
     
     
-    //创建定时器
+    //倒计时结束时，关闭播放器
     func closeClock()
     {
         
@@ -111,7 +111,7 @@ public class ClockTableViewController: UITableViewController {
     }
     
     //取消定延迟调用
-    func cancelClock()
+    public func cancelClock()
     {
         if timer != nil {
             timer.invalidate()
@@ -146,7 +146,7 @@ public class ClockTableViewController: UITableViewController {
         {
             time = "\(seconds)"
         }
-        print("=============\(time)")
+//        print("=============\(time)")
         
 //        if self.delayClockDelegate.responds {
 //            <#code#>
