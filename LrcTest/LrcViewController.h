@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
 #import <MusicLRC/MusicLrcView.h>
-#import <MusicLRC/MusicLRC-Swift.h>
+#import "LrcTest-Swift.h"
 @interface LrcViewController : UIViewController<MusicLrcDelegate,DelayClockDelegate>
 {
     AVPlayer * _player;
