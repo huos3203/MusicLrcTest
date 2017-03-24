@@ -1,16 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "83BCF516FBD01EB2D1295C284C39B649B18D0302",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DCFC9895E98A2481922C99A377AF0383D821167D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "83BCF516FBD01EB2D1295C284C39B649B18D0302" : 9223372036854775807,
-    "207911C7B19393175B8BE742B2179C349990F5CD" : 9223372036854775807
+    "207911C7B19393175B8BE742B2179C349990F5CD" : 9223372036854775807,
+    "DCFC9895E98A2481922C99A377AF0383D821167D" : 9223372036854775807,
+    "83BCF516FBD01EB2D1295C284C39B649B18D0302" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "715C6B59-A428-46EA-B242-AE14B825E536",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "83BCF516FBD01EB2D1295C284C39B649B18D0302" : "LrcTest\/",
-    "207911C7B19393175B8BE742B2179C349990F5CD" : "..\/.cocoapods\/repos\/MusicLrc"
+    "207911C7B19393175B8BE742B2179C349990F5CD" : "..\/.cocoapods\/repos\/MusicLrc",
+    "DCFC9895E98A2481922C99A377AF0383D821167D" : "MusicLrcTest\/",
+    "83BCF516FBD01EB2D1295C284C39B649B18D0302" : "LrcTest\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LrcTest",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/huos3203\/MusicLrcTest.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "83BCF516FBD01EB2D1295C284C39B649B18D0302"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/huos3203\/MusicLrcTest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCFC9895E98A2481922C99A377AF0383D821167D"
     }
   ]
 }

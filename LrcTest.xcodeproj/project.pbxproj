@@ -46,7 +46,6 @@
 		1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7E31E82390F009D8C42 /* swiftTest.swift */; };
 		1483B7E71E8239C3009D8C42 /* VerifyAppVersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7DC1E822AE5009D8C42 /* VerifyAppVersionModel.swift */; };
 		1483B7E81E8239DE009D8C42 /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7D61E822A9E009D8C42 /* ConvertToDictionary.swift */; };
-		1483B7EB1E824BB6009D8C42 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C11E7BE6C00029DD34 /* CLLrcLine.m */; };
 		1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */; };
 		1483B7F21E826792009D8C42 /* HttpClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7D71E822A9E009D8C42 /* HttpClientManager.swift */; };
 		148878EE1E827A7F002A3C04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3B1E6FCE9400E674D3 /* Main.storyboard */; };
@@ -69,8 +68,6 @@
 		1488796A1E839E70002A3C04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */; };
 		1488796B1E839E70002A3C04 /* qbd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5C1E6FE54100E674D3 /* qbd.mp3 */; };
 		1488796E1E839E70002A3C04 /* MusicLRC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 148878FA1E8288B5002A3C04 /* MusicLRC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		148879741E839EE0002A3C04 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; };
-		148879751E839EE0002A3C04 /* MusicLRC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		148BFF341E6FCE9300E674D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
 		148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
@@ -96,6 +93,33 @@
 		14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
 		14AF06DE1E7BE6C00029DD34 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AF06E01E7BE6C00029DD34 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
+		D2C9A7AE1E84CFE600ED0C80 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
+		D2C9A7AF1E84CFE600ED0C80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
+		D2C9A7B01E84CFE600ED0C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
+		D2C9A7B21E84CFE600ED0C80 /* MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; };
+		D2C9A7B41E84CFE600ED0C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3B1E6FCE9400E674D3 /* Main.storyboard */; };
+		D2C9A7B51E84CFE600ED0C80 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
+		D2C9A7B61E84CFE600ED0C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */; };
+		D2C9A7B71E84CFE600ED0C80 /* qbd.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5B1E6FE54100E674D3 /* qbd.lrc */; };
+		D2C9A7B81E84CFE600ED0C80 /* 01爱与痛的边缘.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 14AF068C1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc */; };
+		D2C9A7B91E84CFE600ED0C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */; };
+		D2C9A7BA1E84CFE600ED0C80 /* qbd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5C1E6FE54100E674D3 /* qbd.mp3 */; };
+		D2C9A7BC1E84CFE600ED0C80 /* MusicLRC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1408857D1E76916A008B9466 /* MusicLRC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D2C9A7C21E84D02A00ED0C80 /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7D61E822A9E009D8C42 /* ConvertToDictionary.swift */; };
+		D2C9A7C31E84D02A00ED0C80 /* HttpClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7D71E822A9E009D8C42 /* HttpClientManager.swift */; };
+		D2C9A7C41E84D02A00ED0C80 /* VerifyAppVersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7DC1E822AE5009D8C42 /* VerifyAppVersionModel.swift */; };
+		D2C9A7C61E84D02A00ED0C80 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C41E7BE6C00029DD34 /* EffectView.m */; };
+		D2C9A7C81E84D02A00ED0C80 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C61E7BE6C00029DD34 /* MusicLrcCell.m */; };
+		D2C9A7CA1E84D02A00ED0C80 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
+		D2C9A7CC1E84D02A00ED0C80 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
+		D2C9A7CD1E84D02A00ED0C80 /* SleepClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */; };
+		D2C9A7CE1E84D02A00ED0C80 /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */; };
+		D2C9A7CF1E84D02A00ED0C80 /* ClockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */; };
+		D2C9A7D11E84D0F600ED0C80 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C11E7BE6C00029DD34 /* CLLrcLine.m */; };
+		D2C9A7D21E84D0FC00ED0C80 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */; };
+		D2C9A7D31E84D10000ED0C80 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BE1E7BE6C00029DD34 /* MusicLrcParser.m */; };
+		D2C9A7D41E84DA6B00ED0C80 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
+		D2C9A7D61E84EA2E00ED0C80 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,14 +130,14 @@
 			remoteGlobalIDString = 148BFF2E1E6FCE9300E674D3;
 			remoteInfo = LrcTest;
 		};
-		148879761E839EE0002A3C04 /* PBXContainerItemProxy */ = {
+		14EF59F91E78DE65005ED979 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 148BFF271E6FCE9200E674D3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1408857C1E76916A008B9466;
 			remoteInfo = MusicLRC;
 		};
-		14EF59F91E78DE65005ED979 /* PBXContainerItemProxy */ = {
+		D2C9A7AC1E84CFE600ED0C80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 148BFF271E6FCE9200E674D3 /* Project object */;
 			proxyType = 1;
@@ -140,7 +164,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				148879751E839EE0002A3C04 /* MusicLRC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9A7BB1E84CFE600ED0C80 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D2C9A7BC1E84CFE600ED0C80 /* MusicLRC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +237,9 @@
 		14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcView.h; sourceTree = "<group>"; };
 		14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcView.m; sourceTree = "<group>"; };
 		14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C9A7C11E84CFE900ED0C80 /* LrcTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LrcTest copy-Info.plist"; path = "/Users/xcodeserver/MusicLrcTest/LrcTest copy-Info.plist"; sourceTree = "<absolute>"; };
+		D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +262,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148879741E839EE0002A3C04 /* MusicLRC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +269,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9A7B11E84CFE600ED0C80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C9A7B21E84CFE600ED0C80 /* MusicLRC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +311,7 @@
 				1408857E1E76916D008B9466 /* MusicLRC */,
 				148BFF301E6FCE9300E674D3 /* Products */,
 				148879731E839E71002A3C04 /* LrcTest copy-Info.plist */,
+				D2C9A7C11E84CFE900ED0C80 /* LrcTest copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +322,7 @@
 				148BFF481E6FCE9500E674D3 /* LrcTestTests.xctest */,
 				1408857D1E76916A008B9466 /* MusicLRC.framework */,
 				148879721E839E70002A3C04 /* MusicLocal.app */,
+				D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +335,7 @@
 				148BFF361E6FCE9300E674D3 /* AppDelegate.m */,
 				148BFF381E6FCE9300E674D3 /* LrcViewController.h */,
 				148BFF391E6FCE9300E674D3 /* LrcViewController.m */,
+				D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */,
 				148BFF3B1E6FCE9400E674D3 /* Main.storyboard */,
 				148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */,
 				148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */,
@@ -467,7 +514,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				148879771E839EE0002A3C04 /* PBXTargetDependency */,
 			);
 			name = LrcTest;
 			productName = LrcTest;
@@ -491,6 +537,25 @@
 			productName = LrcTestTests;
 			productReference = 148BFF481E6FCE9500E674D3 /* LrcTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2C9A7AA1E84CFE600ED0C80 /* LrcSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C9A7BD1E84CFE600ED0C80 /* Build configuration list for PBXNativeTarget "LrcSDK" */;
+			buildPhases = (
+				D2C9A7AD1E84CFE600ED0C80 /* Sources */,
+				D2C9A7B11E84CFE600ED0C80 /* Frameworks */,
+				D2C9A7B31E84CFE600ED0C80 /* Resources */,
+				D2C9A7BB1E84CFE600ED0C80 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2C9A7AB1E84CFE600ED0C80 /* PBXTargetDependency */,
+			);
+			name = LrcSDK;
+			productName = LrcTest;
+			productReference = D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -538,6 +603,9 @@
 						DevelopmentTeam = FA78T6VRG8;
 						ProvisioningStyle = Automatic;
 					};
+					D2C9A7AA1E84CFE600ED0C80 = {
+						DevelopmentTeam = FA78T6VRG8;
+					};
 				};
 			};
 			buildConfigurationList = 148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "LrcTest" */;
@@ -559,6 +627,7 @@
 				14EF59F31E78DDD9005ED979 /* CommonDylib */,
 				14AF06661E7A4B920029DD34 /* PushPodSpec */,
 				148879561E839E70002A3C04 /* MusicLocal */,
+				D2C9A7AA1E84CFE600ED0C80 /* LrcSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -607,6 +676,20 @@
 			files = (
 				14AF068F1E7BDA720029DD34 /* 01爱与痛的边缘.lrc in Resources */,
 				14AF06901E7BDA770029DD34 /* qbd.lrc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9A7B31E84CFE600ED0C80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C9A7B41E84CFE600ED0C80 /* Main.storyboard in Resources */,
+				D2C9A7B51E84CFE600ED0C80 /* 荷塘月色.lrc in Resources */,
+				D2C9A7B61E84CFE600ED0C80 /* LaunchScreen.storyboard in Resources */,
+				D2C9A7B71E84CFE600ED0C80 /* qbd.lrc in Resources */,
+				D2C9A7B81E84CFE600ED0C80 /* 01爱与痛的边缘.lrc in Resources */,
+				D2C9A7B91E84CFE600ED0C80 /* Assets.xcassets in Resources */,
+				D2C9A7BA1E84CFE600ED0C80 /* qbd.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +793,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C9A7C21E84D02A00ED0C80 /* ConvertToDictionary.swift in Sources */,
+				D2C9A7C31E84D02A00ED0C80 /* HttpClientManager.swift in Sources */,
+				D2C9A7D11E84D0F600ED0C80 /* CLLrcLine.m in Sources */,
+				D2C9A7C41E84D02A00ED0C80 /* VerifyAppVersionModel.swift in Sources */,
+				D2C9A7D31E84D10000ED0C80 /* MusicLrcParser.m in Sources */,
+				D2C9A7D21E84D0FC00ED0C80 /* CLLrcTool.m in Sources */,
+				D2C9A7C61E84D02A00ED0C80 /* EffectView.m in Sources */,
+				D2C9A7C81E84D02A00ED0C80 /* MusicLrcCell.m in Sources */,
+				D2C9A7CA1E84D02A00ED0C80 /* MusicLrcLabel.m in Sources */,
+				D2C9A7D61E84EA2E00ED0C80 /* ClockViewController.swift in Sources */,
+				D2C9A7CC1E84D02A00ED0C80 /* MusicLrcView.m in Sources */,
+				D2C9A7CD1E84D02A00ED0C80 /* SleepClockView.swift in Sources */,
+				D2C9A7CE1E84D02A00ED0C80 /* TransitioningDelegate.swift in Sources */,
+				D2C9A7CF1E84D02A00ED0C80 /* ClockTableViewController.swift in Sources */,
+				D2C9A7D41E84DA6B00ED0C80 /* ClockTableViewCell.swift in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
@@ -722,11 +820,20 @@
 			files = (
 				148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */,
 				1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */,
-				1483B7EB1E824BB6009D8C42 /* CLLrcLine.m in Sources */,
 				1483B7E81E8239DE009D8C42 /* ConvertToDictionary.swift in Sources */,
 				1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */,
 				1483B7E71E8239C3009D8C42 /* VerifyAppVersionModel.swift in Sources */,
 				1483B7F21E826792009D8C42 /* HttpClientManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9A7AD1E84CFE600ED0C80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C9A7AE1E84CFE600ED0C80 /* LrcViewController.m in Sources */,
+				D2C9A7AF1E84CFE600ED0C80 /* AppDelegate.m in Sources */,
+				D2C9A7B01E84CFE600ED0C80 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,15 +845,15 @@
 			target = 148BFF2E1E6FCE9300E674D3 /* LrcTest */;
 			targetProxy = 1483B7E91E824B50009D8C42 /* PBXContainerItemProxy */;
 		};
-		148879771E839EE0002A3C04 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1408857C1E76916A008B9466 /* MusicLRC */;
-			targetProxy = 148879761E839EE0002A3C04 /* PBXContainerItemProxy */;
-		};
 		14EF59FA1E78DE65005ED979 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1408857C1E76916A008B9466 /* MusicLRC */;
 			targetProxy = 14EF59F91E78DE65005ED979 /* PBXContainerItemProxy */;
+		};
+		D2C9A7AB1E84CFE600ED0C80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1408857C1E76916A008B9466 /* MusicLRC */;
+			targetProxy = D2C9A7AC1E84CFE600ED0C80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -998,6 +1105,7 @@
 		148BFF551E6FCE9500E674D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTestTests/Info.plist;
@@ -1014,6 +1122,7 @@
 		148BFF561E6FCE9500E674D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTestTests/Info.plist;
@@ -1055,6 +1164,49 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D2C9A7BE1E84CFE600ED0C80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Products",
+				);
+				INFOPLIST_FILE = "LrcTest copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/LrcTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D2C9A7BF1E84CFE600ED0C80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Products",
+				);
+				INFOPLIST_FILE = "LrcTest copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/LrcTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1120,6 +1272,15 @@
 			buildConfigurations = (
 				14EF59F41E78DDDA005ED979 /* Debug */,
 				14EF59F51E78DDDA005ED979 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C9A7BD1E84CFE600ED0C80 /* Build configuration list for PBXNativeTarget "LrcSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C9A7BE1E84CFE600ED0C80 /* Debug */,
+				D2C9A7BF1E84CFE600ED0C80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
