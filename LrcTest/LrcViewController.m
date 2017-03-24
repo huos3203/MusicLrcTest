@@ -52,12 +52,30 @@
     [btnPause setFrame:CGRectMake(200, 420, 60, 35)];
     [btnPause addTarget:self action:@selector(pauseAudio:) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *pushBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [pushBtn setTitle:@"model animater" forState:UIControlStateNormal];
+    [pushBtn setFrame:CGRectMake(200, 500, 60, 35)];
+    [pushBtn addTarget:self action:@selector(pushAnimate:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pushBtn];
+    
     _lrcView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 340, 400)];
     [self.view addSubview:_lrcView];
     
     [self.view addSubview:btnPause];//100, 420, 60, 25
    
    
+}
+
+-(void)pushAnimate:(NSString *)nnn
+{
+    ClockViewController *clock = [ClockViewController new];
+    clock.modalPresentationStyle = UIModalPresentationPopover;
+    if (clock.modalPresentationStyle == UIModalPresentationPopover) {
+        //
+        UIPopoverPresentationController *popover = clock.popoverPresentationController;
+        popover.delegate = self;
+    }
+    [self presentViewController:clock animated:YES completion:nil];
 }
 
 //播放音频文件
@@ -152,6 +170,10 @@
     tableView.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:tableView animated:NO completion:nil];
 }
+
+
+#pragma mark --model
+-presentation
 
 
 

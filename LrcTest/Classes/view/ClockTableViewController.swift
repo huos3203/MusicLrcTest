@@ -80,11 +80,7 @@ public class ClockTableViewController: UITableViewController {
         }
         
         //开始倒计时
-        if delayTime > 0
-        {
-            cancelClock()
-            startClock()
-        }
+        startClock()
     }
     
     
@@ -100,9 +96,15 @@ public class ClockTableViewController: UITableViewController {
         self.delayClockDelegate?.setDelayToPerformCloseOperation()
     }
     
-    //定时事件：开启定时器，到时间关闭播放器
-    func startClock()
+    //定时事件：开启定时器
+    public func startClock(delayTime:NSInteger = 0)
     {
+        self.delayTime = delayTime
+        if delayTime <= 0 {
+            return;
+        }
+        cancelClock()
+        
         self.perform(#selector(ClockTableViewController.closeClock), with:nil, afterDelay: TimeInterval(self.delayTime))
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ClockTableViewController.refresh), userInfo: nil, repeats: true)

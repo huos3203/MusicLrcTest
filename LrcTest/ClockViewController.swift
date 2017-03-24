@@ -8,15 +8,31 @@
 
 import UIKit
 
-class ClockViewController: UIViewController {
+class ClockViewController: UIViewController,UIPopoverPresentationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.view.backgroundColor = UIColor.white
         //persentation按钮
+        let ff = UIButton.init(frame: CGRect.init(origin: CGPoint.init(x: 100, y: 200), size: CGSize.init(width: 50, height: 25)))
         
+        ff.setTitle("hello 动画 ", for: .normal)
+        ff.setTitleColor(UIColor.red, for: .normal)
+        ff.addTarget(self, action: #selector(ClockViewController.pushAnimar), for: .touchDown)
+        self.view.addSubview(ff)
+        
+    }
+    
+    func pushAnimar() {
+        //
+         let animater = ClockTableViewController.shareInstance
+        let delegate = ClockTransitioningDelegate()
+        self.transitioningDelegate = delegate
+        animater.transitioningDelegate = delegate
+        animater.modalPresentationStyle = .custom
+        self.present(animater, animated: true, completion: nil)
         
     }
 
@@ -25,15 +41,19 @@ class ClockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .fullScreen
     }
-    */
+    
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        let nav = UINavigationController.init(rootViewController: controller.presentedViewController)
+        let barDone = UIBarButtonItem.init(title: "Donw", style: .done, target: self, action: #selector(ClockViewController.dismiss as (ClockViewController) -> () -> ()))
+        nav.topViewController?.navigationItem.rightBarButtonItem = barDone
+        return nav
+    }
 
+    func dismiss() {
+        //
+        dismiss(animated: true, completion: nil)
+    }
 }
