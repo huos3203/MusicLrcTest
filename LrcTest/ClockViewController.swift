@@ -9,7 +9,7 @@
 import UIKit
 
 class ClockViewController: UIViewController {
-
+    var table:ClockTableViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,14 +30,15 @@ class ClockViewController: UIViewController {
         exit.addTarget(self, action: #selector(ClockViewController.exit), for: .touchDown)
         self.view.addSubview(exit)
         
-        let tableview = ClockListView.shareInstance
-        self.view.addSubview(tableview)
+        //let tableview = ClockListView.shareInstance
+        //self.view.addSubview(tableview)
         
         
     }
     
     func exit() {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        view.addSubview(ClockListView.shareInstance)
     }
     func pushAnimar() {
         //
