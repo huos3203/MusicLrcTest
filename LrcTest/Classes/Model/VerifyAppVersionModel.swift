@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerifyAppVersionModel: NSObject {
+public class VerifyAppVersionModel: NSObject {
 
     var username = ""
     var token = ""
@@ -21,7 +21,7 @@ class VerifyAppVersionModel: NSObject {
         return bundle.object(forInfoDictionaryKey: "CFBundleVersion") as! NSString
     }()
     
-    var result = ""
+    var result = false
     var code = "" //状态码
     var msg = ""
     

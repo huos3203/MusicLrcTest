@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "CLLrcTool.h"
 #import "CLLrcLine.h"
-//#import "LrcTestTests-Swift.h"
+#import "LrcTestTests-Swift.h"
 
 @interface LrcTestTests : XCTestCase
 
@@ -93,6 +93,21 @@
 //        CLLrcLine *line = (CLLrcLine *)obj;
 //        NSLog(@"%@\n",line.description);
 //    }];
+}
+
+
+-(void)testVerVersion
+{
+    NSString *url = @"http://192.168.85.13:8660/DRM/client/product/verifyAppVersion";
+    HttpClientManager *manager = [HttpClientManager new];
+    VerifyAppVersionModel *model = [[VerifyAppVersionModel alloc] initWithUsername:@"222" token:@"dddd"];
+    [manager verifyAppVersionByWithURL:url
+                                 about:model
+                      completionHander:^(VerifyAppVersionModel * app) {
+                          //
+                          NSLog(@"-------%@",app.msg);
+                      }];
+
 }
 
 @end
