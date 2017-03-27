@@ -17,7 +17,11 @@
 	<key>CFBundleShortVersionString</key>
 	<string>3.0</string>
 	<key>CFBundleVersion</key>
+<<<<<<< HEAD
 	<string>421</string>
+=======
+	<string>422</string>
+>>>>>>> 23117f271056f489483f109ffcbf2105420ec1af
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>

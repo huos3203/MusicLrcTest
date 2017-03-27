@@ -21,7 +21,8 @@
     // Override point for customization after application launch.
     
 //    [self.window addSubview:lrcVC.view];
-    self.window.rootViewController = [[LrcViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[LrcViewController alloc] init]];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
     return YES;
