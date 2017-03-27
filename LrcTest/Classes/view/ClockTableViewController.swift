@@ -64,9 +64,24 @@ public class ClockTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    public override func viewDidAppear(_ animated: Bool)
+    {
+        self.tableView.reloadData()
+        //tag定位到cell
+        for cell in self.tableView.visibleCells
+        {
+            if UserDefaults.standard.bool(forKey: "\(cell.tag)")
+            {
+//                cell.setSelected(UserDefaults.standard.bool(forKey: "\(cell.tag)"), animated: false)
+                self.tableView.selectRow(at: self.tableView.indexPath(for: cell), animated: true, scrollPosition: .middle)
+            }
+            
+        }
+    }
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isDragMusic = false
+        
         //
         switch indexPath.row
         {
@@ -145,7 +160,11 @@ public class ClockTableViewController: UITableViewController {
     //代理协议：宿主程序中代理关闭播放器事件
     func cancelByClock()
     {
-        self.delayClockDelegate?.cancelPerformCloseOperation()
+        if(self.delayClockDelegate != nil)
+        {
+            self.delayClockDelegate?.cancelPerformCloseOperation()
+        }
+        
     }
     
     
@@ -171,7 +190,14 @@ public class ClockTableViewController: UITableViewController {
 //            <#code#>
 //        }
 //        self.responds(to: <#T##Selector!#>)
- 
-        self.delayClockDelegate.CountingDownRefreshSencond(time: time)
+//        if self.delayClockDelegate.responds(to:"CountingDownRefreshSencond")
+//        {
+//        
+//        }
+        if (self.delayClockDelegate != nil)
+        {
+            self.delayClockDelegate.CountingDownRefreshSencond(time: time)
+        }
+        
     }
 }

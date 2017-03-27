@@ -14,22 +14,26 @@ class ClockTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textLabels: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        if UserDefaults.standard.bool(forKey: "\(tag)")
-        {
-            imageViews.isHidden = false
-        }
+        
         // Configure the view for the selected state
         if tag < 8
         {
             print("------")
             return
+        }
+        
+        if UserDefaults.standard.bool(forKey: "\(tag)")
+        {
+            imageViews.isHidden = false
         }
         
         if selected
@@ -44,5 +48,7 @@ class ClockTableViewCell: UITableViewCell {
             UserDefaults.standard.set(false, forKey: "\(tag)")
             UserDefaults.standard.synchronize()
         }
+        
+       
     }
 }
