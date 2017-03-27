@@ -11,7 +11,7 @@ import UIKit
 public class ClockListView: UIView,UIGestureRecognizerDelegate
 {
 
-    public var delayClockDelegate:DelayClockDelegate!
+    public var delayClockVC:ClockTableViewController!
     
     public class var shareInstance:ClockListView
     {
@@ -29,15 +29,15 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
     init()
     {
         super.init(frame: CGRect.zero)
-        let clockTable = ClockTableViewController.shareInstance.tableView
-        ClockTableViewController.shareInstance.delayClockDelegate = delayClockDelegate
+        delayClockVC = ClockTableViewController.shareInstance
+        let clockTable = delayClockVC.tableView
         //遮罩
         let chrome = UIView()
         chrome.backgroundColor = UIColor.black
         chrome.alpha = 0.4
         addMyConstraints(self,constraintView: chrome)
         //底部，左右对齐，高度：352
-        chromeAddClockView(chrome: chrome,ClockView: clockTable!)
+        chromeAddClockView(chrome: self,ClockView: clockTable!)
         
         //点击遮罩消失事件列表
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(ClockListView.chromeTap(_:)))

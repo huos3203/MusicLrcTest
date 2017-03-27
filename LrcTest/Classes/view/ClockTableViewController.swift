@@ -71,13 +71,13 @@ public class ClockTableViewController: UITableViewController {
         case 0:
             print("标题：定时关闭，误操作")
         case 1:
-            print("不开启，重置设置")
+            //print("不开启，重置设置")
             delayTime = 0
             cancelClock()
         case 2:
             
             delayTime = self.delayClockDelegate.currentMusicTime()
-            print("当前音乐\(delayTime) 秒")
+            //print("当前音乐\(delayTime) 秒")
         default:
             let cell = tableView.cellForRow(at: indexPath)
             delayTime = {
@@ -98,7 +98,7 @@ public class ClockTableViewController: UITableViewController {
         {
             timer.invalidate()
         }
-        print("执行关闭音乐")
+        //print("执行关闭音乐")
         self.delayClockDelegate?.setDelayToPerformCloseOperation()
     }
     
