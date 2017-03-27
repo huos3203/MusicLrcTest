@@ -26,7 +26,7 @@ public protocol DelayClockDelegate
 //@objc(ClockTableViewController)
 public class ClockTableViewController: UITableViewController {
 
-    public var delayClockDelegate:DelayClockDelegate!
+    public weak var delayClockDelegate:DelayClockDelegate!
     private var delayTime:Int = 0
     private var isDragMusic = false
     
