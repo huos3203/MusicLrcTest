@@ -732,7 +732,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "pwd\nsh Products/buildNumber.sh";
+			shellScript = "pwd\n#sh Products/buildNumber.sh";
 		};
 		14AF066A1E7A4B9D0029DD34 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
