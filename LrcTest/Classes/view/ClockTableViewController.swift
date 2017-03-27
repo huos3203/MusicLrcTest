@@ -28,6 +28,7 @@ public class ClockTableViewController: UITableViewController {
 
     public var delayClockDelegate:DelayClockDelegate!
     private var delayTime:Int = 0
+    private var isDragMusic = false
     
     var min = 0
     var seconds = 0
@@ -65,6 +66,7 @@ public class ClockTableViewController: UITableViewController {
 
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        isDragMusic = false
         //
         switch indexPath.row
         {
@@ -77,6 +79,7 @@ public class ClockTableViewController: UITableViewController {
         case 2:
             
             delayTime = self.delayClockDelegate.currentMusicTime()
+            isDragMusic = true
             //print("当前音乐\(delayTime) 秒")
         default:
             let cell = tableView.cellForRow(at: indexPath)
@@ -102,8 +105,16 @@ public class ClockTableViewController: UITableViewController {
         self.delayClockDelegate?.setDelayToPerformCloseOperation()
     }
     
+    public func dragMusicClock(delayTime:NSInteger = 0)
+    {
+        if(isDragMusic)
+        {
+            startClock(delayTime:delayTime)
+        }
+    }
+    
     //定时事件：开启定时器
-    public func startClock(delayTime:NSInteger = 0)
+    func startClock(delayTime:NSInteger = 0)
     {
         self.delayTime = delayTime
         if delayTime <= 0 {
