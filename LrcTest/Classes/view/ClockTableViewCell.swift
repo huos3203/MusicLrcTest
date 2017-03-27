@@ -20,10 +20,9 @@ class ClockTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool)
+    {
         super.setSelected(selected, animated: animated)
-        
-        
         // Configure the view for the selected state
         if tag < 8
         {
@@ -31,22 +30,13 @@ class ClockTableViewCell: UITableViewCell {
             return
         }
         
-        if UserDefaults.standard.bool(forKey: "\(tag)")
-        {
-            imageViews.isHidden = false
-        }
-        
         if selected
         {
             imageViews.isHidden = false
-            UserDefaults.standard.set(true, forKey: "\(tag)")
-            UserDefaults.standard.synchronize()
         }
         else
         {
             imageViews.isHidden = true
-            UserDefaults.standard.set(false, forKey: "\(tag)")
-            UserDefaults.standard.synchronize()
         }
         
        
