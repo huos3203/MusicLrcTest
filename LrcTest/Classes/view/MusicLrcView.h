@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
 #import "MusicLrcLabel.h"
-#import "MusicLRC-Swift.h"
+//#import "LrcTest-Swift.h"
+//#if LrcTest
+//#import "LrcTest-Swift.h"
+//#elseif MusicLRC
+//#import "MusicLRC-Swift.h"
+//#else
+//#import <MusicLRC/MusicLRC-Swift.h>
+//#endif
 /*
  实现要求
  1、实现类为视图，可以直接嵌入其他视图

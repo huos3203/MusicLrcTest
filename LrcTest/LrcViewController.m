@@ -81,7 +81,7 @@
 -(void)pushAnimate:(NSString *)nnn
 {
     ClockListView *list = [ClockListView shareInstance];
-    list.delayClockDelegate = self;
+    list.delayClockVC.delayClockDelegate = self;
     [self.view addSubview:list];
     
     return;

@@ -134,14 +134,15 @@ static MusicLrcView *instance;
     
 }
 
--(BOOL)loadLrcBy:(NSInteger)fileID
+-(BOOL)loadLrcByd:(NSInteger)fileID
      audioPlayer:(AVAudioPlayer *)player
      lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
     //下载歌词
-    
-    
+//    HttpClientManager *httpManager = [HttpClientManager new];
+//    [httpManager downMusicLrcByWithURL]
     //return [self loadLrcBy: audioPlayer:<#(AVAudioPlayer *)#> lrcDedegate:<#(id<MusicLrcDelegate>)#>];
+    return false;
 }
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath
