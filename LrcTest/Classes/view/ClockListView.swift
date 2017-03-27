@@ -71,6 +71,8 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
     }
     
 
+    //
+    
     func addAnimation()
     {
         UIView.transition(from: superview!, to: self, duration: 0.5, options: .transitionCurlDown) { (bool) in
