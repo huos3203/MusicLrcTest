@@ -58,6 +58,11 @@
     [pushBtn addTarget:self action:@selector(pushAnimate:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pushBtn];
     
+    UIButton *pushBtn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [pushBtn1 setTitle:@"table" forState:UIControlStateNormal];
+    [pushBtn1 setFrame:CGRectMake(200, 550, 60, 35)];
+    [pushBtn1 addTarget:self action:@selector(pushLayerTable) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pushBtn1];
     _lrcView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 340, 400)];
     [self.view addSubview:_lrcView];
     
@@ -66,10 +71,23 @@
    
 }
 
+-(void)pushLayerTable
+{
+    //self.navigationController?.pushViewController(LayerTableView(), animated: false)
+    LayerTableView *table = [LayerTableView new];
+    [[self navigationController] pushViewController:table animated:false];
+}
+
 -(void)pushAnimate:(NSString *)nnn
 {
+    ClockListView *list = [ClockListView shareInstance];
+    list.delayClockDelegate = self;
+    [self.view addSubview:list];
+    
+    return;
+    
     ClockViewController *clock = [ClockViewController new];
-    clock.modalPresentationStyle = UIModalPresentationPopover;
+    //clock.modalPresentationStyle = UIModalPresentationPopover;
     if (clock.modalPresentationStyle == UIModalPresentationPopover) {
         //
         UIPopoverPresentationController *popover = clock.popoverPresentationController;
@@ -133,35 +151,6 @@
 -(void) pauseAudio:(id) sender
 {
     
-//    [_player pause];
-//    SleepClockView *clockView = [SleepClockView shareInstance];
-//    [clockView setupBy:@[@1,@2,@3] toTarget:self];
-//    [self presentViewController:clockView animated:YES completion:nil];
-    
-    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"333" message:@"dddd" preferredStyle:UIAlertControllerStyleActionSheet];
-////    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
-////    [alertView.view addSubview:view];
-//    UIAlertAction *action = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        //
-//    }];
-//    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        //
-//    }];
-//    UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        //
-//    }];
-//    UIAlertAction *action5 = [UIAlertAction actionWithTitle:@"eee" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        //
-//    }];
-//    [alertView addAction:action];
-//    [alertView addAction:action3];
-//    [alertView addAction:action4];
-//    [alertView addAction:action5];
-//    alertView.view.frame = CGRectMake(0, 0, 800, 800);
-//    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(-20, -20, 800, 800)];
-//    [alertView.view addSubview:tableview];
-//    [self presentViewController:alertView animated:NO completion:nil];
-    
     self.exampleTransitionDelegate = [ClockTransitioningDelegate new];
     self.transitioningDelegate = self.exampleTransitionDelegate;
     ClockTableViewController *tableView = [ClockTableViewController shareInstance];
@@ -173,7 +162,18 @@
 
 
 #pragma mark --model
--presentation
+-(UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style
+{
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[controller presentedViewController]];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
+    nav.topViewController.navigationItem.rightBarButtonItem = item;
+    return [controller presentedViewController];
+}
+
+-(void)dismiss
+{
+    [super dismissViewControllerAnimated:true completion:nil];
+}
 
 
 

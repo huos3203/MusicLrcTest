@@ -41,13 +41,19 @@ public class ClockTableViewController: UITableViewController {
         public static let instance = { () -> ClockTableViewController in
             let bundle = Bundle.init(for: ClockTableViewController.self)
                 let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
-                return board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
+            let VC = board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
+                VC.loadView()
+                return VC
             }()
             
         }
         return Singleton.instance
     }
 
+    public override func awakeFromNib() {
+        //
+        print("\(#function)")
+    }
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -80,7 +86,7 @@ public class ClockTableViewController: UITableViewController {
         }
         
         //开始倒计时
-        startClock()
+        startClock(delayTime: delayTime)
     }
     
     
@@ -148,7 +154,7 @@ public class ClockTableViewController: UITableViewController {
         {
             time = "\(seconds)"
         }
-//        print("=============\(time)")
+       //print("=============\(time)")
         
 //        if self.delayClockDelegate.responds {
 //            <#code#>

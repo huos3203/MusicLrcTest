@@ -23,8 +23,24 @@ class ClockViewController: UIViewController,UIPopoverPresentationControllerDeleg
         ff.addTarget(self, action: #selector(ClockViewController.pushAnimar), for: .touchDown)
         self.view.addSubview(ff)
         
+        //退出按钮
+        let exit = UIButton.init(frame: CGRect.init(x: 200, y: 300, width: 50, height: 35))
+        exit.setTitle("exit", for: .normal)
+        exit.setTitleColor(UIColor.red, for: .normal)
+        exit.addTarget(self, action: #selector(ClockViewController.exit), for: .touchDown)
+        self.view.addSubview(exit)
+        
+        //let tableview = ClockListView.shareInstance
+        //self.view.addSubview(tableview)
+        
+        
     }
     
+    func exit() {
+        //self.dismiss(animated: true, completion: nil)
+        view.addSubview(ClockListView.shareInstance)
+    }
+
     func pushAnimar() {
         //
          let animater = ClockTableViewController.shareInstance
