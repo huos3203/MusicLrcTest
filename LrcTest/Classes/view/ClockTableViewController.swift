@@ -64,21 +64,25 @@ public class ClockTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    public override func viewDidAppear(_ animated: Bool)
-    {
+    public override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
         //tag定位到cell
-        for cell in self.tableView.visibleCells
-        {
-            if UserDefaults.standard.bool(forKey: "\(cell.tag)")
-            {
-//                cell.setSelected(UserDefaults.standard.bool(forKey: "\(cell.tag)"), animated: false)
-                self.tableView.selectRow(at: self.tableView.indexPath(for: cell), animated: true, scrollPosition: .middle)
-            }
-            
-        }
+        let index = UserDefaults.standard.integer(forKey: "isSelected")
+         self.tableView.selectRow(at: IndexPath.init(row: index, section: 0) , animated: true, scrollPosition: .middle)
     }
     
+    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //
+        if cell.isKind(of: ClockTableViewCell.self) {
+            let celle = cell as! ClockTableViewCell
+            let index = UserDefaults.standard.integer(forKey: "isSelected")
+            if index == indexPath.row {
+                celle.imageViews.isHidden = false
+            }
+        }
+        
+        
+    }
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isDragMusic = false
         
@@ -103,6 +107,8 @@ public class ClockTableViewController: UITableViewController {
             }()
         }
         
+        UserDefaults.standard.setValue(indexPath.row, forKey: "isSelected")
+        UserDefaults.standard.synchronize()
         //开始倒计时
         startClock(delayTime: delayTime)
     }
@@ -116,6 +122,7 @@ public class ClockTableViewController: UITableViewController {
         {
             timer.invalidate()
         }
+        UserDefaults.standard.removeObject(forKey: "isSelected")
         //print("执行关闭音乐")
         self.delayClockDelegate?.setDelayToPerformCloseOperation()
     }
@@ -135,7 +142,7 @@ public class ClockTableViewController: UITableViewController {
         if delayTime <= 0 {
             return;
         }
-        cancelClock()
+        cancelClock(reset: true)
         
         self.perform(#selector(ClockTableViewController.closeClock), with:nil, afterDelay: TimeInterval(self.delayTime))
         
@@ -145,11 +152,17 @@ public class ClockTableViewController: UITableViewController {
     }
     
     //取消定延迟调用
-    public func cancelClock()
+    public func cancelClock(reset:Bool = false)
     {
+        if !reset
+        {
+            UserDefaults.standard.removeObject(forKey: "isSelected")
+        }
+        
         if timer != nil {
             timer.invalidate()
         }
+        
         cancelByClock()
         NSObject.cancelPreviousPerformRequests(withTarget: self)
 //        NSObject.cancelPreviousPerformRequests(withTarget: self,
