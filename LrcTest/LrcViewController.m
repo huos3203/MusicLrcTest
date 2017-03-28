@@ -159,9 +159,6 @@
     [HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished) {
         
     }];
-    
-    
-
     [_audioPlayer play];
     
 }

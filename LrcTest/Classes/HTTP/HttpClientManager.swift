@@ -94,6 +94,7 @@ public class HttpClientManager:NSObject
     {
         //http://www.jianshu.com/p/5445f2205f70 URLHostAllowedCharacterSet
         let urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        print("lujing: === \(urlStr)")
         let url = URL(string:urlStr!)!
         let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in
             
@@ -110,9 +111,10 @@ public class HttpClientManager:NSObject
                 let lrcFileURL = lrcDirURL.appendingPathComponent(fileName+".lrc")
                 if FileManager.default.fileExists(atPath: lrcFileURL.path)
                 {
-                    print("----lrc已存在")
-                    loadLrc(lrcFileURL.path)
-                    return
+                    try! FileManager.default.removeItem(atPath: lrcFileURL.path)
+                    //print("----lrc已存在")
+                    //loadLrc(lrcFileURL.path)
+                    //return
                 }
                 do{
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
