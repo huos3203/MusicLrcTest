@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
 #import "MusicLrcLabel.h"
-//#import "LrcTest-Swift.h"
+#import "LrcTest-Swift.h"
 //#if LrcTest
 //#import "LrcTest-Swift.h"
 //#elseif MusicLRC
@@ -77,5 +77,10 @@
 +(MusicLrcView *)shared;
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
+
+//通过网络加载歌词
+-(BOOL)loadLrcFrom:(MusicLrcModel *)LrcModel
+       audioPlayer:(AVAudioPlayer *)player
+       lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
 
 @end

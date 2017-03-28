@@ -134,15 +134,30 @@ static MusicLrcView *instance;
     
 }
 
--(BOOL)loadLrcByd:(NSInteger)fileID
-     audioPlayer:(AVAudioPlayer *)player
-     lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
+-(BOOL)loadLrcFrom:(MusicLrcModel *)lrcModel
+       audioPlayer:(AVAudioPlayer *)player
+       lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
+    if(lrcModel == nil)
+        return false;
     //下载歌词
-//    HttpClientManager *httpManager = [HttpClientManager new];
-//    [httpManager downMusicLrcByWithURL]
-    //return [self loadLrcBy: audioPlayer:<#(AVAudioPlayer *)#> lrcDedegate:<#(id<MusicLrcDelegate>)#>];
-    return false;
+    
+    //拼接
+    HttpClientManager *httpManager = [HttpClientManager new];
+    [httpManager downMusicLrcByLrcModel:lrcModel
+                               loadLrc:^(NSString * location)
+    {
+        //
+        NSLog(@"下载完成，回调主线程%@",location);
+        if (location != nil && location.length > 0)
+        {
+            [self loadLrcBy:location
+                audioPlayer:player
+                lrcDedegate:lrcDelegate];
+        }
+    }];
+
+    return true;
 }
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath

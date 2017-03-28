@@ -139,7 +139,19 @@
     NSString *lrcPath = [[NSBundle mainBundle] pathForResource:@"01爱与痛的边缘" ofType:@"lrc"];
     MusicLrcView *lrcView = [MusicLrcView shared];
 //    [lrcView switchLrcOfMusic:lrcPath audioPlayer:_audioPlayer lrcDelegate:self];
-    [lrcView loadLrcBy:lrcPath audioPlayer:_audioPlayer lrcDedegate:self];
+    //[lrcView loadLrcBy:lrcPath audioPlayer:_audioPlayer lrcDedegate:self];
+    
+    //
+    NSString  *host = @"http://192.168.85.13:8660/DRM/";
+    NSString *fileid = @"6dd1d187-9e51-4dda-afcd-315f383734fa";
+    NSString *userNam = @"13717795774";
+    NSString *token = @"098dda0a733863fc0faca940ef527f25";
+    NSString *url2 = [NSString stringWithFormat:@"%@/client/downloadMusicLyric/%@",host,fileid];
+    MusicLrcModel *lrcmode = [[MusicLrcModel alloc] initWithUsername:userNam
+                                                               token: token
+                                                              lrcURL:url2
+                                                       musiclyric_id:fileid];
+    [lrcView loadLrcFrom:lrcmode audioPlayer:_audioPlayer lrcDedegate:self];
     
     [_lrcView addSubview:lrcView];
 
