@@ -44,7 +44,8 @@ extension NSObject{
                         if propName == "description"
                         || propName == "result"
                         || propName == "code"
-                        || propName == "msg"{
+                        || propName == "msg"
+                        || propName == "lrcURL"{
                             continue
                         }
                         //NSLog("\(propsCount)个，属性\(i)：\(propName)")

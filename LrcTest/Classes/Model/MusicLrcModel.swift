@@ -7,10 +7,27 @@
 //
 
 import UIKit
-
-class MusicLrcModel: NSObject
+// /client/downloadMusicLyric/{musicLyric_id}
+// username /token / musiclyric_id
+public class MusicLrcModel: NSObject
 {
     var username = ""
     var token = ""
+    var lrcURL = ""
     var musiclyric_id=""
+    
+    public init(username:String,token:String,lrcURL:String,musiclyric_id:String)
+    {
+        //
+        self.username = username
+        self.token = token
+        self.lrcURL = lrcURL
+        self.musiclyric_id = musiclyric_id
+    }
+    
+    //转为请求数据
+    func convertToJSON() -> String
+    {
+        return requestBody()
+    }
 }
