@@ -96,26 +96,33 @@ public class HttpClientManager:NSObject
         let urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let url = URL(string:urlStr!)!
         let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in
-            //
-            //存盘
-            let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-            //文件URL
-            let lrcDirURL = URL.init(fileURLWithPath: documentPath!)
-            let lrcFileURL = lrcDirURL.appendingPathComponent(fileName+".lrc")
-            if FileManager.default.fileExists(atPath: lrcFileURL.path)
+            print("错误：-----\(err?.localizedDescription)")
+            
+            let responses = response as! HTTPURLResponse
+            if (responses.statusCode == 200)
             {
-                print("----lrc已存在")
-                loadLrc(lrcFileURL.path)
-                return
+                //存盘
+                let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+                //文件URL
+                
+                let lrcDirURL = URL.init(fileURLWithPath: documentPath!)
+                let lrcFileURL = lrcDirURL.appendingPathComponent(fileName+".lrc")
+                if FileManager.default.fileExists(atPath: lrcFileURL.path)
+                {
+                    print("----lrc已存在")
+                    loadLrc(lrcFileURL.path)
+                    return
+                }
+                do{
+                    try FileManager.default.copyItem(at: location!, to: lrcFileURL)
+                    print("存盘路径：\(lrcFileURL.absoluteString)")
+                    loadLrc(lrcFileURL.path)
+                }catch{
+                    print("存盘失败：\(err?.localizedDescription)")
+                }
+
             }
-            do{
-                try FileManager.default.copyItem(at: location!, to: lrcFileURL)
-                print("存盘路径：\(lrcFileURL.absoluteString)")
-                loadLrc(lrcFileURL.path)
-            }catch{
-                print("存盘失败：\(err?.localizedDescription)")
-            }
-        }
+                    }
         downTask.resume()
     }
     

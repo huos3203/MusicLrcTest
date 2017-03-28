@@ -152,8 +152,12 @@
                                                                token: token
                                                               lrcURL:url2
                                                        musiclyric_id:fileid];
-    [lrcView loadLrcFrom:lrcmode audioPlayer:_audioPlayer lrcDedegate:self completion:^(BOOL finished) {
-        //
+    MusicLrcModel *lrcmodel = [[MusicLrcModel alloc] initWithUsername: userNam
+                                                                token: token
+                                                               lrcURL: url2
+                                                        musiclyric_id: fileid];
+    [HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished) {
+        
     }];
     
     
