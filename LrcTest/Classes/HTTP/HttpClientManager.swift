@@ -8,9 +8,18 @@
 
 import UIKit
 
-
-public class HttpClientManager
+public class HttpClientManager:NSObject
 {
+    
+    public class var shareInstance:HttpClientManager
+    {
+        struct Singleton {
+            static let instance = HttpClientManager()
+        }
+        return Singleton.instance
+    }
+    
+    
     
     //请求url
     public func verifyAppVersionBy(withURL url:String,
@@ -43,14 +52,14 @@ public class HttpClientManager
     }
     
     //下载歌词
-    public func downMusicLrcBy(lrcModel model:MusicLrcModel , loadLrc:@escaping (String)->Void)->Bool
+    public func downMusicLrcBy(lrcModel model:MusicLrcModel , loadLrc:@escaping (String)->Void)
     {
         if model.lrcURL.utf16.count == 0
         || model.musiclyric_id.utf16.count == 0
         || model.token.utf16.count == 0
         || model.username.utf16.count == 0
         {
-            return false
+            return
         }
         var request = URLRequest(url: URL(string: model.lrcURL)!)
         print(model.convertToJSON())
@@ -79,7 +88,6 @@ public class HttpClientManager
             
         }
         requestLrcURL.resume()
-        return true
     }
     
     func downLRCFile(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
@@ -109,5 +117,18 @@ public class HttpClientManager
             }
         }
         downTask.resume()
+    }
+    
+    //
+    public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
+    {
+        MusicLrcView.shared().showindicatorView()
+        downMusicLrcBy(lrcModel: lrcModel) { (lrcPath) in
+            //
+            let isCanLoad = MusicLrcView.shared().loadLrc(by: lrcPath, audioPlayer: player, lrcDedegate: lrcDelegate)
+            
+            completion(isCanLoad)
+        }
+        
     }
 }

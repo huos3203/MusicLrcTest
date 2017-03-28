@@ -152,7 +152,9 @@
                                                                token: token
                                                               lrcURL:url2
                                                        musiclyric_id:fileid];
-    [lrcView loadLrcFrom:lrcmode audioPlayer:_audioPlayer lrcDedegate:self];
+    [lrcView loadLrcFrom:lrcmode audioPlayer:_audioPlayer lrcDedegate:self completion:^(BOOL finished) {
+        //
+    }];
     
     
 

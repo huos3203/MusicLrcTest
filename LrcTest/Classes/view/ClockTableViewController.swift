@@ -39,12 +39,12 @@ public class ClockTableViewController: UITableViewController {
     {
         struct Singleton{
             
-        public static let instance = { () -> ClockTableViewController in
-            let bundle = Bundle.init(for: ClockTableViewController.self)
-                let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
-            let VC = board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
-                VC.loadView()
-                return VC
+            static let instance = { () -> ClockTableViewController in
+                let bundle = Bundle.init(for: ClockTableViewController.self)
+                    let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
+                let VC = board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
+                    VC.loadView()
+                    return VC
             }()
             
         }

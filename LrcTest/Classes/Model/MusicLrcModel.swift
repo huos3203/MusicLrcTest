@@ -9,6 +9,7 @@
 import UIKit
 // /client/downloadMusicLyric/{musicLyric_id}
 // username /token / musiclyric_id
+@objc
 public class MusicLrcModel: NSObject
 {
     var username = ""

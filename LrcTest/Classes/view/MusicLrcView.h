@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AVFoundation/AVFoundation.h"
+#import <AVFoundation/AVFoundation.h>
 #import "MusicLrcLabel.h"
-#import "LrcTest-Swift.h"
+
+//#import "LrcTest-Swift.h"
 //#if LrcTest
 //#import "LrcTest-Swift.h"
 //#elseif MusicLRC
 //#import "MusicLRC-Swift.h"
+//#import "MusicLRC/MusicLRC-Swift.h"
+//#import <MusicLRC/MusicLRC-Swift.h>
 //#else
 //#import <MusicLRC/MusicLRC-Swift.h>
 //#endif
@@ -74,13 +77,12 @@
 /** 歌词的定时器 */
 @property (nonatomic,strong) CADisplayLink *lrcTiemr;
 
+@property(copy)void(^handler)(BOOL);
 +(MusicLrcView *)shared;
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath audioPlayer:(AVAudioPlayer *)player lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
 
 //通过网络加载歌词
--(BOOL)loadLrcFrom:(MusicLrcModel *)LrcModel
-       audioPlayer:(AVAudioPlayer *)player
-       lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate;
+-(void)showindicatorView;
 
 @end

@@ -161,14 +161,8 @@ static MusicLrcView *instance;
     
 }
 
--(BOOL)loadLrcFrom:(MusicLrcModel *)lrcModel
-       audioPlayer:(AVAudioPlayer *)player
-       lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
+-(void)showindicatorView
 {
-    if(lrcModel == nil)
-        return false;
-    __block BOOL isCanLoad = false;
-    //下载歌词
     if (indicatorView.superview == nil)
     {
         [self.superview addSubview:indicatorView];
@@ -176,33 +170,19 @@ static MusicLrcView *instance;
     [indicatorView startAnimating];
     [indicatorView setHidden:false];
     [self setNeedsUpdateConstraints];
-    //拼接
-    HttpClientManager *httpManager = [HttpClientManager new];
-    [httpManager downMusicLrcByLrcModel:lrcModel
-                               loadLrc:^(NSString * location)
-    {
-        NSLog(@"下载完成，回调主线程%@",location);
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                [indicatorView stopAnimating];
-                [indicatorView setHidden:true];
-                if (location != nil && location.length > 0)
-                {
-                   isCanLoad = [self loadLrcBy:location audioPlayer:player lrcDedegate:lrcDelegate];
-                }
-                else
-                {
-                    isCanLoad = false;
-                }
-            }];
-        
-    }];
-    return true;
 }
 
 -(BOOL)loadLrcBy:(NSString *)lrcPath
      audioPlayer:(AVAudioPlayer *)player
      lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [indicatorView stopAnimating];
+        [indicatorView setHidden:true];
+    }];
+
+    
     if(lrcPath != nil
        && player != nil
        && lrcDelegate != nil
