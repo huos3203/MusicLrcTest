@@ -61,10 +61,19 @@ public class HttpClientManager: NSObject
             if data != nil
             {
                 let httpURL = String.init(data: data!, encoding: String.Encoding.utf8)
-                print("歌词路径：\(httpURL)")
-                self.downLRCFile(urlStr: httpURL!,
-                               fileName: model.musiclyric_id,
-                                loadLrc: loadLrc)
+             
+                if (httpURL?.lowercased().hasSuffix("lrc"))!
+                {
+                    self.downLRCFile(urlStr: httpURL!,
+                                     fileName: model.musiclyric_id,
+                                     loadLrc: loadLrc)
+                }
+                else
+                {
+                    print("文件路径错误")
+                    loadLrc("")
+                }
+                
             }
             
         }

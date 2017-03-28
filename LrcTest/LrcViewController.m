@@ -142,6 +142,7 @@
     //[lrcView loadLrcBy:lrcPath audioPlayer:_audioPlayer lrcDedegate:self];
     
     //
+    [_lrcView addSubview:lrcView];
     NSString  *host = @"http://192.168.85.13:8660/DRM/";
     NSString *fileid = @"6dd1d187-9e51-4dda-afcd-315f383734fa";
     NSString *userNam = @"13717795774";
@@ -153,7 +154,7 @@
                                                        musiclyric_id:fileid];
     [lrcView loadLrcFrom:lrcmode audioPlayer:_audioPlayer lrcDedegate:self];
     
-    [_lrcView addSubview:lrcView];
+    
 
     [_audioPlayer play];
     
