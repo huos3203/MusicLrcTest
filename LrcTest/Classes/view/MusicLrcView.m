@@ -17,6 +17,9 @@
 
 static MusicLrcView *instance;
 @implementation MusicLrcView
+{
+    UIActivityIndicatorView *indicatorView;
+}
 
 
 +(MusicLrcView *)shared
@@ -41,6 +44,13 @@ static MusicLrcView *instance;
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self setDelegate:self];
         [self setDataSource:self];
+        
+        //loading
+        indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [indicatorView setColor:[UIColor grayColor]];
+        indicatorView.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        
     }
     return self;
 }
@@ -91,6 +101,11 @@ static MusicLrcView *instance;
 
 -(void)updateConstraints
 {
+    UIView *superView = [self superview];
+    if (superView == nil)
+    {
+        return;
+    }
 //    [_tableView setTranslatesAutoresizingMaskIntoConstraints:false];
     NSArray *h = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[tableview]-0-|"
                                                          options:0 metrics:nil
@@ -98,10 +113,22 @@ static MusicLrcView *instance;
     NSArray *v = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableview]-0-|"
                                                          options:0 metrics:nil
                                                            views:@{@"tableview":self}];
-    [[self superview] addConstraints:h];
-    [[self superview] addConstraints:v];
-    [super updateConstraints];
+    [superView addConstraints:h];
+    [superView addConstraints:v];
     
+    if (indicatorView.superview != nil)
+    {
+        //添加 loading
+        NSArray *ih = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[indicator]-|" options:NSLayoutFormatAlignAllCenterX metrics:nil views:@{@"indicator":indicatorView}];
+        
+        NSArray *iv = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[indicator]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:@{@"indicator":indicatorView}];
+        
+        [superView addConstraints:ih];
+        [superView addConstraints:iv];
+    }
+   
+    
+    [super updateConstraints];
 }
 
 //固有内容大小
@@ -140,23 +167,35 @@ static MusicLrcView *instance;
 {
     if(lrcModel == nil)
         return false;
+    __block BOOL isCanLoad = false;
     //下载歌词
-    
+    if (indicatorView.superview == nil)
+    {
+        [self.superview addSubview:indicatorView];
+    }
+    [indicatorView startAnimating];
+    [indicatorView setHidden:false];
+    [self setNeedsUpdateConstraints];
     //拼接
     HttpClientManager *httpManager = [HttpClientManager new];
     [httpManager downMusicLrcByLrcModel:lrcModel
                                loadLrc:^(NSString * location)
     {
-        //
         NSLog(@"下载完成，回调主线程%@",location);
-        if (location != nil && location.length > 0)
-        {
-            [self loadLrcBy:location
-                audioPlayer:player
-                lrcDedegate:lrcDelegate];
-        }
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [indicatorView stopAnimating];
+                [indicatorView setHidden:true];
+                if (location != nil && location.length > 0)
+                {
+                   isCanLoad = [self loadLrcBy:location audioPlayer:player lrcDedegate:lrcDelegate];
+                }
+                else
+                {
+                    isCanLoad = false;
+                }
+            }];
+        
     }];
-
     return true;
 }
 
@@ -164,7 +203,6 @@ static MusicLrcView *instance;
      audioPlayer:(AVAudioPlayer *)player
      lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
-
     if(lrcPath != nil
        && player != nil
        && lrcDelegate != nil
@@ -179,7 +217,6 @@ static MusicLrcView *instance;
         
         [self removeLrcTimer];
         [self addLrcTimer];
-        [self setNeedsUpdateConstraints];
     }
     else
     {
