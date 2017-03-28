@@ -176,12 +176,8 @@ static MusicLrcView *instance;
      audioPlayer:(AVAudioPlayer *)player
      lrcDedegate:(id<MusicLrcDelegate>)lrcDelegate
 {
-    
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [indicatorView stopAnimating];
-        [indicatorView setHidden:true];
-    }];
-
+    [indicatorView stopAnimating];
+    [indicatorView setHidden:true];
     
     if(lrcPath != nil
        && player != nil

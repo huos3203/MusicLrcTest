@@ -96,9 +96,10 @@ public class HttpClientManager:NSObject
         let urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let url = URL(string:urlStr!)!
         let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in
-            print("错误：-----\(err?.localizedDescription)")
+            
             
             let responses = response as! HTTPURLResponse
+            print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
                 //存盘
@@ -120,22 +121,26 @@ public class HttpClientManager:NSObject
                 }catch{
                     print("存盘失败：\(err?.localizedDescription)")
                 }
-
             }
-                    }
+            else
+            {
+                loadLrc("")
+            }
+        }
         downTask.resume()
     }
     
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
     {
+    
         MusicLrcView.shared().showindicatorView()
         downMusicLrcBy(lrcModel: lrcModel) { (lrcPath) in
             //
-            let isCanLoad = MusicLrcView.shared().loadLrc(by: lrcPath, audioPlayer: player, lrcDedegate: lrcDelegate)
-            
-            completion(isCanLoad)
+            OperationQueue.main.addOperation {
+                let isCanLoad = MusicLrcView.shared().loadLrc(by: lrcPath, audioPlayer: player, lrcDedegate: lrcDelegate)
+                completion(isCanLoad)
+            }
         }
-        
     }
 }

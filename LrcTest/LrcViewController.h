@@ -13,7 +13,7 @@
 //#if LrcTest
 //#import "LrcTest-Swift.h"
 //#else
-#import <MusicLRC/MusicLRC-Swift.h>
+//#import <MusicLRC/MusicLRC-Swift.h>
 //#endif
 
 @interface LrcViewController : UIViewController<MusicLrcDelegate,DelayClockDelegate,UIPopoverPresentationControllerDelegate>
