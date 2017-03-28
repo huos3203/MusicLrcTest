@@ -8,7 +8,8 @@
 
 import UIKit
 
-public class HttpClientManager: NSObject
+
+public class HttpClientManager
 {
     
     //请求url
