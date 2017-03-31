@@ -15,15 +15,17 @@ public class MusicLrcModel: NSObject
     var username = ""
     var token = ""
     var lrcURL = ""
-    var musiclyric_id=""
+    var musiclyric_id = ""
+    var localPath = ""
     
-    public init(username:String,token:String,lrcURL:String,musiclyric_id:String)
+    public init(username:String,token:String,lrcURL:String,musiclyric_id:String,localPath:String)
     {
         //
         self.username = username
         self.token = token
         self.lrcURL = lrcURL
         self.musiclyric_id = musiclyric_id
+        self.localPath = localPath
     }
     
     //转为请求数据

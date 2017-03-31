@@ -45,7 +45,8 @@ extension NSObject{
                         || propName == "result"
                         || propName == "code"
                         || propName == "msg"
-                        || propName == "lrcURL"{
+                        || propName == "lrcURL"
+                        || propName == "localPath"{
                             continue
                         }
                         //NSLog("\(propsCount)个，属性\(i)：\(propName)")

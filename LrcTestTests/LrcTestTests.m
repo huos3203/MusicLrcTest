@@ -126,7 +126,7 @@
                                                                 token: token
                                                                lrcURL: url2
                                                         musiclyric_id: fileid];
-    [[HttpClientManager shareInstance] downMusicLrcByLrcModel:lrcmode loadLrc:^(NSString * lrcPath) {
+    [[HttpClientManager shareInstance] downMusicLrcByLrcModel:lrcmodel loadLrc:^(NSString * lrcPath) {
         NSLog(@"----路径：%@",lrcPath);
         [expre fulfill];
     }];

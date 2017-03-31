@@ -64,6 +64,14 @@ public class HttpClientManager:NSObject
         {
             return
         }
+        
+        //当文件存在时
+        if(FileManager.default.fileExists(atPath: model.localPath))
+        {
+            loadLrc(model.localPath)
+            return
+        }
+        
         var request = URLRequest(url: URL(string: model.lrcURL)!)
         print(model.convertToJSON())
         let data = model.convertToJSON().data(using: .utf8)
@@ -80,8 +88,8 @@ public class HttpClientManager:NSObject
                 if (httpURL?.lowercased().hasSuffix("lrc"))!
                 {
                     self.downLRCFile(urlStr: httpURL!,
-                                     fileName: model.musiclyric_id,
-                                     loadLrc: loadLrc)
+                                   fileName: model.localPath,
+                                    loadLrc: loadLrc)
                 }
                 else
                 {
@@ -106,24 +114,20 @@ public class HttpClientManager:NSObject
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
-                //存盘
-                let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-                //文件URL
-                
-                let lrcDirURL = URL.init(fileURLWithPath: documentPath!)
-                let lrcFileURL = lrcDirURL.appendingPathComponent(fileName+".lrc")
-                if FileManager.default.fileExists(atPath: lrcFileURL.path)
-                {
-                    try! FileManager.default.removeItem(atPath: lrcFileURL.path)
-                    //print("----lrc已存在")
-                    //loadLrc(lrcFileURL.path)
-                    //return
-                }
+                //let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+            
                 do{
+                    let documentPath = (fileName as NSString).deletingLastPathComponent
+                    let lrcDirURL = URL.init(fileURLWithPath: documentPath)
+                    try FileManager.default.createDirectory(at: lrcDirURL, withIntermediateDirectories: true, attributes: nil)
+                    
+                    let lrcFileURL = lrcDirURL.appendingPathComponent(fileName+".lrc")
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
                     print("存盘路径：\(lrcFileURL.absoluteString)")
                     loadLrc(lrcFileURL.path)
-                }catch{
+                }
+                catch
+                {
                     print("存盘失败：\(err?.localizedDescription)")
                 }
             }
