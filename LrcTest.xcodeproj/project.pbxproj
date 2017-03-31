@@ -91,6 +91,8 @@
 		14AF06DA1E7BE6C00029DD34 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C61E7BE6C00029DD34 /* MusicLrcCell.m */; };
 		14AF06DB1E7BE6C00029DD34 /* MusicLrcLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C71E7BE6C00029DD34 /* MusicLrcLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
+		84EB66951E8AA87400EA892A /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB66941E8AA87400EA892A /* MusicAPI.swift */; };
+		84EB66961E8AA87400EA892A /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB66941E8AA87400EA892A /* MusicAPI.swift */; };
 		84FE2B461E87A3FF003CE93F /* LayerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE2B451E87A3FE003CE93F /* LayerTableView.swift */; };
 		D221DBA21E852BB600444AE3 /* ClockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DB9F1E85282700444AE3 /* ClockListView.swift */; };
 		D221DBA31E852BB800444AE3 /* ClockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DB9F1E85282700444AE3 /* ClockListView.swift */; };
@@ -249,6 +251,7 @@
 		14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcView.h; sourceTree = "<group>"; };
 		14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcView.m; sourceTree = "<group>"; };
 		14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		84EB66941E8AA87400EA892A /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
 		84FE2B451E87A3FE003CE93F /* LayerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTableView.swift; sourceTree = "<group>"; };
 		D221DB9F1E85282700444AE3 /* ClockListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockListView.swift; sourceTree = "<group>"; };
 		D221DBA81E88F36300444AE3 /* MusicLrcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLrcModel.swift; sourceTree = "<group>"; };
@@ -403,6 +406,7 @@
 		14AF06B91E7BE6C00029DD34 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84EB66941E8AA87400EA892A /* MusicAPI.swift */,
 				1483B7D51E822A9D009D8C42 /* HTTP */,
 				14AF06BA1E7BE6C00029DD34 /* LrcUtil */,
 				14AF06BF1E7BE6C00029DD34 /* Model */,
@@ -778,6 +782,7 @@
 				14AF06DA1E7BE6C00029DD34 /* MusicLrcCell.m in Sources */,
 				14AF06D11E7BE6C00029DD34 /* MusicLrcParser.m in Sources */,
 				14AF06CE1E7BE6C00029DD34 /* CLLrcTool.m in Sources */,
+				84EB66961E8AA87400EA892A /* MusicAPI.swift in Sources */,
 				1483B7CA1E8119CA009D8C42 /* ClockTableViewCell.swift in Sources */,
 				1483B7D91E822A9E009D8C42 /* ConvertToDictionary.swift in Sources */,
 				146EB4D31E8A476900D753F0 /* MusicLrcModel.swift in Sources */,
@@ -831,6 +836,7 @@
 				D2E45CD51E84F50300674BA9 /* ClockTableViewCell.swift in Sources */,
 				D2C9A7CE1E84D02A00ED0C80 /* TransitioningDelegate.swift in Sources */,
 				D2C9A7CF1E84D02A00ED0C80 /* ClockTableViewController.swift in Sources */,
+				84EB66951E8AA87400EA892A /* MusicAPI.swift in Sources */,
 				148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */,
 				148BFF371E6FCE9300E674D3 /* AppDelegate.m in Sources */,
 				148BFF341E6FCE9300E674D3 /* main.m in Sources */,
