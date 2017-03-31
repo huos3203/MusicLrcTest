@@ -138,7 +138,6 @@ public class HttpClientManager:NSObject
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
     {
-    
         MusicLrcView.shared().showindicatorView()
         downMusicLrcBy(lrcModel: lrcModel) { (lrcPath) in
             //
