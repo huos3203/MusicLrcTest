@@ -148,14 +148,11 @@
     NSString *userNam = @"13717795774";
     NSString *token = @"098dda0a733863fc0faca940ef527f25";
     NSString *url2 = [NSString stringWithFormat:@"%@/client/downloadMusicLyric/%@",host,fileid];
-    MusicLrcModel *lrcmode = [[MusicLrcModel alloc] initWithUsername:userNam
-                                                               token: token
-                                                              lrcURL:url2
-                                                       musiclyric_id:fileid];
     MusicLrcModel *lrcmodel = [[MusicLrcModel alloc] initWithUsername: userNam
                                                                 token: token
                                                                lrcURL: url2
-                                                        musiclyric_id: fileid];
+                                                        musiclyric_id: fileid
+                               localPath:@""];
     [HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished) {
         
     }];
