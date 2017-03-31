@@ -68,6 +68,17 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
             addMyConstraints(superview!,constraintView: self)
         }
         super.updateConstraints()
+        UIView.animate(withDuration: 1.0) { 
+            //
+            
+        }
+        
+        UIView.animate(withDuration: 1.0, animations: { 
+            self.layoutIfNeeded()
+        }) { (bo) in
+            //
+            print("-----")
+        }
     }
     
 

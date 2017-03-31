@@ -121,19 +121,17 @@
     MusicLrcModel *lrcmodel = [[MusicLrcModel alloc] initWithUsername: userNam
                                                                 token: token
                                                                lrcURL: url2
-                                                        musiclyric_id: fileid];
+                                                        musiclyric_id: fileid
+                               localPath:@""];
 
     [[HttpClientManager shareInstance] downMusicLrcByLrcModel:lrcmodel loadLrc:^(NSString * lrcPath) {
-        NSLog(@"----路径：%@",lrcPath);
+       // NSLog(@"----路径：%@",lrcPath);
         [expre fulfill];
     }];
     
-    [self waitForExpectationsWithTimeout:5 handler:^(NSError * _Nullable error) {
+    [self waitForExpectationsWithTimeout:20 handler:^(NSError * _Nullable error) {
         NSLog(@"error-----%@",[error localizedDescription]);
     }];
-//    [HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished) {
-//        
-//    }];
 }
 
 @end
