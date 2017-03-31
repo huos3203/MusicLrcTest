@@ -12,7 +12,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
 {
 
     public var delayClockVC:ClockTableViewController!
-    
+    var chrome:UIView!
     public class var shareInstance:ClockListView
     {
         struct Singleton{
@@ -32,9 +32,9 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         delayClockVC = ClockTableViewController.shareInstance
         let clockTable = delayClockVC.tableView
         //遮罩
-        let chrome = UIView()
+        chrome = UIView()
         chrome.backgroundColor = UIColor.black
-        chrome.alpha = 0.4
+        chrome.alpha = 0
         addMyConstraints(self,constraintView: chrome)
         //底部，左右对齐，高度：352
         chromeAddClockView(chrome: self,ClockView: clockTable!)
@@ -68,13 +68,10 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
             addMyConstraints(superview!,constraintView: self)
         }
         super.updateConstraints()
-        UIView.animate(withDuration: 1.0) { 
-            //
-            
-        }
         
-        UIView.animate(withDuration: 1.0, animations: { 
+        UIView.animate(withDuration: 0.5, animations: {
             self.layoutIfNeeded()
+            self.chrome.alpha = 0.4
         }) { (bo) in
             //
             print("-----")
@@ -129,6 +126,8 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         if gestureRecognizer.location(in: self).y < inval
         {
             //print("合法区域")
+            self.chrome.alpha = 0
+            self.frame.size.height = 0
             return true
         }
         return false
