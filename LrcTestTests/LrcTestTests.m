@@ -110,4 +110,33 @@
 
 }
 
+-(void)testLoadLRCFile
+{
+    XCTestExpectation *expre = [self expectationWithDescription:@"2342342342"];
+    NSString  *host = @"http://192.168.85.13:8660/DRM/";
+    NSString *fileid = @"6dd1d187-9e51-4dda-afcd-315f383734fa";
+    NSString *userNam = @"13717795774";
+    NSString *token = @"098dda0a733863fc0faca940ef527f25";
+    NSString *url2 = [NSString stringWithFormat:@"%@/client/downloadMusicLyric/%@",host,fileid];
+    MusicLrcModel *lrcmode = [[MusicLrcModel alloc] initWithUsername:userNam
+                                                               token: token
+                                                              lrcURL:url2
+                                                       musiclyric_id:fileid];
+    MusicLrcModel *lrcmodel = [[MusicLrcModel alloc] initWithUsername: userNam
+                                                                token: token
+                                                               lrcURL: url2
+                                                        musiclyric_id: fileid];
+    [[HttpClientManager shareInstance] downMusicLrcByLrcModel:lrcmode loadLrc:^(NSString * lrcPath) {
+        NSLog(@"----路径：%@",lrcPath);
+        [expre fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:5 handler:^(NSError * _Nullable error) {
+        NSLog(@"error-----%@",[error localizedDescription]);
+    }];
+//    [HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished) {
+//        
+//    }];
+}
+
 @end
