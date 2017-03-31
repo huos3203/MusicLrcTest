@@ -99,6 +99,12 @@
 		D221DBA61E88CC4000444AE3 /* HttpClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7D71E822A9E009D8C42 /* HttpClientManager.swift */; };
 		D221DBA71E88CC4200444AE3 /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7D61E822A9E009D8C42 /* ConvertToDictionary.swift */; };
 		D221DBA91E88F36400444AE3 /* MusicLrcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DBA81E88F36300444AE3 /* MusicLrcModel.swift */; };
+		D2378DB31E8DEFAF00F859D7 /* MusicLrcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DBA81E88F36300444AE3 /* MusicLrcModel.swift */; };
+		D2378DB41E8DF79400F859D7 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
+		D2378DB51E8DF82E00F859D7 /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C41E7BE6C00029DD34 /* EffectView.m */; };
+		D2378DB61E8DF83200F859D7 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C61E7BE6C00029DD34 /* MusicLrcCell.m */; };
+		D2378DB71E8DF83400F859D7 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
+		D2378DB81E8DF89400F859D7 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BE1E7BE6C00029DD34 /* MusicLrcParser.m */; };
 		D2C9A7AE1E84CFE600ED0C80 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
 		D2C9A7AF1E84CFE600ED0C80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF361E6FCE9300E674D3 /* AppDelegate.m */; };
 		D2C9A7B01E84CFE600ED0C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF331E6FCE9300E674D3 /* main.m */; };
@@ -836,12 +842,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */,
+				D2378DB51E8DF82E00F859D7 /* EffectView.m in Sources */,
+				D2378DB31E8DEFAF00F859D7 /* MusicLrcModel.swift in Sources */,
 				1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */,
+				D2378DB71E8DF83400F859D7 /* MusicLrcLabel.m in Sources */,
 				D221DBA61E88CC4000444AE3 /* HttpClientManager.swift in Sources */,
 				1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */,
 				D221DBA71E88CC4200444AE3 /* ConvertToDictionary.swift in Sources */,
+				D2378DB81E8DF89400F859D7 /* MusicLrcParser.m in Sources */,
+				D2378DB41E8DF79400F859D7 /* MusicLrcView.m in Sources */,
 				D221DBA51E88CC3C00444AE3 /* VerifyAppVersionModel.swift in Sources */,
 				D221DBA41E88C09900444AE3 /* CLLrcLine.m in Sources */,
+				D2378DB61E8DF83200F859D7 /* MusicLrcCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
