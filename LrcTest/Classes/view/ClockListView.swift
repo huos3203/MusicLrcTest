@@ -62,10 +62,10 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
                                                          views: ["cview":self,"superview":inView])
         
         //纵向高度等于父视图
-        let vVF = "V:[cview(==0)]-0-|"
+        let vVF = "V:[cview(==selfHeight)]-0-|"
         let Vconstraint = NSLayoutConstraint.constraints(withVisualFormat: vVF,
                                                          options: NSLayoutFormatOptions(rawValue: 0),
-                                                         metrics: nil,
+                                                         metrics: ["selfHeight":UIScreen.main.bounds.height],
                                                          views: ["cview":self,"superview":inView])
         let constraint = Vconstraint[0]
         if constraint.firstItem.isKind(of: ClockListView.self)
@@ -76,7 +76,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         inView.addConstraints(Vconstraint)
         //setNeedsUpdateConstraints()
         self.layoutIfNeeded()
-        UIView.animate(withDuration: 0.0, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             self.chrome.alpha = 0.7
             self.selfHeight.constant = UIScreen.main.bounds.height  //rootView高度
             self.layoutIfNeeded()
