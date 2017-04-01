@@ -22,7 +22,6 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
             }()
             
         }
-        Singleton.instance.setNeedsUpdateConstraints()
         return Singleton.instance
     }
 
@@ -50,7 +49,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
     }
     
     var selfHeight:NSLayoutConstraint!
-    public func addIntoView(inView:UIView)
+    public func addIntoView(_ inView:UIView)
     {
         inView.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -62,10 +61,10 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
                                                          views: ["cview":self,"superview":inView])
         
         //纵向高度等于父视图
-        let vVF = "V:|-0-[cview(==superview@700)]-0-|"
+        let vVF = "V:|-height-[cview(==superview@700)]-0-|"
         let Vconstraint = NSLayoutConstraint.constraints(withVisualFormat: vVF,
                                                          options: NSLayoutFormatOptions(rawValue: 0),
-                                                         metrics: nil,
+                                                         metrics: ["height":UIScreen.main.bounds.height],
                                                          views: ["cview":self,"superview":inView])
         let constraint = Vconstraint[0]
         if constraint.firstItem.isKind(of: ClockListView.self)
@@ -74,7 +73,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         }
         inView.addConstraints(Hconstraint)
         inView.addConstraints(Vconstraint)
-        
+        setNeedsUpdateConstraints()
         UIView.animate(withDuration: 1.0, animations: {
             self.selfHeight.constant = 0
             self.chrome.alpha = 0.4
@@ -97,6 +96,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
                 self.setNeedsUpdateConstraints()
             }, completion: { (bo) in
                 print("定时器消失")
+                self.removeFromSuperview()
             })
         }
     }
@@ -107,13 +107,13 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         print("\(#function)")
         super.updateConstraints()
         
-        UIView.animate(withDuration: 0.5, animations: {
-            self.layoutIfNeeded()
-            self.chrome.alpha = 0.4
-        }) { (bo) in
-            //
-            print("-----")
-        }
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.layoutIfNeeded()
+//            self.chrome.alpha = 0.4
+//        }) { (bo) in
+//            //
+//            print("-----")
+//        }
     }
     
 
