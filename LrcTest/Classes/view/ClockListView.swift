@@ -106,6 +106,14 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         //
         print("\(#function)")
         super.updateConstraints()
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.layoutIfNeeded()
+            self.chrome.alpha = 0.4
+        }) { (bo) in
+            //
+            print("-----")
+        }
     }
     
 
