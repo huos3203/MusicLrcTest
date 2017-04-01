@@ -50,7 +50,7 @@
     UIButton *btnPause = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btnPause setTitle:@"暂停" forState:UIControlStateNormal];
     [btnPause setFrame:CGRectMake(200, 420, 60, 35)];
-    [btnPause addTarget:self action:@selector(pauseAudio:) forControlEvents:UIControlEventTouchUpInside];
+    [btnPause addTarget:self action:@selector(pushAnimate:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *pushBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [pushBtn setTitle:@"model animater" forState:UIControlStateNormal];
@@ -82,8 +82,7 @@
 {
     ClockListView *list = [ClockListView shareInstance];
     list.delayClockVC.delayClockDelegate = self;
-    [self.view addSubview:list];
-    
+    [list addIntoView:self.view];
     return;
     
     ClockViewController *clock = [ClockViewController new];
