@@ -76,8 +76,8 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         inView.addConstraints(Vconstraint)
         //setNeedsUpdateConstraints()
         self.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.chrome.alpha = 0.4
+        UIView.animate(withDuration: 0.0, animations: {
+            self.chrome.alpha = 0.7
             self.selfHeight.constant = UIScreen.main.bounds.height  //rootView高度
             self.layoutIfNeeded()
         }) { (bo) in

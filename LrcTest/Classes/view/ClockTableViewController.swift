@@ -57,6 +57,8 @@ public class ClockTableViewController: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.setValue(1, forKey: "isSelected")
+        UserDefaults.standard.synchronize()
     }
 
     override public func didReceiveMemoryWarning() {
@@ -68,7 +70,7 @@ public class ClockTableViewController: UITableViewController {
         self.tableView.reloadData()
         //tag定位到cell
         let index = UserDefaults.standard.integer(forKey: "isSelected")
-         self.tableView.selectRow(at: IndexPath.init(row: index, section: 0) , animated: true, scrollPosition: .middle)
+        self.tableView.selectRow(at: IndexPath.init(row: index, section: 0) , animated: true, scrollPosition: .middle)
     }
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
