@@ -41,10 +41,13 @@ public class ClockTableViewController: UITableViewController {
             
             static let instance = { () -> ClockTableViewController in
                 let bundle = Bundle.init(for: ClockTableViewController.self)
-                    let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
+                let board:UIStoryboard = UIStoryboard.init(name: "Main", bundle: bundle)
                 let VC = board.instantiateViewController(withIdentifier: "ClockTableViewController") as! ClockTableViewController
-                    VC.loadView()
-                    return VC
+                //设置默认选项不开启
+                UserDefaults.standard.setValue(1, forKey: "isSelected")
+                UserDefaults.standard.synchronize()
+                VC.loadView()
+                return VC
             }()
             
         }
@@ -57,8 +60,6 @@ public class ClockTableViewController: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.setValue(1, forKey: "isSelected")
-        UserDefaults.standard.synchronize()
     }
 
     override public func didReceiveMemoryWarning() {
