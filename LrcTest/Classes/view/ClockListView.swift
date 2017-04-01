@@ -30,7 +30,10 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         super.init(frame: CGRect.zero)
         delayClockVC = ClockTableViewController.shareInstance
         let clockTable = delayClockVC.tableView
-        clockTable?.alpha = 0
+        
+        //clockTable?.backgroundColor = UIColor(white:255/255,alpha:0.9)//Color.colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha
+        clockTable?.backgroundColor = UIColor.clear//.white.withAlphaComponent(0.9)
+        //clockTable?.alpha = 0.9
         //遮罩
         chrome = UIView()
         chrome.backgroundColor = UIColor.black
@@ -76,13 +79,13 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         inView.addConstraints(Vconstraint)
         //setNeedsUpdateConstraints()
         self.layoutIfNeeded()
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.2, animations: {
             self.chrome.alpha = 0.7
             self.selfHeight.constant = UIScreen.main.bounds.height  //rootView高度
             self.layoutIfNeeded()
         }) { (bo) in
             //
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.tableHeight.constant = 352    //tableView 高度
                 ClockTableViewController.shareInstance.tableView.alpha = 1
                 self.layoutIfNeeded()

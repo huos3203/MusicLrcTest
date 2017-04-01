@@ -76,6 +76,7 @@ public class ClockTableViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //
+         cell.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         if cell.isKind(of: ClockTableViewCell.self) {
             let celle = cell as! ClockTableViewCell
             let index = UserDefaults.standard.integer(forKey: "isSelected")
