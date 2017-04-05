@@ -20,7 +20,6 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
             public static let instance = {
                 return ClockListView()
             }()
-            
         }
         return Singleton.instance
     }
@@ -86,7 +85,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
                 ClockTableViewController.shareInstance.tableView.alpha = 1
                 self.layoutIfNeeded()
             }, completion: { (boo) in
-                 print("tableView动画-----")
+                 //print("tableView动画-----")
             })
             
         }
@@ -120,8 +119,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
     
     public override func updateConstraints()
     {
-        //
-        print("\(#function)")
+        //print("\(#function)")
         super.updateConstraints()
     }
 

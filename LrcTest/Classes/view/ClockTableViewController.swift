@@ -82,15 +82,13 @@ public class ClockTableViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //
-        if cell.isKind(of: ClockTableViewCell.self) {
+        if cell.isKind(of: ClockTableViewCell.self) && indexPath.row > 0 {
             let celle = cell as! ClockTableViewCell
             let index = UserDefaults.standard.integer(forKey: "isSelected")
             if index == indexPath.row {
                 celle.imageViews.isHidden = false
             }
         }
-        
-        
     }
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isDragMusic = false
@@ -165,7 +163,8 @@ public class ClockTableViewController: UITableViewController {
     {
         if !reset
         {
-            UserDefaults.standard.removeObject(forKey: "isSelected")
+            UserDefaults.standard.setValue(1, forKey: "isSelected")
+            UserDefaults.standard.synchronize()
         }
         
         if timer != nil {
