@@ -114,14 +114,12 @@ public class HttpClientManager:NSObject
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
-                //let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-            
+                //正式
+                let lrcFileURL = URL.init(fileURLWithPath: fileName)
+                
+                //test
+                //let lrcFileURL = self.createLRCDir()
                 do{
-                    let documentPath = (fileName as NSString).deletingLastPathComponent
-                    let lrcDirURL = URL.init(fileURLWithPath: documentPath)
-                    try FileManager.default.createDirectory(at: lrcDirURL, withIntermediateDirectories: true, attributes: nil)
-                    
-                    let lrcFileURL = lrcDirURL.appendingPathComponent(fileName+".lrc")
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
                     print("存盘路径：\(lrcFileURL.absoluteString)")
                     loadLrc(lrcFileURL.path)
@@ -129,6 +127,7 @@ public class HttpClientManager:NSObject
                 catch
                 {
                     print("存盘失败：\(err?.localizedDescription)")
+                    loadLrc("")
                 }
             }
             else
@@ -138,6 +137,22 @@ public class HttpClientManager:NSObject
         }
         downTask.resume()
     }
+    
+    func createLRCDir()->URL
+    {
+        let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        let lrcDirURL = URL.init(fileURLWithPath: documentPath!)
+        do
+        {
+            try FileManager.default.createDirectory(at: lrcDirURL, withIntermediateDirectories: true, attributes: nil)
+        }catch{
+            print("=====")
+        }
+        
+        return lrcDirURL.appendingPathComponent("test.lrc")
+    }
+    
+    
     
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)

@@ -159,11 +159,11 @@
     
     //- (void)verifyAppVersionByWithURL:(NSString * _Nonnull)url about:(VerifyAppVersionModel * _Nonnull)app completionHander:(void (^ _Nonnull)(VerifyAppVersionModel * _Nonnull))completionHander;
     //- (nonnull instancetype)initWithUsername:(NSString * _Nonnull)username token:(NSString * _Nonnull)token OBJC_DESIGNATED_INITIALIZER;
-    VerifyAppVersionModel *model = [[VerifyAppVersionModel alloc] initWithUsername:@"" token:@""];
-    [HttpClientManager.shareInstance verifyAppVersionByWithURL:@"/client/product/verifyAppVersion" about:model completionHander:^(VerifyAppVersionModel * model) {
-        //
-        NSLog(@"%@",model.code);
-    }];
+//    VerifyAppVersionModel *model = [[VerifyAppVersionModel alloc] initWithUsername:@"" token:@""];
+//    [HttpClientManager.shareInstance verifyAppVersionByWithURL:@"/client/product/verifyAppVersion" about:model completionHander:^(VerifyAppVersionModel * model) {
+//        //
+//        NSLog(@"%@",model.code);
+//    }];
 }
 
 
