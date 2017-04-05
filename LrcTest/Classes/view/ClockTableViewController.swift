@@ -60,6 +60,12 @@ public class ClockTableViewController: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
+        //在此处无法实现透明效果，原因不明.最终在storyboard上设置解决
+        //tableView.backgroundColor = UIColor.clear
+        
+        //tableView.backgroundColor = UIColor(white:255/255,alpha:0.9)//Color.colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha
+        //tableView.backgroundColor = UIColor.clear//.white.withAlphaComponent(0.9)
+        //tableView.alpha = 0.9
     }
 
     override public func didReceiveMemoryWarning() {
@@ -76,7 +82,6 @@ public class ClockTableViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //
-         cell.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         if cell.isKind(of: ClockTableViewCell.self) {
             let celle = cell as! ClockTableViewCell
             let index = UserDefaults.standard.integer(forKey: "isSelected")
