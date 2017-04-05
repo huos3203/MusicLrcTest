@@ -30,10 +30,6 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         super.init(frame: CGRect.zero)
         delayClockVC = ClockTableViewController.shareInstance
         let clockTable = delayClockVC.tableView
-        
-        //clockTable?.backgroundColor = UIColor(white:255/255,alpha:0.9)//Color.colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha
-        clockTable?.backgroundColor = UIColor.clear//.white.withAlphaComponent(0.9)
-        //clockTable?.alpha = 0.9
         //遮罩
         chrome = UIView()
         chrome.backgroundColor = UIColor.black

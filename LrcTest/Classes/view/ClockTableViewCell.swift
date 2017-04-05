@@ -18,6 +18,7 @@ class ClockTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backgroundColor = UIColor.white.withAlphaComponent(0.8)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool)
@@ -29,7 +30,6 @@ class ClockTableViewCell: UITableViewCell {
             print("------")
             return
         }
-        
         if selected
         {
             imageViews.isHidden = false
@@ -38,6 +38,8 @@ class ClockTableViewCell: UITableViewCell {
         {
             imageViews.isHidden = true
         }
+        
+        
         
        
     }
