@@ -82,7 +82,8 @@ public class ClockTableViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //
-        if cell.isKind(of: ClockTableViewCell.self) && indexPath.row > 0 {
+        if cell.isKind(of: ClockTableViewCell.self) && indexPath.row > 0
+        {
             let celle = cell as! ClockTableViewCell
             let index = UserDefaults.standard.integer(forKey: "isSelected")
             if index == indexPath.row {
