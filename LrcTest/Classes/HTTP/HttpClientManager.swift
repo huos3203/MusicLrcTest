@@ -136,7 +136,7 @@ public class HttpClientManager:NSObject
         //let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in  }
         downTask.resume()
     }
-    
+
     
     func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
     {
@@ -157,6 +157,7 @@ public class HttpClientManager:NSObject
         
     }
 
+
     func createLRCDir()->URL
     {
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
@@ -171,7 +172,6 @@ public class HttpClientManager:NSObject
         return lrcDirURL.appendingPathComponent("test.lrc")
     }
     
-
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
     {
