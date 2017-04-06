@@ -117,6 +117,7 @@ public class ClockTableViewController: UITableViewController {
         
         UserDefaults.standard.setValue(indexPath.row, forKey: "isSelected")
         UserDefaults.standard.synchronize()
+        ClockListView.shareInstance.chromeTap(UITapGestureRecognizer()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 )
         //开始倒计时
         startClock(delayTime: delayTime)
     }
@@ -146,11 +147,11 @@ public class ClockTableViewController: UITableViewController {
     //定时事件：开启定时器
     func startClock(delayTime:NSInteger = 0)
     {
+        cancelClock(reset: true)
         self.delayTime = delayTime
         if delayTime <= 0 {
             return;
         }
-        cancelClock(reset: true)
         
         self.perform(#selector(ClockTableViewController.closeClock), with:nil, afterDelay: TimeInterval(self.delayTime))
         

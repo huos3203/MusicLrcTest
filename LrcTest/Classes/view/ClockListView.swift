@@ -93,28 +93,26 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
     
     func chromeTap(_ tap:UITapGestureRecognizer)
     {
-        if tap.state == .ended
-        {
+//        if tap.state == .ended
+//        {
             //从父视图移除
             //self.removeFromSuperview()
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.chrome.alpha = 0
-                self.tableHeight.constant = 0
-                ClockTableViewController.shareInstance.tableView.alpha = 0
-                self.setNeedsUpdateConstraints()
-                
             }, completion: { (bo) in
                 
-                UIView.animate(withDuration: 1.0, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     self.selfHeight.constant = 0
-                    self.setNeedsUpdateConstraints()
+                    self.tableHeight.constant = 0
+                    ClockTableViewController.shareInstance.tableView.alpha = 0
+                    self.layoutIfNeeded()
                 }, completion: { (bo) in
                     //
                     print("定时器消失")
                     self.removeFromSuperview()
                 })
             })
-        }
+//        }
     }
     
     public override func updateConstraints()
