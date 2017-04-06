@@ -114,12 +114,12 @@ public class ClockTableViewController: UITableViewController {
                 return (cell?.tag)!*60
             }()
         }
-        
-        UserDefaults.standard.setValue(indexPath.row, forKey: "isSelected")
-        UserDefaults.standard.synchronize()
-        ClockListView.shareInstance.chromeTap(UITapGestureRecognizer()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 )
         //开始倒计时
         startClock(delayTime: delayTime)
+        UserDefaults.standard.setValue(indexPath.row, forKey: "isSelected")
+        UserDefaults.standard.synchronize()
+        ClockListView.shareInstance.chromeTap(UITapGestureRecognizer())
+        
     }
     
     

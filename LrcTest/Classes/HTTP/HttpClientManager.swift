@@ -156,7 +156,7 @@ public class HttpClientManager:NSObject
         }
         
     }
-    
+
     func createLRCDir()->URL
     {
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
@@ -171,6 +171,7 @@ public class HttpClientManager:NSObject
         return lrcDirURL.appendingPathComponent("test.lrc")
     }
     
+
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
     {
