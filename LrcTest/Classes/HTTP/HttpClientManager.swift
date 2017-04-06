@@ -57,22 +57,24 @@ public class HttpClientManager:NSObject
     //下载歌词
     public func downMusicLrcBy(lrcModel model:MusicLrcModel , loadLrc:@escaping (String)->Void)
     {
-        if model.lrcURL.utf16.count == 0
-        || model.musiclyric_id.utf16.count == 0
-        || model.token.utf16.count == 0
-        || model.username.utf16.count == 0
+        if (model.lrcURL == nil || (model.lrcURL?.isEmpty)!)                //model.lrcURL.utf16.count == 0
+        || (model.musiclyric_id == nil || (model.musiclyric_id?.isEmpty)!)  //model.musiclyric_id.utf16.count == 0
+        || (model.token == nil || (model.token?.isEmpty)!)                  //model.token.utf16.count == 0
+        || (model.username == nil || (model.username?.isEmpty)!)            //model.username.utf16.count == 0
+        || (model.localPath == nil || (model.localPath?.isEmpty)!)            //model.username.utf16.count == 0)
         {
+            loadLrc("")
             return
         }
         
         //当文件存在时
-        if(FileManager.default.fileExists(atPath: model.localPath))
+        if(FileManager.default.fileExists(atPath: model.localPath!))
         {
-            loadLrc(model.localPath)
+            loadLrc(model.localPath!)
             return
         }
         
-        var request = URLRequest(url: URL(string: model.lrcURL)!)
+        var request = URLRequest(url: URL(string: model.lrcURL!)!)
         print(model.convertToJSON())
         let data = model.convertToJSON().data(using: .utf8)
         request.httpBodyStream = InputStream.init(data: data!)
@@ -87,9 +89,10 @@ public class HttpClientManager:NSObject
                 
                 if (httpURL?.lowercased().hasSuffix("lrc"))!
                 {
-                    self.downLRCFile(urlStr: httpURL!,
-                                   fileName: model.localPath,
-                                    loadLrc: loadLrc)
+                    //test
+                    //let lrcFileURL = self.createLRCDir().path
+                    let lrcFileURL = model.localPath!
+                    self.downLRCByStringURL(urlStr:  httpURL!, fileName: lrcFileURL, loadLrc: loadLrc)
                 }
                 else
                 {
@@ -104,21 +107,16 @@ public class HttpClientManager:NSObject
     func downLRCFile(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
     {
         //http://www.jianshu.com/p/5445f2205f70 URLHostAllowedCharacterSet
-        let urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-        print("lujing: === \(urlStr)")
-        let url = URL(string:urlStr!)!
-        let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in
-            
-            
+        let urlStr1 = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let url = URL(string:urlStr1!)!
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        let downTask = URLSession.shared.downloadTask(with: request) { (location, response, err) in
             let responses = response as! HTTPURLResponse
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
-                //正式
                 let lrcFileURL = URL.init(fileURLWithPath: fileName)
-                
-                //test
-                //let lrcFileURL = self.createLRCDir()
                 do{
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
                     print("存盘路径：\(lrcFileURL.absoluteString)")
@@ -135,7 +133,28 @@ public class HttpClientManager:NSObject
                 loadLrc("")
             }
         }
+        //let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in  }
         downTask.resume()
+    }
+    
+    
+    func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
+    {
+        //
+        let urlStr1 = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let url = URL(string:urlStr1!)!
+        do {
+            let htmlsource = try NSString.init(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
+            print(htmlsource)
+            let lrcFileURL = URL.init(fileURLWithPath: fileName)
+            try htmlsource.write(to: lrcFileURL, atomically: true, encoding: String.Encoding.utf8.rawValue)
+            loadLrc(lrcFileURL.path)
+        } catch
+        {
+            //
+            loadLrc("")
+        }
+        
     }
     
     func createLRCDir()->URL
@@ -151,8 +170,6 @@ public class HttpClientManager:NSObject
         
         return lrcDirURL.appendingPathComponent("test.lrc")
     }
-    
-    
     
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
