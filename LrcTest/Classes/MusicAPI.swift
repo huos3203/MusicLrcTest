@@ -36,7 +36,7 @@ public class MusicAPI: NSObject
     {
         //
         lrcViewManager.showindicatorView()
-        httpTaskManager.downMusicLrcBy(lrcModel: model) { (lrcPath) in
+        httpTaskManager.downMusicLrcBy(lrcModel: model) { (lrcPath, log) in
             //
             OperationQueue.main.addOperation {
                 let isCanLoad = self.lrcViewManager.loadLrc(by: lrcPath, audioPlayer: player, lrcDedegate: lrcDelegate)
