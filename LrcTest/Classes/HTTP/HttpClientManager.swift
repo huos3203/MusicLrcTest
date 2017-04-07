@@ -151,7 +151,7 @@ public class HttpClientManager:NSObject
     
     func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
     {
-        //
+        //   
         let urlStr1 = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let url = URL(string:urlStr1!)!
         do {
