@@ -63,16 +63,16 @@ public class HttpClientManager:NSObject
         || (model.username == nil || (model.username?.isEmpty)!)            //model.username.utf16.count == 0
         || (model.localPath == nil || (model.localPath?.isEmpty)!)            //model.username.utf16.count == 0)
         {
-            //loadLrc("")
-            //return
+            loadLrc("")
+            return
         }
         
         //当文件存在时
         if(FileManager.default.fileExists(atPath: model.localPath!))
         {
-            try! FileManager.default.removeItem(atPath: model.localPath!)
-            //loadLrc(model.localPath!)
-            //return
+            //try! FileManager.default.removeItem(atPath: model.localPath!)
+            loadLrc(model.localPath!)
+            return
         }
         
         var request = URLRequest(url: URL(string: model.lrcURL!)!)
