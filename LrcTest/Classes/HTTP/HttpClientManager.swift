@@ -126,6 +126,7 @@ public class HttpClientManager:NSObject
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
+                //正式
                 let lrcFileURL = URL.init(fileURLWithPath: fileName)
                 do{
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)

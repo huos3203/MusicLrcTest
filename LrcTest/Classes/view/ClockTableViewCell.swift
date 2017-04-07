@@ -38,9 +38,5 @@ class ClockTableViewCell: UITableViewCell {
         {
             imageViews.isHidden = true
         }
-        
-        
-        
-       
     }
 }
