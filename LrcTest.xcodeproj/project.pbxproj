@@ -35,6 +35,8 @@
 /* Begin PBXBuildFile section */
 		140885811E76916D008B9466 /* MusicLRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1408857F1E76916D008B9466 /* MusicLRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		140886731E77C048008B9466 /* 荷塘月色.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 140886721E77C048008B9466 /* 荷塘月色.lrc */; };
+		144B8E111E9783FF009969E8 /* VerifyAppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 144B8E101E9783FF009969E8 /* VerifyAppTool.m */; };
+		144B8E181E978531009969E8 /* VerifyAppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 144B8E101E9783FF009969E8 /* VerifyAppTool.m */; };
 		146EB4D31E8A476900D753F0 /* MusicLrcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DBA81E88F36300444AE3 /* MusicLrcModel.swift */; };
 		146EB4EB1E8A552B00D753F0 /* MusicLrcView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		146EB4EC1E8A552F00D753F0 /* MusicLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */; };
@@ -201,6 +203,8 @@
 		140885801E76916D008B9466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140886721E77C048008B9466 /* 荷塘月色.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.lrc"; sourceTree = "<group>"; };
 		1444AD711E7FD6DD00F1AC76 /* SleepClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepClockView.swift; sourceTree = "<group>"; };
+		144B8E0F1E9783FF009969E8 /* VerifyAppTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyAppTool.h; sourceTree = "<group>"; };
+		144B8E101E9783FF009969E8 /* VerifyAppTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyAppTool.m; sourceTree = "<group>"; };
 		1483B7B81E80FFCE009D8C42 /* TransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitioningDelegate.swift; sourceTree = "<group>"; };
 		1483B7BB1E81024E009D8C42 /* ClockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTableViewController.swift; sourceTree = "<group>"; };
 		1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTableViewCell.swift; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 		14AF06BA1E7BE6C00029DD34 /* LrcUtil */ = {
 			isa = PBXGroup;
 			children = (
+				144B8E0F1E9783FF009969E8 /* VerifyAppTool.h */,
+				144B8E101E9783FF009969E8 /* VerifyAppTool.m */,
 				14AF06BB1E7BE6C00029DD34 /* CLLrcTool.h */,
 				14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */,
 				14AF06BD1E7BE6C00029DD34 /* MusicLrcParser.h */,
@@ -826,6 +832,7 @@
 				D221DBA21E852BB600444AE3 /* ClockListView.swift in Sources */,
 				D2C9A7C41E84D02A00ED0C80 /* VerifyAppVersionModel.swift in Sources */,
 				D2C9A7D31E84D10000ED0C80 /* MusicLrcParser.m in Sources */,
+				144B8E111E9783FF009969E8 /* VerifyAppTool.m in Sources */,
 				D2C9A7D21E84D0FC00ED0C80 /* CLLrcTool.m in Sources */,
 				D2C9A7C61E84D02A00ED0C80 /* EffectView.m in Sources */,
 				D2C9A7C81E84D02A00ED0C80 /* MusicLrcCell.m in Sources */,
@@ -853,6 +860,7 @@
 				1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */,
 				D2378DB71E8DF83400F859D7 /* MusicLrcLabel.m in Sources */,
 				D221DBA61E88CC4000444AE3 /* HttpClientManager.swift in Sources */,
+				144B8E181E978531009969E8 /* VerifyAppTool.m in Sources */,
 				1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */,
 				D221DBA71E88CC4200444AE3 /* ConvertToDictionary.swift in Sources */,
 				D2378DB81E8DF89400F859D7 /* MusicLrcParser.m in Sources */,

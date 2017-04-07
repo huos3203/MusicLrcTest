@@ -11,6 +11,7 @@
 #import "CLLrcLine.h"
 #import "LrcTestTests-Swift.h"
 
+
 @interface LrcTestTests : XCTestCase
 
 @end
@@ -132,6 +133,43 @@
     [self waitForExpectationsWithTimeout:20 handler:^(NSError * _Nullable error) {
         NSLog(@"error-----%@",[error localizedDescription]);
     }];
+}
+
+-(void)verifyAppVersion
+{
+    SZUser *user = [SZUser shared];
+    NSString *hostURL = [NSString stringWithFormat:@"%@/client/product/verifyAppVersion",kBaseHost];
+    [VerifyAppTool verifyByVersionOwer:user.name token:user.token OnHost:hostURL handler:^(NSString *code, NSString *msg) {
+        //版本号过低 16002
+        if (code.integerValue != 16002)
+        {
+            //根据状态码提示
+            
+            return;
+        }
+        
+        if(code.integerValue == 16002)
+        {
+            msg = @"当前版本存在安全隐患，\n为保障您的权益，请立即升级！";
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"版本升级" message:msg preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"立即升级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //
+                [self openAppStore];
+            }];
+            
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //退出到home界面操作
+                
+            }];
+            
+            [alertVC addAction:okAction];
+            [alertVC addAction:cancelAction];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }
+        
+        
+    }];
+    
 }
 
 @end
