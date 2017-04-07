@@ -63,15 +63,16 @@ public class HttpClientManager:NSObject
         || (model.username == nil || (model.username?.isEmpty)!)            //model.username.utf16.count == 0
         || (model.localPath == nil || (model.localPath?.isEmpty)!)            //model.username.utf16.count == 0)
         {
-            loadLrc("")
-            return
+            //loadLrc("")
+            //return
         }
         
         //当文件存在时
         if(FileManager.default.fileExists(atPath: model.localPath!))
         {
-            loadLrc(model.localPath!)
-            return
+            try! FileManager.default.removeItem(atPath: model.localPath!)
+            //loadLrc(model.localPath!)
+            //return
         }
         
         var request = URLRequest(url: URL(string: model.lrcURL!)!)
@@ -81,7 +82,12 @@ public class HttpClientManager:NSObject
         request.httpMethod = "POST"
         let requestLrcURL = URLSession.shared.dataTask(with: request) { (data, response, err) in
             //
-            let responses = response as! HTTPURLResponse
+            guard let responses = response as? HTTPURLResponse else
+            {
+                loadLrc("")
+                return
+            }
+            
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
@@ -112,7 +118,11 @@ public class HttpClientManager:NSObject
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
         let downTask = URLSession.shared.downloadTask(with: request) { (location, response, err) in
-            let responses = response as! HTTPURLResponse
+            guard let responses = response as? HTTPURLResponse else
+            {
+                loadLrc("")
+                return
+            }
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
