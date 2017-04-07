@@ -55,7 +55,7 @@ public class HttpClientManager:NSObject
     }
     
     //下载歌词
-    public func downMusicLrcBy(lrcModel model:MusicLrcModel , loadLrc:@escaping (String)->Void)
+    public func downMusicLrcBy(lrcModel model:MusicLrcModel , loadLrc:@escaping (String,String)->Void)
     {
         if (model.lrcURL == nil || (model.lrcURL?.isEmpty)!)                //model.lrcURL.utf16.count == 0
         || (model.musiclyric_id == nil || (model.musiclyric_id?.isEmpty)!)  //model.musiclyric_id.utf16.count == 0
@@ -63,7 +63,7 @@ public class HttpClientManager:NSObject
         || (model.username == nil || (model.username?.isEmpty)!)            //model.username.utf16.count == 0
         || (model.localPath == nil || (model.localPath?.isEmpty)!)            //model.username.utf16.count == 0)
         {
-            loadLrc("")
+            loadLrc("","请求数据不完整")
             return
         }
         
@@ -71,7 +71,7 @@ public class HttpClientManager:NSObject
         if(FileManager.default.fileExists(atPath: model.localPath!))
         {
             //try! FileManager.default.removeItem(atPath: model.localPath!)
-            loadLrc(model.localPath!)
+            loadLrc(model.localPath!,"")
             return
         }
         
@@ -84,7 +84,7 @@ public class HttpClientManager:NSObject
             //
             guard let responses = response as? HTTPURLResponse else
             {
-                loadLrc("")
+                loadLrc("","访问网络失败")
                 return
             }
             
@@ -102,8 +102,8 @@ public class HttpClientManager:NSObject
                 }
                 else
                 {
-                    print("文件路径错误")
-                    loadLrc("")
+                    //print("文件路径错误")
+                    loadLrc("","lrc路径接口响应：\(responses.statusCode)")
                 }
             }
         }
@@ -149,7 +149,7 @@ public class HttpClientManager:NSObject
     }
 
     
-    func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
+    func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String,String)->Void)
     {
         //   
         let urlStr1 = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
@@ -159,11 +159,11 @@ public class HttpClientManager:NSObject
             //print(htmlsource)
             let lrcFileURL = URL.init(fileURLWithPath: fileName)
             try htmlsource.write(to: lrcFileURL, atomically: true, encoding: String.Encoding.utf8.rawValue)
-            loadLrc(lrcFileURL.path)
+            loadLrc(lrcFileURL.path,"")
         } catch
         {
             //
-            loadLrc("")
+            loadLrc("","lrc文件存盘中失败")
         }
         
     }
@@ -184,14 +184,14 @@ public class HttpClientManager:NSObject
     }
     
     //
-    public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
+    public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool,String)->Void)
     {
         MusicLrcView.shared().showindicatorView()
-        downMusicLrcBy(lrcModel: lrcModel) { (lrcPath) in
+        downMusicLrcBy(lrcModel: lrcModel) { (lrcPath,logmessage) in
             //
             OperationQueue.main.addOperation {
                 let isCanLoad = MusicLrcView.shared().loadLrc(by: lrcPath, audioPlayer: player, lrcDedegate: lrcDelegate)
-                completion(isCanLoad)
+                completion(isCanLoad,logmessage)
             }
         }
     }
