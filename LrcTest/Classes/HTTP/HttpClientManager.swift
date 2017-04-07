@@ -156,7 +156,7 @@ public class HttpClientManager:NSObject
         let url = URL(string:urlStr1!)!
         do {
             let htmlsource = try NSString.init(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
-            print(htmlsource)
+            //print(htmlsource)
             let lrcFileURL = URL.init(fileURLWithPath: fileName)
             try htmlsource.write(to: lrcFileURL, atomically: true, encoding: String.Encoding.utf8.rawValue)
             loadLrc(lrcFileURL.path)
