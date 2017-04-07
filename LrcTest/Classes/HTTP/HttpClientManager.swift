@@ -126,7 +126,15 @@ public class HttpClientManager:NSObject
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
+<<<<<<< HEAD
                 let lrcFileURL = URL.init(fileURLWithPath: fileName)
+=======
+                //正式
+                let lrcFileURL = URL.init(fileURLWithPath: fileName)
+                
+                //test
+                //let lrcFileURL = self.createLRCDir()
+>>>>>>> 下载lrc测试代码
                 do{
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
                     print("存盘路径：\(lrcFileURL.absoluteString)")
@@ -181,6 +189,22 @@ public class HttpClientManager:NSObject
         
         return lrcDirURL.appendingPathComponent("test.lrc")
     }
+    
+    func createLRCDir()->URL
+    {
+        let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        let lrcDirURL = URL.init(fileURLWithPath: documentPath!)
+        do
+        {
+            try FileManager.default.createDirectory(at: lrcDirURL, withIntermediateDirectories: true, attributes: nil)
+        }catch{
+            print("=====")
+        }
+        
+        return lrcDirURL.appendingPathComponent("test.lrc")
+    }
+    
+    
     
     //
     public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool)->Void)
