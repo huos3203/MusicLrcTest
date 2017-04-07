@@ -126,15 +126,7 @@ public class HttpClientManager:NSObject
             print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
-<<<<<<< HEAD
                 let lrcFileURL = URL.init(fileURLWithPath: fileName)
-=======
-                //正式
-                let lrcFileURL = URL.init(fileURLWithPath: fileName)
-                
-                //test
-                //let lrcFileURL = self.createLRCDir()
->>>>>>> 下载lrc测试代码
                 do{
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
                     print("存盘路径：\(lrcFileURL.absoluteString)")
