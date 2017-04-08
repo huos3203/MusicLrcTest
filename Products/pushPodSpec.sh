@@ -59,5 +59,6 @@ then
     echo "Pod已安装"
     funPushSpec $repoNAME $specPath
 else
+    sudo gem install cocoapods  #更新／安装
     exit 0
 fi
