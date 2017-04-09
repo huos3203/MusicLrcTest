@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import LogSwift
 public class HttpClientManager:NSObject
 {
     
@@ -64,6 +64,7 @@ public class HttpClientManager:NSObject
         || (model.localPath == nil || (model.localPath?.isEmpty)!)            //model.username.utf16.count == 0)
         {
             loadLrc("","请求数据不完整")
+            PBBLogModel.init(.DEBUG, in: .SuiZhi, desc: "请求数据不完整")
             return
         }
         
@@ -92,7 +93,7 @@ public class HttpClientManager:NSObject
                 loadLrc("")
                 return
             }
-            print("responses.statusCode：-----\(responses.statusCode)")
+            //print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
                 //正式

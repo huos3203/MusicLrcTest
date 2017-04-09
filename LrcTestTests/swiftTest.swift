@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import LogSwift
+@testable import LrcTest
 class swiftTest: XCTestCase {
     
     override func setUp() {
@@ -51,6 +52,15 @@ class swiftTest: XCTestCase {
         print(enc)
         let des = log.aesDecryptor(password: enc, secret: "d")
         print(des)
+    }
+    
+    func testHttp() {
+        //
+        let model = MusicLrcModel.init(username: "", token: "", lrcURL: "", musiclyric_id: "", localPath: "")
+        HttpClientManager().downMusicLrcBy(lrcModel: model) { (path, log) in
+            //
+            print("路径：\(path),日志：\(log)")
+        }
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
