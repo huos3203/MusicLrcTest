@@ -131,12 +131,12 @@ public class HttpClientManager:NSObject
                 let lrcFileURL = URL.init(fileURLWithPath: fileName)
                 do{
                     try FileManager.default.copyItem(at: location!, to: lrcFileURL)
-                    print("存盘路径：\(lrcFileURL.absoluteString)")
+                    //print("存盘路径：\(lrcFileURL.absoluteString)")
                     loadLrc(lrcFileURL.path)
                 }
                 catch
                 {
-                    print("存盘失败：\(err?.localizedDescription)")
+                    //print("存盘失败：\(err?.localizedDescription)")
                     loadLrc("")
                 }
             }
