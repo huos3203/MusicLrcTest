@@ -14,17 +14,17 @@
 # 索引文件绝对路径
 specPath=$PROJECT_DIR/Products/MusicLrc.podspec
 #托管私库名
-repoNAME=PodRepo
+repoNAME=podRepo
 #远程托管库
 repoURL=https://github.com/huos3203/PodRepo.git
 #本地索引库库
-repoPATH=`pod repo list | grep /.*${repoNAME}$ | sed 's/- Path: //g'`
+repoPATH=`pod repo list | grep /.*${repoNAME}$ | sed 's/- Path: //g' | sed 's/- URL: //g'`
 
 # 判断个人私库是否以clone到本地目录
 funAddRepoToPod()
 {
-    echo $repoPATH
-    if [ -d $repoPATH ]
+    echo "私库路径：$repoPATH"
+    if [ -d "${repoPATH}" ]
     then
         echo "私库已被添加，返回本地路径"
     else
@@ -40,6 +40,7 @@ funAddTagAndPush()
     #获取podspec文件中的tag值
     tag=`cat $specPath | grep 's.version' | sed -n '1p' | sed 's/s.*=//g' | sed 's/"//g' | sed 's/ //g'`
     echo "获取podspec文件中的tag值 ${tag}"
+    git commit -m "新增版本：tag值 ${tag}"
     git tag ${tag}
     git push --tag
 }
@@ -57,6 +58,7 @@ funPushSpec()
     funAddRepoToPod $1
     # 清理私库，便于维护更新索引文件
     cd $repoPATH
+    echo "进入私库目录：`pwd`"
     #设置当前系统的 locale,支持中文路径
     #或在~/.profile文件中添加配置：export LANG=en_US.UTF-8
     export LC_CTYPE="zh_CN.UTF-8"

@@ -183,7 +183,7 @@ class ClockAnimatedTransitioning: NSObject,UIViewControllerAnimatedTransitioning
         let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         //determine the start and end positions of the view.
-        let fromView = fromVC?.view
+        //let fromView = fromVC?.view
         let toView = toVC?.view
         let containerView = transitionContext.containerView
         

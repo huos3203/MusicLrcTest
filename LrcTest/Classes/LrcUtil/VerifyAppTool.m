@@ -47,7 +47,7 @@
                 }
                 else
                 {
-                    NSLog(@"result失败结果：%hhd",result.boolValue);
+                    //NSLog(@"result失败结果：%hhd",result.boolValue);
                 }
                 
            // }
