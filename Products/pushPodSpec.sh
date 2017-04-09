@@ -6,6 +6,10 @@
 #  Created by pengyucheng on 16/03/2017.
 #  Copyright © 2017 PBBReader. All rights reserved.
 
+# 同时删除多个repo：  pod repo remove reponame1 reponame2
+# 同时删除多个本地tag：  git tag -d 3.2 3.3
+# 同时删除多个远程tag：  git push origin :3.2 :3.3
+
 # 1. 定义函数：函数名(){函数体 [return Int]}
 # 2. 函数调用：fun名称 参数1 参数2。$n：函数内使用传入值0<n<10 .${n}获取无限制。
 # 3. 函数返回：必须为整数，$?：获取函数返回值。不能返回字符串 。错误提示：“numeric argument required”。
