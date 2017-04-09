@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MusicLrc"
-  s.version      = "3.3"
+  s.version      = "3.1"
   s.summary      = "使用正则表达式，重新定义解析歌词的算法"
 
   # This description is used to generate tags and improve search results.
