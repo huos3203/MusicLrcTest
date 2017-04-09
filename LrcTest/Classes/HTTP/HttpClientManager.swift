@@ -134,7 +134,7 @@ public class HttpClientManager:NSObject
                 return
             }
             
-            print("responses.statusCode：-----\(responses.statusCode)")
+            //print("responses.statusCode：-----\(responses.statusCode)")
             if (responses.statusCode == 200)
             {
                 let httpURL = String.init(data: data!, encoding: String.Encoding.utf8)
