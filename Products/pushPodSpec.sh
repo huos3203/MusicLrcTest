@@ -33,9 +33,23 @@ funAddRepoToPod()
     fi
 }
 
-# 函数
+#添加tag并push
+funAddTagAndPush()
+{
+
+    #获取podspec文件中的tag值
+    tag=`cat $specPath | grep 's.version' | sed -n '1p' | sed 's/s.*=//g' | sed 's/"//g' | sed 's/ //g'`
+    echo "获取podspec文件中的tag值 ${tag}"
+    git tag ${tag}
+    git push --tag
+}
+
+# 更新私库
 funPushSpec()
 {
+    #指定新版本
+    funAddTagAndPush
+
     # 验证未见合法性
     #pod lib lint
 
