@@ -16,7 +16,7 @@ target 'MusicLrcUtil' do
   use_frameworks!
 
   # Pods for LrcTest
-pod 'LogSwift','~> 1.1'
+  pod 'LogSwift','~> 1.1'
   target 'LrcTestTests' do
     inherit! :search_paths
     # Pods for testing
