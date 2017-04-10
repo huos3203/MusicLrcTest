@@ -65,6 +65,7 @@ public class HttpClientManager:NSObject
         {
             loadLrc("","请求数据不完整")
             PBBLogModel.init(.DEBUG, in: .SuiZhi, desc: "请求数据不完整").sendTo()
+
             return
         }
         

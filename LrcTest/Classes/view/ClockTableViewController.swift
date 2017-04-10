@@ -155,6 +155,7 @@ public class ClockTableViewController: UITableViewController {
         
         self.perform(#selector(ClockTableViewController.closeClock), with:nil, afterDelay: TimeInterval(self.delayTime))
         
+        refresh()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ClockTableViewController.refresh), userInfo: nil, repeats: true)
         // 将定时器添加到运行循环
         RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
