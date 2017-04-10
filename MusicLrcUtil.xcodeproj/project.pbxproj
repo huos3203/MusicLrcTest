@@ -221,7 +221,7 @@
 		148878FA1E8288B5002A3C04 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
 		148879721E839E70002A3C04 /* MusicLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148879731E839E71002A3C04 /* LrcTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LrcTest copy-Info.plist"; path = "/Users/pengyucheng/git-svn/MusicLrc/LrcTest copy-Info.plist"; sourceTree = "<absolute>"; };
-		148BFF2F1E6FCE9300E674D3 /* LrcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		148BFF2F1E6FCE9300E674D3 /* MusicLrcUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicLrcUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		148BFF361E6FCE9300E674D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -353,8 +353,8 @@
 		148BFF261E6FCE9200E674D3 = {
 			isa = PBXGroup;
 			children = (
-				148BFF311E6FCE9300E674D3 /* LrcTest */,
-				148BFF4B1E6FCE9500E674D3 /* LrcTestTests */,
+				148BFF311E6FCE9300E674D3 /* MusicLrcUtil */,
+				148BFF4B1E6FCE9500E674D3 /* MusicLrcUtilTests */,
 				1408857E1E76916D008B9466 /* MusicLRC */,
 				148BFF301E6FCE9300E674D3 /* Products */,
 				148879731E839E71002A3C04 /* LrcTest copy-Info.plist */,
@@ -367,7 +367,7 @@
 		148BFF301E6FCE9300E674D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				148BFF2F1E6FCE9300E674D3 /* LrcTest.app */,
+				148BFF2F1E6FCE9300E674D3 /* MusicLrcUtil.app */,
 				148BFF481E6FCE9500E674D3 /* LrcTestTests.xctest */,
 				1408857D1E76916A008B9466 /* MusicLRC.framework */,
 				148879721E839E70002A3C04 /* MusicLocal.app */,
@@ -376,7 +376,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		148BFF311E6FCE9300E674D3 /* LrcTest */ = {
+		148BFF311E6FCE9300E674D3 /* MusicLrcUtil */ = {
 			isa = PBXGroup;
 			children = (
 				14AF06B91E7BE6C00029DD34 /* Classes */,
@@ -393,6 +393,7 @@
 				14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */,
 				148BFF321E6FCE9300E674D3 /* Supporting Files */,
 			);
+			name = MusicLrcUtil;
 			path = LrcTest;
 			sourceTree = "<group>";
 		};
@@ -409,7 +410,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		148BFF4B1E6FCE9500E674D3 /* LrcTestTests */ = {
+		148BFF4B1E6FCE9500E674D3 /* MusicLrcUtilTests */ = {
 			isa = PBXGroup;
 			children = (
 				148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */,
@@ -418,6 +419,7 @@
 				1483B7E01E8238B5009D8C42 /* LrcTestTests-Bridging-Header.h */,
 				1483B7E31E82390F009D8C42 /* swiftTest.swift */,
 			);
+			name = MusicLrcUtilTests;
 			path = LrcTestTests;
 			sourceTree = "<group>";
 		};
@@ -591,9 +593,9 @@
 			productReference = 148879721E839E70002A3C04 /* MusicLocal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		148BFF2E1E6FCE9300E674D3 /* LrcTest */ = {
+		148BFF2E1E6FCE9300E674D3 /* MusicLrcUtil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 148BFF511E6FCE9500E674D3 /* Build configuration list for PBXNativeTarget "LrcTest" */;
+			buildConfigurationList = 148BFF511E6FCE9500E674D3 /* Build configuration list for PBXNativeTarget "MusicLrcUtil" */;
 			buildPhases = (
 				68BE67DFD78BCE8C726598D5 /* [CP] Check Pods Manifest.lock */,
 				148BFF2B1E6FCE9300E674D3 /* Sources */,
@@ -607,9 +609,9 @@
 			);
 			dependencies = (
 			);
-			name = LrcTest;
+			name = MusicLrcUtil;
 			productName = LrcTest;
-			productReference = 148BFF2F1E6FCE9300E674D3 /* LrcTest.app */;
+			productReference = 148BFF2F1E6FCE9300E674D3 /* MusicLrcUtil.app */;
 			productType = "com.apple.product-type.application";
 		};
 		148BFF471E6FCE9500E674D3 /* LrcTestTests */ = {
@@ -706,7 +708,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "LrcTest" */;
+			buildConfigurationList = 148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "MusicLrcUtil" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -719,7 +721,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				148BFF2E1E6FCE9300E674D3 /* LrcTest */,
+				148BFF2E1E6FCE9300E674D3 /* MusicLrcUtil */,
 				148BFF471E6FCE9500E674D3 /* LrcTestTests */,
 				1408857C1E76916A008B9466 /* MusicLRC */,
 				14EF59F31E78DDD9005ED979 /* CommonDylib */,
@@ -1166,7 +1168,7 @@
 /* Begin PBXTargetDependency section */
 		1483B7EA1E824B50009D8C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 148BFF2E1E6FCE9300E674D3 /* LrcTest */;
+			target = 148BFF2E1E6FCE9300E674D3 /* MusicLrcUtil */;
 			targetProxy = 1483B7E91E824B50009D8C42 /* PBXContainerItemProxy */;
 		};
 		14EF59FA1E78DE65005ED979 /* PBXTargetDependency */ = {
@@ -1583,7 +1585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "LrcTest" */ = {
+		148BFF2A1E6FCE9200E674D3 /* Build configuration list for PBXProject "MusicLrcUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				148BFF4F1E6FCE9500E674D3 /* Debug */,
@@ -1592,7 +1594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		148BFF511E6FCE9500E674D3 /* Build configuration list for PBXNativeTarget "LrcTest" */ = {
+		148BFF511E6FCE9500E674D3 /* Build configuration list for PBXNativeTarget "MusicLrcUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				148BFF521E6FCE9500E674D3 /* Debug */,

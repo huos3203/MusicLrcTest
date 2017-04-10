@@ -75,7 +75,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         //setNeedsUpdateConstraints()
         self.layoutIfNeeded()
         UIView.animate(withDuration: 0.2, animations: {
-            self.chrome.alpha = 0.7
+            self.chrome.alpha = 0.5
             self.selfHeight.constant = UIScreen.main.bounds.height  //rootView高度
             self.layoutIfNeeded()
         }) { (bo) in
@@ -97,18 +97,19 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
 //        {
             //从父视图移除
             //self.removeFromSuperview()
-            UIView.animate(withDuration: 0.2, animations: {
-                self.chrome.alpha = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.tableHeight.constant = 0
+                //ClockTableViewController.shareInstance.tableView.alpha = 0
+                self.layoutIfNeeded()
             }, completion: { (bo) in
                 
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.selfHeight.constant = 0
-                    self.tableHeight.constant = 0
-                    ClockTableViewController.shareInstance.tableView.alpha = 0
-                    self.layoutIfNeeded()
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.chrome.alpha = 0
                 }, completion: { (bo) in
                     //
                     print("定时器消失")
+                    self.selfHeight.constant = 0
+                    self.layoutIfNeeded()
                     self.removeFromSuperview()
                 })
             })
