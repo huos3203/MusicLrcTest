@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import LogSwift
 public class MusicAPI: NSObject
 {
     class var shareInstance: MusicAPI
@@ -28,7 +28,6 @@ public class MusicAPI: NSObject
         clockViewManager = ClockListView()
         lrcViewManager = MusicLrcView()
         httpTaskManager = HttpClientManager()
-        
     }
     
     //下载，同步歌词

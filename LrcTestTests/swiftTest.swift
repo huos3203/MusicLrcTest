@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import LogSwift
 class swiftTest: XCTestCase {
     
     override func setUp() {
@@ -45,6 +45,13 @@ class swiftTest: XCTestCase {
 
     }
     
+    func testjiami() {
+        let log = PBBLogModel()
+        let enc = log.aesEncryptPassword(password: "dfdfdf", secret: "d")
+        print(enc)
+        let des = log.aesDecryptor(password: enc, secret: "d")
+        print(des)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

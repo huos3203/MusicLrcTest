@@ -125,7 +125,7 @@
                                                         musiclyric_id: fileid
                                localPath:@""];
 
-    [[HttpClientManager shareInstance] downMusicLrcByLrcModel:lrcmodel loadLrc:^(NSString * lrcPath) {
+    [[HttpClientManager shareInstance] downMusicLrcByLrcModel:lrcmodel loadLrc:^(NSString * lrcPath,NSString *log) {
        // NSLog(@"----路径：%@",lrcPath);
         [expre fulfill];
     }];
@@ -134,7 +134,7 @@
         NSLog(@"error-----%@",[error localizedDescription]);
     }];
 }
-
+/*
 -(void)verifyAppVersion
 {
     SZUser *user = [SZUser shared];
@@ -171,5 +171,6 @@
     }];
     
 }
+ */
 
 @end
