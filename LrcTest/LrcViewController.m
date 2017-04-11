@@ -152,6 +152,7 @@
                                                                lrcURL: url2
                                                         musiclyric_id: fileid
                                localPath:@""];
+
     [HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished,NSString *log) {
         
     }];
