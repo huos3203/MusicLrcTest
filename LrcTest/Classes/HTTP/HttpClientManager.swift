@@ -70,37 +70,15 @@ public class HttpClientManager:NSObject
         //当文件存在时
         if(FileManager.default.fileExists(atPath: model.localPath!))
         {
-            //try! FileManager.default.removeItem(atPath: model.localPath!)
-            loadLrc(model.localPath!,"")
-            return
+            try! FileManager.default.removeItem(atPath: model.localPath!)
+            //loadLrc(model.localPath!,"")
+            //return
         }
         //self.requestLRCURL(model: model, loadLrc: loadLrc)
-        ///此处无需转码：addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-        let urladd = "\(model.lrcURL!)?\(model.convertToJSON())"
-        let url = URL(string:urladd)!
-        do {
-            let httpURL = try NSString.init(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
-            //print(htmlsource)
-            if (httpURL.lowercased.hasSuffix("lrc"))
-            {
-                //test
-                //let lrcFileURL = self.createLRCDir().path
-                let lrcFileURL = model.localPath!
-                self.downLRCByStringURL(urlStr:  httpURL as String, fileName: lrcFileURL, loadLrc: loadLrc)
-            }
-            else
-            {
-                //print("文件路径错误")
-                loadLrc("","lrc错误路径：\(httpURL)")
-            }
-            
-        } catch
-        {
-            //
-            loadLrc("","请求lrc文件路径失败")
-        }
+        self.requestLRCURLBy(model: model, loadLrc: loadLrc)
     }
     
+    /// 访问请求歌词路径的接口，出现501的频率很高
     func downLRCFile(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
     {
         //http://www.jianshu.com/p/5445f2205f70 URLHostAllowedCharacterSet
@@ -138,8 +116,8 @@ public class HttpClientManager:NSObject
         //let downTask = URLSession.shared.downloadTask(with: url) { (location, response, err) in  }
         downTask.resume()
     }
-
     
+    /// 访问请求歌词路径的接口，出现501的频率很高
     func requestLRCURL(model:MusicLrcModel, loadLrc:@escaping (String,String)->Void)
     {
         var request = URLRequest(url: URL(string: model.lrcURL!)!)
@@ -179,6 +157,36 @@ public class HttpClientManager:NSObject
             }
         }
         requestLrcURL.resume()
+    }
+    
+    
+    func requestLRCURLBy(model:MusicLrcModel, loadLrc:@escaping (String,String)->Void)
+    {
+        ///此处无需转码：addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let urladd = "\(model.lrcURL!)?\(model.convertToJSON())"
+        let url = URL(string:urladd)!
+        do {
+            let httpURL = try NSString.init(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
+            //print(htmlsource)
+            if (httpURL.lowercased.hasSuffix("lrc"))
+            {
+                //test
+                //let lrcFileURL = self.createLRCDir().path
+                let lrcFileURL = model.localPath!
+                self.downLRCByStringURL(urlStr:  httpURL as String, fileName: lrcFileURL, loadLrc: loadLrc)
+            }
+            else
+            {
+                //print("文件路径错误")
+                loadLrc("","lrc错误路径：\(httpURL)")
+            }
+            
+        } catch
+        {
+            //
+            loadLrc("","请求lrc文件路径失败")
+        }
+
     }
     
     func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String,String)->Void)
