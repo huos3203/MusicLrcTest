@@ -74,40 +74,31 @@ public class HttpClientManager:NSObject
             loadLrc(model.localPath!,"")
             return
         }
-        
-        var request = URLRequest(url: URL(string: model.lrcURL!)!)
-        print(model.convertToJSON())
-        let data = model.convertToJSON().data(using: .utf8)
-        request.httpBodyStream = InputStream.init(data: data!)
-        request.httpMethod = "POST"
-        let requestLrcURL = URLSession.shared.dataTask(with: request) { (data, response, err) in
-            //
-            guard let responses = response as? HTTPURLResponse else
+        //self.requestLRCURL(model: model, loadLrc: loadLrc)
+        ///此处无需转码：addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let urladd = "\(model.lrcURL!)?\(model.convertToJSON())"
+        let url = URL(string:urladd)!
+        do {
+            let httpURL = try NSString.init(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
+            //print(htmlsource)
+            if (httpURL.lowercased.hasSuffix("lrc"))
             {
-                loadLrc("","访问网络失败")
-                return
+                //test
+                //let lrcFileURL = self.createLRCDir().path
+                let lrcFileURL = model.localPath!
+                self.downLRCByStringURL(urlStr:  httpURL as String, fileName: lrcFileURL, loadLrc: loadLrc)
+            }
+            else
+            {
+                //print("文件路径错误")
+                loadLrc("","lrc错误路径：\(httpURL)")
             }
             
-            print("responses.statusCode：-----\(responses.statusCode)")
-            if (responses.statusCode == 200)
-            {
-                let httpURL = String.init(data: data!, encoding: String.Encoding.utf8)
-                
-                if (httpURL?.lowercased().hasSuffix("lrc"))!
-                {
-                    //test
-                    //let lrcFileURL = self.createLRCDir().path
-                    let lrcFileURL = model.localPath!
-                    self.downLRCByStringURL(urlStr:  httpURL!, fileName: lrcFileURL, loadLrc: loadLrc)
-                }
-                else
-                {
-                    //print("文件路径错误")
-                    loadLrc("","lrc路径接口响应：\(responses.statusCode)")
-                }
-            }
+        } catch
+        {
+            //
+            loadLrc("","请求lrc文件路径失败")
         }
-        requestLrcURL.resume()
     }
     
     func downLRCFile(urlStr:String,fileName:String ,loadLrc:@escaping (String)->Void)
@@ -148,6 +139,47 @@ public class HttpClientManager:NSObject
         downTask.resume()
     }
 
+    
+    func requestLRCURL(model:MusicLrcModel, loadLrc:@escaping (String,String)->Void)
+    {
+        var request = URLRequest(url: URL(string: model.lrcURL!)!)
+        print(model.convertToJSON())
+        let data = model.convertToJSON().data(using: .utf8)
+        request.httpBodyStream = InputStream.init(data: data!)
+        request.httpMethod = "GET"
+        let requestLrcURL = URLSession.shared.dataTask(with: request) { (data, response, err) in
+            //
+            guard let responses = response as? HTTPURLResponse else
+            {
+                loadLrc("","访问网络失败")
+                return
+            }
+            
+            print("responses.statusCode：-----\(responses.statusCode)")
+            if (responses.statusCode == 200)
+            {
+                let httpURL = String.init(data: data!, encoding: String.Encoding.utf8)
+                
+                if (httpURL?.lowercased().hasSuffix("lrc"))!
+                {
+                    //test
+                    //let lrcFileURL = self.createLRCDir().path
+                    let lrcFileURL = model.localPath!
+                    self.downLRCByStringURL(urlStr:  httpURL!, fileName: lrcFileURL, loadLrc: loadLrc)
+                }
+                else
+                {
+                    //print("文件路径错误")
+                    loadLrc("","lrc错误路径：\(httpURL!)")
+                }
+            }
+            else
+            {
+                loadLrc("","lrc路径接口响应：\(responses.statusCode)")
+            }
+        }
+        requestLrcURL.resume()
+    }
     
     func downLRCByStringURL(urlStr:String,fileName:String ,loadLrc:@escaping (String,String)->Void)
     {

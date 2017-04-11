@@ -78,7 +78,7 @@ static  CLLrcTool *instance;
 {
     NSMutableArray *lineArr = [NSMutableArray new];
     //正则表达式实现
-    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"\\d{1,2}:\\d{2}.\\d{2}"
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"\\d{1,}:\\d{1,}.\\d{1,}"
                                                                     options:NSRegularExpressionCaseInsensitive
                                                                       error:nil];
     NSArray *matchs = [regex matchesInString:lineText options:0 range:NSMakeRange(0, lineText.length)];

@@ -189,6 +189,12 @@ static MusicLrcView *instance;
         _lrcDelegate = lrcDelegate;
         //解析数据
         self.lrcName = lrcPath;
+        if(self.lrcList == nil || [self.lrcList count] == 0)
+        {
+            //文件格式错误，移除该文件
+            [[NSFileManager defaultManager] removeItemAtPath:lrcPath error:nil];
+            return false;
+        }
         [self reloadData];
         
         [self removeLrcTimer];
@@ -303,21 +309,25 @@ static MusicLrcView *instance;
             self.lrcLabel.text = currentLrcLine.text;
             self.lrcLabel.alpha = 1.0;
             
-            // 将当前播放的歌词移动到中间
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-//            [self scrollToRowAtIndexPath:indexPath
-//                        atScrollPosition:UITableViewScrollPositionMiddle
-//                                animated:YES];
-            [self selectRowAtIndexPath:indexPath
-                              animated:YES
-                        scrollPosition:UITableViewScrollPositionMiddle];
-            
-            // 记录上一句位置，当移动到下一句时，上一句和当前这一句都需要进行更新行
-            NSIndexPath *previousPath = [NSIndexPath indexPathForRow:self.currentIndex inSection:0];
-            // 记录当前播放的下标。下次来到这里，currentIndex指的就是上一句
-            self.currentIndex = i;
-            [self reloadRowsAtIndexPaths:@[indexPath,previousPath]
-                        withRowAnimation:UITableViewRowAnimationNone];
+            [UIView animateWithDuration:0.4 animations:^{
+                //
+                // 将当前播放的歌词移动到中间
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+                //            [self scrollToRowAtIndexPath:indexPath
+                //                        atScrollPosition:UITableViewScrollPositionMiddle
+                //                                animated:YES];
+                [self selectRowAtIndexPath:indexPath
+                                  animated:NO
+                            scrollPosition:UITableViewScrollPositionMiddle];
+                
+                // 记录上一句位置，当移动到下一句时，上一句和当前这一句都需要进行更新行
+                NSIndexPath *previousPath = [NSIndexPath indexPathForRow:self.currentIndex inSection:0];
+                // 记录当前播放的下标。下次来到这里，currentIndex指的就是上一句
+                self.currentIndex = i;
+                [self reloadRowsAtIndexPaths:@[indexPath,previousPath]
+                            withRowAnimation:UITableViewRowAnimationNone];
+            }];
+           
         }
         if (self.currentIndex == i)
         {
