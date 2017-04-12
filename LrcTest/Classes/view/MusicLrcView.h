@@ -76,6 +76,7 @@
 @property (nonatomic,assign) NSTimeInterval duration;
 /** 歌词的定时器 */
 @property (nonatomic,strong) CADisplayLink *lrcTiemr;
+- (void)removeLrcTimer;
 
 @property(copy)void(^handler)(BOOL);
 +(MusicLrcView *)shared;

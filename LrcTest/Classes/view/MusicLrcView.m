@@ -274,6 +274,11 @@ static MusicLrcView *instance;
 #pragma mark - 使用自定义tableViewCell更新歌词进度
 -(void)updateLrcPregress
 {
+    if(self.lrcList == nil || [self.lrcList count] == 0)
+    {
+        return;
+    }
+    
     if (_audioPlayer)
     {
         self.currentTime = _audioPlayer.currentTime;

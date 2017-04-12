@@ -235,4 +235,9 @@ public class HttpClientManager:NSObject
             }
         }
     }
+    
+    public func removeLrcTimer()
+    {
+        MusicLrcView.shared().removeLrcTimer()
+    }
 }
