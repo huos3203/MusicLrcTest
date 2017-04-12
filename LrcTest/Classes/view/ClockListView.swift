@@ -106,6 +106,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
                 UIView.animate(withDuration: 0.2, animations: {
                     self.chrome.alpha = 0
                 }, completion: { (bo) in
+
                     self.selfHeight.constant = 0
                     self.layoutIfNeeded()
                     self.removeFromSuperview()
