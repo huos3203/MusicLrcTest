@@ -70,9 +70,9 @@ public class HttpClientManager:NSObject
         //当文件存在时
         if(FileManager.default.fileExists(atPath: model.localPath!))
         {
-            try! FileManager.default.removeItem(atPath: model.localPath!)
-            //loadLrc(model.localPath!,"")
-            //return
+            //try! FileManager.default.removeItem(atPath: model.localPath!)
+            loadLrc(model.localPath!,"")
+            return
         }
         //self.requestLRCURL(model: model, loadLrc: loadLrc)
         self.requestLRCURLBy(model: model, loadLrc: loadLrc)
