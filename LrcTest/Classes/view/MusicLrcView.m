@@ -314,7 +314,7 @@ static MusicLrcView *instance;
             self.lrcLabel.text = currentLrcLine.text;
             self.lrcLabel.alpha = 1.0;
             
-            [UIView animateWithDuration:0.4 animations:^{
+            [UIView animateWithDuration:0.7 animations:^{
                 //
                 // 将当前播放的歌词移动到中间
                 NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
