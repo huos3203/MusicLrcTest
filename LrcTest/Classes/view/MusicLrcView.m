@@ -179,12 +179,12 @@ static MusicLrcView *instance;
     [indicatorView stopAnimating];
     [indicatorView setHidden:true];
     
+    [self removeLrcTimer];
     if(lrcPath != nil
        && player != nil
        && lrcDelegate != nil
        && [[NSFileManager defaultManager] fileExistsAtPath:lrcPath])
     {
-        
         _audioPlayer = player;
         _lrcDelegate = lrcDelegate;
         //解析数据
@@ -195,14 +195,12 @@ static MusicLrcView *instance;
             [[NSFileManager defaultManager] removeItemAtPath:lrcPath error:nil];
             return false;
         }
-        [self reloadData];
         
-        [self removeLrcTimer];
+        [self reloadData];
         [self addLrcTimer];
     }
     else
     {
-        [self removeLrcTimer];
         return false;
     }
     
@@ -258,8 +256,12 @@ static MusicLrcView *instance;
     }
     
     // 获得当前播放的歌曲歌词模型
+    if([self.lrcList count] == 0)
+    {
+        cell.lrcLabel.text = @"";
+        return cell;
+    }
     CLLrcLine *lrcline = self.lrcList[indexPath.row];
-    
     cell.lrcLabel.text = lrcline.text;
     
     return cell;
