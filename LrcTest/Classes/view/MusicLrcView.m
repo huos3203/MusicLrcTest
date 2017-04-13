@@ -123,8 +123,8 @@ static MusicLrcView *instance;
         
         NSArray *iv = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[indicator]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:@{@"indicator":indicatorView}];
         
-        [superView addConstraints:ih];
-        [superView addConstraints:iv];
+        [indicatorView.superview addConstraints:ih];
+        [indicatorView.superview addConstraints:iv];
     }
    
     
