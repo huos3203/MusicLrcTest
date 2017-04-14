@@ -194,21 +194,40 @@ public class HttpClientManager:NSObject
         //   
         let urlStr1 = urlStr.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let url = URL(string:urlStr1!)!
-        do {
-            let htmlsource = try NSString.init(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
-            //print(htmlsource)
-            let lrcFileURL = URL.init(fileURLWithPath: fileName)
-            try htmlsource.write(to: lrcFileURL, atomically: true, encoding: String.Encoding.utf8.rawValue)
-            loadLrc(lrcFileURL.path,"")
-        } catch
+        let lrcFileURL = URL.init(fileURLWithPath: fileName)
+        var encoding:UInt
+        do
         {
+            // 获得编码ID
+            encoding = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(CFStringEncodings.GB_18030_2000.rawValue))
+            try sourceByEncoding(sourceURL: url, lrcFileURL: lrcFileURL, encoding: encoding)
+            loadLrc(lrcFileURL.path,"")
+        }
+        catch
+        {
+            print(error.localizedDescription)
             //
-            loadLrc("","lrc文件存盘中失败")
+            do {
+                encoding = String.Encoding.utf8.rawValue
+                try sourceByEncoding(sourceURL: url, lrcFileURL: lrcFileURL, encoding: encoding)
+                loadLrc(lrcFileURL.path,"")
+            } catch
+            {
+                print(error.localizedDescription)
+                loadLrc("","lrc文件存盘中失败:\(error.localizedDescription)")
+            }
+            
         }
         
     }
 
-
+    func sourceByEncoding(sourceURL:URL,lrcFileURL:URL,encoding:UInt) throws
+    {
+        let htmlsource = try NSString.init(contentsOf: sourceURL, encoding: encoding)
+        try htmlsource.write(to: lrcFileURL, atomically: true, encoding: String.Encoding.utf8.rawValue)
+    }
+    
+    
     func createLRCDir()->URL
     {
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
