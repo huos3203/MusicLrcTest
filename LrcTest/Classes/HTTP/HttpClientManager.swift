@@ -68,7 +68,7 @@ public class HttpClientManager:NSObject
         } catch
         {
             //
-            loadLrc("","请求lrc文件路径失败，下载错误\(error.localizedDescription)")
+            loadLrc("","请求lrc文件路径：\(urladd)，错误\(error.localizedDescription)")
         }
 
     }
@@ -92,11 +92,11 @@ public class HttpClientManager:NSObject
             do {
                 encoding = String.Encoding.utf8.rawValue
                 try sourceByEncoding(sourceURL: url, lrcFileURL: lrcFileURL, encoding: encoding)
-                loadLrc(lrcFileURL.path,"下载歌词，gbk失败：\(error.localizedDescription)\n 开始使用utf8格式下载")
+                loadLrc(lrcFileURL.path,"下载歌词：\(urlStr1)，gbk失败：\(error.localizedDescription)\n 开始使用utf8格式下载")
             } catch
             {
                 print(error.localizedDescription)
-                loadLrc("","lrc文件存盘中失败:\(error.localizedDescription)")
+                loadLrc("","lrc文件：\(urlStr1)，存盘中失败:\(error.localizedDescription)")
             }
             
         }
