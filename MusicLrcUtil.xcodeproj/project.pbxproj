@@ -139,6 +139,10 @@
 		D2C9A7D21E84D0FC00ED0C80 /* CLLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */; };
 		D2C9A7D31E84D10000ED0C80 /* MusicLrcParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06BE1E7BE6C00029DD34 /* MusicLrcParser.m */; };
 		D2C9A7D61E84EA2E00ED0C80 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */; };
+		D2CAAAD01EA99D2600785B37 /* testswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAAACF1EA99D2600785B37 /* testswift.swift */; };
+		D2CAAAD31EA99DB300785B37 /* Banana.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAAAD21EA99DB300785B37 /* Banana.swift */; };
+		D2CAAAD51EA99F6F00785B37 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAAAD41EA99F6F00785B37 /* Offer.swift */; };
+		D2CAAAD71EA9A0BC00785B37 /* BananaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */; };
 		D2E45CD51E84F50300674BA9 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
 		F7D83FC94796297A98FBF5FB /* Pods_LrcTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D289127C06DD578410ECEDF3 /* Pods_LrcTestTests.framework */; };
 		FEF04887340A31D4313A1DB8 /* Pods_MusicLrcUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */; };
@@ -226,7 +230,7 @@
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		148BFF361E6FCE9300E674D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		148BFF381E6FCE9300E674D3 /* LrcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LrcViewController.h; path = ../../LrcViewController.h; sourceTree = "<group>"; };
+		148BFF381E6FCE9300E674D3 /* LrcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LrcViewController.h; sourceTree = "<group>"; };
 		148BFF391E6FCE9300E674D3 /* LrcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LrcViewController.m; sourceTree = "<group>"; };
 		148BFF3C1E6FCE9400E674D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -284,6 +288,10 @@
 		D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9A7C11E84CFE900ED0C80 /* LrcTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LrcTest copy-Info.plist"; path = "/Users/xcodeserver/MusicLrcTest/LrcTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		D2CAAACF1EA99D2600785B37 /* testswift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testswift.swift; sourceTree = "<group>"; };
+		D2CAAAD21EA99DB300785B37 /* Banana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Banana.swift; path = "Arrange+Act+Assert/Banana.swift"; sourceTree = "<group>"; };
+		D2CAAAD41EA99F6F00785B37 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offer.swift; path = "Arrange+Act+Assert/Offer.swift"; sourceTree = "<group>"; };
+		D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaTests.swift; path = "Arrange+Act+Assert/BananaTests.swift"; sourceTree = "<group>"; };
 		E4911385D25DE07AC99859B6 /* Pods_MusicLRC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLRC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLrcUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE22002DDFB6DA543C42C902 /* Pods-MusicLRC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLRC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLRC/Pods-MusicLRC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -312,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF04887340A31D4313A1DB8 /* Pods_MusicLrcUtil.framework in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +396,7 @@
 				14AF06B91E7BE6C00029DD34 /* Classes */,
 				148BFF351E6FCE9300E674D3 /* AppDelegate.h */,
 				148BFF361E6FCE9300E674D3 /* AppDelegate.m */,
+				148BFF381E6FCE9300E674D3 /* LrcViewController.h */,
 				148BFF391E6FCE9300E674D3 /* LrcViewController.m */,
 				84FE2B451E87A3FE003CE93F /* LayerTableView.swift */,
 				D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */,
@@ -420,11 +428,13 @@
 		148BFF4B1E6FCE9500E674D3 /* MusicLrcUtilTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2CAAAD11EA99D6800785B37 /* Arrange+Act+Assert */,
 				148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */,
 				148BFF4E1E6FCE9500E674D3 /* Info.plist */,
 				14AF068E1E7BB1A80029DD34 /* LRC.playground */,
 				1483B7E01E8238B5009D8C42 /* LrcTestTests-Bridging-Header.h */,
 				1483B7E31E82390F009D8C42 /* swiftTest.swift */,
+				D2CAAACF1EA99D2600785B37 /* testswift.swift */,
 			);
 			name = MusicLrcUtilTests;
 			path = LrcTestTests;
@@ -482,7 +492,6 @@
 		14AF06C21E7BE6C00029DD34 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				148BFF381E6FCE9300E674D3 /* LrcViewController.h */,
 				14AF06C31E7BE6C00029DD34 /* EffectView.h */,
 				14AF06C41E7BE6C00029DD34 /* EffectView.m */,
 				14AF06C51E7BE6C00029DD34 /* MusicLrcCell.h */,
@@ -518,6 +527,16 @@
 				FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2CAAAD11EA99D6800785B37 /* Arrange+Act+Assert */ = {
+			isa = PBXGroup;
+			children = (
+				D2CAAAD21EA99DB300785B37 /* Banana.swift */,
+				D2CAAAD41EA99F6F00785B37 /* Offer.swift */,
+				D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */,
+			);
+			name = "Arrange+Act+Assert";
 			sourceTree = "<group>";
 		};
 		F4519031338CF8FC6866D78D /* Pods */ = {
@@ -1147,13 +1166,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CAAAD71EA9A0BC00785B37 /* BananaTests.swift in Sources */,
 				148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */,
 				D2378DB51E8DF82E00F859D7 /* EffectView.m in Sources */,
 				D2378DB31E8DEFAF00F859D7 /* MusicLrcModel.swift in Sources */,
+				D2CAAAD51EA99F6F00785B37 /* Offer.swift in Sources */,
 				1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */,
+				D2CAAAD01EA99D2600785B37 /* testswift.swift in Sources */,
 				D2378DB71E8DF83400F859D7 /* MusicLrcLabel.m in Sources */,
 				D221DBA61E88CC4000444AE3 /* HttpClientManager.swift in Sources */,
 				144B8E181E978531009969E8 /* VerifyAppTool.m in Sources */,
+				D2CAAAD31EA99DB300785B37 /* Banana.swift in Sources */,
 				1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */,
 				D221DBA71E88CC4200444AE3 /* ConvertToDictionary.swift in Sources */,
 				D2378DB81E8DF89400F859D7 /* MusicLrcParser.m in Sources */,
@@ -1477,7 +1500,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "LrcTestTests/LrcTestTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LrcTest.app/LrcTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicLrcUtil.app/LrcTest";
 			};
 			name = Debug;
 		};
@@ -1494,7 +1517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LrcTestTests/LrcTestTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LrcTest.app/LrcTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicLrcUtil.app/LrcTest";
 			};
 			name = Release;
 		};

@@ -17,7 +17,7 @@ NSString *lrcc = [lineText substringFromIndex:lastRange.location + lastRange.len
 
 # 使用帮助
 原理：
-![](LrcTest/daotuu.jpg)
+<!--![](LrcTest/daotuu.jpg)-->
 
 ## 安装
 
@@ -25,7 +25,8 @@ NSString *lrcc = [lineText substringFromIndex:lastRange.location + lastRange.len
 核心代码只有`MusicLrcView.h/m`和`MusicLrcParser.h/m`四个文件
 将直接拷贝到项目中，然后`import "MusicLrcView.h"`使用即可
 
-### 第二种动态框架
+### ~~第二种动态框架~~
+在混编编译过程中，出现内核支持问题。（暂时废弃）
 直接下载`MusicLRC.framework`，导入到项目中。
 ```
 #import <MusicLRC/MusicLrcView.h>
@@ -43,7 +44,7 @@ pod 'MusicLrc', :git => 'https://github.com/huos3203/MusicLrcTest.git'
 $ pod install
 ```
 
-通过私库集成
+安装PodRepo私库方式
 ---
 1. 加入你的pod本地私有库中：
 
@@ -53,15 +54,16 @@ $ pod install
     $ pod search MusicLrc
 
         -> MusicLrc (0.0.2)
-        Just Testing.
-        pod 'MusicLrc', '~> 0.0.2'
+        使用正则表达式，重新定义解析歌词的算法
+        pod 'MusicLrc', '~> 3.2'
         - Homepage: https://github.com/huos3203/MusicLrcTest
         - Source:   https://github.com/huos3203/MusicLrcTest.git
-        - Versions: 0.0.2 [PodRepo repo]
-3. 在Podfile文件中配置：
-
-    $ pod 'MusicLrc', '~> 0.0.2'
-4. 在项目目录pod安装
+        - Versions: 3.2, 3.0, 2.0, 0.0.2 [podRepo repo]
+3. 配置Podfile文件：
+    source 'https://github.com/huos3203/PodRepo.git'
+    
+    pod 'MusicLrc', '~> 3.2'
+4. 在项目根目录安装
 
     $ pod install
 
@@ -85,8 +87,7 @@ $ pod install
 `lrcPath`: lrc格式歌词路径
 `audioPlayer`:`AVAudioPlayer`播放器实例
 `lrcDelegate`:遵循`MusicLrcDelegate`协议的类
-## 两个代理
-自定义外观样式
+## 自定义外观样式的代理协议
 ```objc
 //代理
 @protocol MusicLrcDelegate <NSObject>
@@ -112,15 +113,20 @@ MusicLrcView *lrcView = [MusicLrcView shared];
 [self.view addSubview:lrcView];
 
 ```
+## 新增功能
+
+### 下载歌词，并同步至播放器
+HttpClientManager是使用Swift编写，需要注意-Swift.h映射文件
+```objc
+[HttpClientManager.shareInstance loadLrcByLrcModel:lrcmodel player:_audioPlayer lrcDelegate:self completion:^(BOOL finished,NSString * loginfo) {
+    
+}];
+```
+
+```swift
 
 
-## xcode 常用命令
-
-## lldb 常用命令
-
-## git 常用命令
-
-## swift 命令
-## lldb命令
+```
+### 音乐播放器定时关闭功能
 
 

@@ -8,7 +8,7 @@
 
 import XCTest
 @testable import LogSwift
-@testable import LrcTest
+@testable import MusicLrcUtil
 class swiftTest: XCTestCase {
     
     override func setUp() {
