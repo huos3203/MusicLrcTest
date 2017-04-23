@@ -75,7 +75,6 @@
 		148BFF3A1E6FCE9300E674D3 /* LrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF391E6FCE9300E674D3 /* LrcViewController.m */; };
 		148BFF3F1E6FCE9400E674D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */; };
 		148BFF421E6FCE9400E674D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */; };
-		148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */; };
 		148BFF5D1E6FE54100E674D3 /* qbd.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5B1E6FE54100E674D3 /* qbd.lrc */; };
 		148BFF5E1E6FE54100E674D3 /* qbd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 148BFF5C1E6FE54100E674D3 /* qbd.mp3 */; };
 		14AF068D1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 14AF068C1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc */; };
@@ -96,6 +95,10 @@
 		7E90ED1F370724E482CB4848 /* Pods_LrcSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9AD268AD85452EBB73E4F5 /* Pods_LrcSDK.framework */; };
 		84EB66951E8AA87400EA892A /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB66941E8AA87400EA892A /* MusicAPI.swift */; };
 		84EB66961E8AA87400EA892A /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB66941E8AA87400EA892A /* MusicAPI.swift */; };
+		84F0D65E1EAC94470011D0DE /* BananaHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E9F1EAC6FEE0067CD03 /* BananaHelpers.swift */; };
+		84F0D6601EAC94A00011D0DE /* Monkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0D65F1EAC94A00011D0DE /* Monkey.swift */; };
+		84F0D6681EAC9D040011D0DE /* SilliestMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0D6671EAC9D040011D0DE /* SilliestMonkey.swift */; };
+		84F0D66A1EAC9D550011D0DE /* SilliestMonkeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0D6691EAC9D550011D0DE /* SilliestMonkeyTest.swift */; };
 		84FE2B461E87A3FF003CE93F /* LayerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE2B451E87A3FE003CE93F /* LayerTableView.swift */; };
 		992CE1FD698F4CC0673DCFE4 /* Pods_MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4911385D25DE07AC99859B6 /* Pods_MusicLRC.framework */; };
 		BC7B0B5F52682CEC89E16785 /* Pods_MusicLocal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FA3E817F4AE91D884D5502 /* Pods_MusicLocal.framework */; };
@@ -225,7 +228,6 @@
 		1483B7E31E82390F009D8C42 /* swiftTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swiftTest.swift; sourceTree = "<group>"; };
 		148878FA1E8288B5002A3C04 /* MusicLRC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MusicLRC.framework; sourceTree = "<group>"; };
 		148879721E839E70002A3C04 /* MusicLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		148879731E839E71002A3C04 /* LrcTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LrcTest copy-Info.plist"; path = "/Users/pengyucheng/git-svn/MusicLrc/LrcTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		148BFF2F1E6FCE9300E674D3 /* MusicLrcUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicLrcUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148BFF331E6FCE9300E674D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148BFF351E6FCE9300E674D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -275,7 +277,11 @@
 		6C9AD268AD85452EBB73E4F5 /* Pods_LrcSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LrcSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C354E49E3E73FC0888625 /* Pods-LrcTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTest/Pods-LrcTest.debug.xcconfig"; sourceTree = "<group>"; };
 		83B25AF64C616AE5285C556F /* Pods-MusicLrcUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.release.xcconfig"; sourceTree = "<group>"; };
+		84DD9E9F1EAC6FEE0067CD03 /* BananaHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaHelpers.swift; path = "Arrange+Act+Assert/BananaHelpers.swift"; sourceTree = "<group>"; };
 		84EB66941E8AA87400EA892A /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
+		84F0D65F1EAC94A00011D0DE /* Monkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Monkey.swift; path = "Arrange+Act+Assert/Monkey.swift"; sourceTree = "<group>"; };
+		84F0D6671EAC9D040011D0DE /* SilliestMonkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SilliestMonkey.swift; path = "Arrange+Act+Assert/SilliestMonkey.swift"; sourceTree = "<group>"; };
+		84F0D6691EAC9D550011D0DE /* SilliestMonkeyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SilliestMonkeyTest.swift; path = "Arrange+Act+Assert/SilliestMonkeyTest.swift"; sourceTree = "<group>"; };
 		84FE2B451E87A3FE003CE93F /* LayerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTableView.swift; sourceTree = "<group>"; };
 		89FA3E817F4AE91D884D5502 /* Pods_MusicLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A165D5D8E5420C58BC44AE73 /* Pods-LrcTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -286,7 +292,6 @@
 		D272E2C71E9BAFD400CB887B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
 		D289127C06DD578410ECEDF3 /* Pods_LrcTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LrcTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2C9A7C11E84CFE900ED0C80 /* LrcTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LrcTest copy-Info.plist"; path = "/Users/xcodeserver/MusicLrcTest/LrcTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		D2CAAACF1EA99D2600785B37 /* testswift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testswift.swift; sourceTree = "<group>"; };
 		D2CAAAD21EA99DB300785B37 /* Banana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Banana.swift; path = "Arrange+Act+Assert/Banana.swift"; sourceTree = "<group>"; };
@@ -371,8 +376,6 @@
 				148BFF4B1E6FCE9500E674D3 /* MusicLrcUtilTests */,
 				1408857E1E76916D008B9466 /* MusicLRC */,
 				148BFF301E6FCE9300E674D3 /* Products */,
-				148879731E839E71002A3C04 /* LrcTest copy-Info.plist */,
-				D2C9A7C11E84CFE900ED0C80 /* LrcTest copy-Info.plist */,
 				F4519031338CF8FC6866D78D /* Pods */,
 				28EDAF39CEA14EB7401CFC68 /* Frameworks */,
 			);
@@ -532,9 +535,13 @@
 		D2CAAAD11EA99D6800785B37 /* Arrange+Act+Assert */ = {
 			isa = PBXGroup;
 			children = (
+				84DD9E9F1EAC6FEE0067CD03 /* BananaHelpers.swift */,
 				D2CAAAD21EA99DB300785B37 /* Banana.swift */,
 				D2CAAAD41EA99F6F00785B37 /* Offer.swift */,
 				D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */,
+				84F0D65F1EAC94A00011D0DE /* Monkey.swift */,
+				84F0D6671EAC9D040011D0DE /* SilliestMonkey.swift */,
+				84F0D6691EAC9D550011D0DE /* SilliestMonkeyTest.swift */,
 			);
 			name = "Arrange+Act+Assert";
 			sourceTree = "<group>";
@@ -1167,11 +1174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CAAAD71EA9A0BC00785B37 /* BananaTests.swift in Sources */,
-				148BFF4D1E6FCE9500E674D3 /* LrcTestTests.m in Sources */,
 				D2378DB51E8DF82E00F859D7 /* EffectView.m in Sources */,
 				D2378DB31E8DEFAF00F859D7 /* MusicLrcModel.swift in Sources */,
 				D2CAAAD51EA99F6F00785B37 /* Offer.swift in Sources */,
 				1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */,
+				84F0D65E1EAC94470011D0DE /* BananaHelpers.swift in Sources */,
+				84F0D66A1EAC9D550011D0DE /* SilliestMonkeyTest.swift in Sources */,
 				D2CAAAD01EA99D2600785B37 /* testswift.swift in Sources */,
 				D2378DB71E8DF83400F859D7 /* MusicLrcLabel.m in Sources */,
 				D221DBA61E88CC4000444AE3 /* HttpClientManager.swift in Sources */,
@@ -1179,6 +1187,8 @@
 				D2CAAAD31EA99DB300785B37 /* Banana.swift in Sources */,
 				1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */,
 				D221DBA71E88CC4200444AE3 /* ConvertToDictionary.swift in Sources */,
+				84F0D6601EAC94A00011D0DE /* Monkey.swift in Sources */,
+				84F0D6681EAC9D040011D0DE /* SilliestMonkey.swift in Sources */,
 				D2378DB81E8DF89400F859D7 /* MusicLrcParser.m in Sources */,
 				D2378DB41E8DF79400F859D7 /* MusicLrcView.m in Sources */,
 				D221DBA51E88CC3C00444AE3 /* VerifyAppVersionModel.swift in Sources */,

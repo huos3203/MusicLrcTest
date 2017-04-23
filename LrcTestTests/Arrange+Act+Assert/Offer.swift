@@ -6,22 +6,18 @@
 //  Copyright © 2017年 PBBReader. All rights reserved.
 //
 
-import UIKit
-
-class Offer
+public func offer(_ banana:Banana) -> String
 {
-    func offer(banana:Banana) -> String
+    //
+    if banana.isEdible
     {
-        //
-        if banana.isEdible
-        {
-            // 给人一个已经剥好的香蕉
-            return "Hey, want a banana?"
-        }
-        else
-        {
-            // 给人一个味剥皮的香蕉
-            return "Hey, want me to peel this banana for you?"
-        }
+        // 给人一个已经剥好的香蕉
+        return "Hey, want a banana?"
+    }
+    else
+    {
+        // 给人一个味剥皮的香蕉
+        return "Hey, want me to peel this banana for you?"
     }
 }
+

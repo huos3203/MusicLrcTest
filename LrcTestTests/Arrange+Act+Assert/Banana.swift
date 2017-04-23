@@ -11,7 +11,7 @@ import UIKit
 /**
  剥香蕉皮
  */
-class Banana
+public class Banana
 {
     private var isPeeled = false
     ///Arrange:创建一个
