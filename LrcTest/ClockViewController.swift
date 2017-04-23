@@ -7,8 +7,11 @@
 //
 
 import UIKit
-
-class ClockViewController: UIViewController,UIPopoverPresentationControllerDelegate {
+/**
+    转场动画案例
+ */
+class ClockViewController: UIViewController,UIPopoverPresentationControllerDelegate
+{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +60,13 @@ class ClockViewController: UIViewController,UIPopoverPresentationControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
+    {
         return .fullScreen
     }
     
-    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+    func presentationController(_ controller: UIPresentationController,viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController?
+    {
         let nav = UINavigationController.init(rootViewController: controller.presentedViewController)
         let barDone = UIBarButtonItem.init(title: "Donw", style: .done, target: self, action: #selector(ClockViewController.dismiss as (ClockViewController) -> () -> ()))
         nav.topViewController?.navigationItem.rightBarButtonItem = barDone
