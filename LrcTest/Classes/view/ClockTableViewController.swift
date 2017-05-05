@@ -192,7 +192,7 @@ public class ClockTableViewController: UITableViewController {
     }
     
     
-    func refresh()
+    public func refresh()
     {
         delayTime -= 1
         //分钟转为秒
@@ -208,7 +208,7 @@ public class ClockTableViewController: UITableViewController {
         {
             time = "\(seconds)"
         }
-       //print("=============\(time)")
+       print("=============\(time)")
         
 //        if self.delayClockDelegate.responds {
 //            <#code#>
