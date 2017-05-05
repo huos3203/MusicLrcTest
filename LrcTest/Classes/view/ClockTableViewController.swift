@@ -208,7 +208,7 @@ public class ClockTableViewController: UITableViewController {
         {
             time = "\(seconds)"
         }
-       print("=============\(time)")
+//       print("=============\(time)")
         
 //        if self.delayClockDelegate.responds {
 //            <#code#>
