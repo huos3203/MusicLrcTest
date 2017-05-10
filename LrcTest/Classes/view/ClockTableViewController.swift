@@ -168,6 +168,7 @@ public class ClockTableViewController: UITableViewController {
         {
             UserDefaults.standard.setValue(1, forKey: "isSelected")
             UserDefaults.standard.synchronize()
+            isDragMusic = false
         }
         
         if timer != nil {
