@@ -168,6 +168,7 @@ public class ClockTableViewController: UITableViewController {
         {
             UserDefaults.standard.setValue(1, forKey: "isSelected")
             UserDefaults.standard.synchronize()
+            isDragMusic = false
         }
         
         if timer != nil {
@@ -192,7 +193,7 @@ public class ClockTableViewController: UITableViewController {
     }
     
     
-    func refresh()
+    public func refresh()
     {
         delayTime -= 1
         //分钟转为秒
@@ -208,7 +209,7 @@ public class ClockTableViewController: UITableViewController {
         {
             time = "\(seconds)"
         }
-       //print("=============\(time)")
+//       print("=============\(time)")
         
 //        if self.delayClockDelegate.responds {
 //            <#code#>
