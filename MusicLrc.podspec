@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MusicLrc"
-  s.version      = "3.1"
+  s.version      = "3.3"
   s.summary      = "使用正则表达式，重新定义解析歌词的算法"
 
   # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
                         集成日志工具
                    DESC
 
-  s.homepage     = "https://github.com/huos3203/MusicLrcTest"
+  s.homepage     = "https://github.com/it-boyer/MusicLrcTest"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   s.author             = { "布衣男儿" => "724987481@qq.com" }
   # Or just: s.author    = "布衣男儿"
   # s.authors            = { "布衣男儿" => "email@address.com" }
-  s.social_media_url   = "https://huos3203.github.io"
+  s.social_media_url   = "https://it-boyer.github.io"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/huos3203/MusicLrcTest.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/it-boyer/MusicLrcTest.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,6 +134,6 @@ s.source_files  = "LrcTest/Classes/**/*" #, "LrcTest/Classes/*.{h,m}"
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "LogSwift", "~> 1.8"
+   s.dependency "LogSwift", '~> 1.8'
 
 end

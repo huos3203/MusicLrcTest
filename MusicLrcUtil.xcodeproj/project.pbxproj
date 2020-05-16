@@ -92,7 +92,6 @@
 		14AF06DA1E7BE6C00029DD34 /* MusicLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C61E7BE6C00029DD34 /* MusicLrcCell.m */; };
 		14AF06DB1E7BE6C00029DD34 /* MusicLrcLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AF06C71E7BE6C00029DD34 /* MusicLrcLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AF06DD1E7BE6C00029DD34 /* MusicLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C81E7BE6C00029DD34 /* MusicLrcLabel.m */; };
-		7E90ED1F370724E482CB4848 /* Pods_LrcSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9AD268AD85452EBB73E4F5 /* Pods_LrcSDK.framework */; };
 		84EB66951E8AA87400EA892A /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB66941E8AA87400EA892A /* MusicAPI.swift */; };
 		84EB66961E8AA87400EA892A /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB66941E8AA87400EA892A /* MusicAPI.swift */; };
 		84F0D65E1EAC94470011D0DE /* BananaHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E9F1EAC6FEE0067CD03 /* BananaHelpers.swift */; };
@@ -104,8 +103,6 @@
 		84F0D6721EACE70D0011D0DE /* BananaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0D6711EACE70C0011D0DE /* BananaViewController.swift */; };
 		84F0D6741EACE8E80011D0DE /* BananaViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0D6731EACE8E80011D0DE /* BananaViewControllerSpec.swift */; };
 		84FE2B461E87A3FF003CE93F /* LayerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE2B451E87A3FE003CE93F /* LayerTableView.swift */; };
-		992CE1FD698F4CC0673DCFE4 /* Pods_MusicLRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4911385D25DE07AC99859B6 /* Pods_MusicLRC.framework */; };
-		BC7B0B5F52682CEC89E16785 /* Pods_MusicLocal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FA3E817F4AE91D884D5502 /* Pods_MusicLocal.framework */; };
 		D221DBA21E852BB600444AE3 /* ClockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DB9F1E85282700444AE3 /* ClockListView.swift */; };
 		D221DBA31E852BB800444AE3 /* ClockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221DB9F1E85282700444AE3 /* ClockListView.swift */; };
 		D221DBA41E88C09900444AE3 /* CLLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF06C11E7BE6C00029DD34 /* CLLrcLine.m */; };
@@ -270,12 +267,7 @@
 		14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		1EA3F3A3D2BE7E837931CBA1 /* Pods-MusicLrcUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.debug.xcconfig"; sourceTree = "<group>"; };
 		2BBB720736BB18DEDA9717C7 /* Pods-LrcTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTest/Pods-LrcTest.release.xcconfig"; sourceTree = "<group>"; };
-		2F68ADECB84F007AE87DEFFB /* Pods-MusicLocal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLocal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLocal/Pods-MusicLocal.debug.xcconfig"; sourceTree = "<group>"; };
 		315A994BBD4D7819B093B229 /* Pods_LrcTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LrcTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		391518674703C0356575A9DB /* Pods-LrcSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-LrcSDK/Pods-LrcSDK.release.xcconfig"; sourceTree = "<group>"; };
-		6974A9275155D19D7B0CA2FD /* Pods-MusicLRC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLRC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLRC/Pods-MusicLRC.release.xcconfig"; sourceTree = "<group>"; };
-		6B839DA3158D8E71D217E576 /* Pods-LrcSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcSDK/Pods-LrcSDK.debug.xcconfig"; sourceTree = "<group>"; };
-		6C9AD268AD85452EBB73E4F5 /* Pods_LrcSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LrcSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C354E49E3E73FC0888625 /* Pods-LrcTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTest/Pods-LrcTest.debug.xcconfig"; sourceTree = "<group>"; };
 		83B25AF64C616AE5285C556F /* Pods-MusicLrcUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.release.xcconfig"; sourceTree = "<group>"; };
 		84DD9E9F1EAC6FEE0067CD03 /* BananaHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaHelpers.swift; path = "Arrange+Act+Assert/BananaHelpers.swift"; sourceTree = "<group>"; };
@@ -288,13 +280,11 @@
 		84F0D6711EACE70C0011D0DE /* BananaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaViewController.swift; path = Spec/BananaViewController.swift; sourceTree = "<group>"; };
 		84F0D6731EACE8E80011D0DE /* BananaViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaViewControllerSpec.swift; path = Spec/BananaViewControllerSpec.swift; sourceTree = "<group>"; };
 		84FE2B451E87A3FE003CE93F /* LayerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTableView.swift; sourceTree = "<group>"; };
-		89FA3E817F4AE91D884D5502 /* Pods_MusicLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A165D5D8E5420C58BC44AE73 /* Pods-LrcTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A623B794164C5DA7208F8D19 /* Pods-LrcTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		B66F8724AEA023D3892F8547 /* Pods-MusicLocal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLocal.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLocal/Pods-MusicLocal.release.xcconfig"; sourceTree = "<group>"; };
 		D221DB9F1E85282700444AE3 /* ClockListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockListView.swift; sourceTree = "<group>"; };
 		D221DBA81E88F36300444AE3 /* MusicLrcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLrcModel.swift; sourceTree = "<group>"; };
-		D272E2C71E9BAFD400CB887B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		D272E2C71E9BAFD400CB887B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D289127C06DD578410ECEDF3 /* Pods_LrcTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LrcTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9A7C01E84CFE600ED0C80 /* LrcSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9A7D51E84EA2E00ED0C80 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
@@ -302,10 +292,8 @@
 		D2CAAAD21EA99DB300785B37 /* Banana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Banana.swift; path = "Arrange+Act+Assert/Banana.swift"; sourceTree = "<group>"; };
 		D2CAAAD41EA99F6F00785B37 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offer.swift; path = "Arrange+Act+Assert/Offer.swift"; sourceTree = "<group>"; };
 		D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaTests.swift; path = "Arrange+Act+Assert/BananaTests.swift"; sourceTree = "<group>"; };
-		E4911385D25DE07AC99859B6 /* Pods_MusicLRC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLRC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9258648246FD3DE0031EC3E /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
+		F9258648246FD3DE0031EC3E /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLrcUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE22002DDFB6DA543C42C902 /* Pods-MusicLRC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLRC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLRC/Pods-MusicLRC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +301,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992CE1FD698F4CC0673DCFE4 /* Pods_MusicLRC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				148879631E839E70002A3C04 /* MusicLRC.framework in Frameworks */,
-				BC7B0B5F52682CEC89E16785 /* Pods_MusicLocal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C9A7B21E84CFE600ED0C80 /* MusicLRC.framework in Frameworks */,
-				7E90ED1F370724E482CB4848 /* Pods_LrcSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,11 +513,8 @@
 		28EDAF39CEA14EB7401CFC68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C9AD268AD85452EBB73E4F5 /* Pods_LrcSDK.framework */,
 				315A994BBD4D7819B093B229 /* Pods_LrcTest.framework */,
 				D289127C06DD578410ECEDF3 /* Pods_LrcTestTests.framework */,
-				E4911385D25DE07AC99859B6 /* Pods_MusicLRC.framework */,
-				89FA3E817F4AE91D884D5502 /* Pods_MusicLocal.framework */,
 				FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */,
 			);
 			name = Frameworks;
@@ -566,16 +548,10 @@
 		F4519031338CF8FC6866D78D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B839DA3158D8E71D217E576 /* Pods-LrcSDK.debug.xcconfig */,
-				391518674703C0356575A9DB /* Pods-LrcSDK.release.xcconfig */,
 				7E8C354E49E3E73FC0888625 /* Pods-LrcTest.debug.xcconfig */,
 				2BBB720736BB18DEDA9717C7 /* Pods-LrcTest.release.xcconfig */,
 				A165D5D8E5420C58BC44AE73 /* Pods-LrcTestTests.debug.xcconfig */,
 				A623B794164C5DA7208F8D19 /* Pods-LrcTestTests.release.xcconfig */,
-				FE22002DDFB6DA543C42C902 /* Pods-MusicLRC.debug.xcconfig */,
-				6974A9275155D19D7B0CA2FD /* Pods-MusicLRC.release.xcconfig */,
-				2F68ADECB84F007AE87DEFFB /* Pods-MusicLocal.debug.xcconfig */,
-				B66F8724AEA023D3892F8547 /* Pods-MusicLocal.release.xcconfig */,
 				1EA3F3A3D2BE7E837931CBA1 /* Pods-MusicLrcUtil.debug.xcconfig */,
 				83B25AF64C616AE5285C556F /* Pods-MusicLrcUtil.release.xcconfig */,
 			);
@@ -607,13 +583,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 140885881E76916D008B9466 /* Build configuration list for PBXNativeTarget "MusicLRC" */;
 			buildPhases = (
-				AF8BB8984A65F9BD971C2156 /* [CP] Check Pods Manifest.lock */,
 				14AF06591E7936180029DD34 /* 更新build版本 */,
 				140885781E76916A008B9466 /* Sources */,
 				140885791E76916A008B9466 /* Frameworks */,
 				1408857A1E76916A008B9466 /* Headers */,
 				1408857B1E76916A008B9466 /* Resources */,
-				7B2CC689245448F1ED30B20B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -628,14 +602,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1488796F1E839E70002A3C04 /* Build configuration list for PBXNativeTarget "MusicLocal" */;
 			buildPhases = (
-				A337CB80AC59B8EE6C4782DA /* [CP] Check Pods Manifest.lock */,
 				148879571E839E70002A3C04 /* Sources */,
 				148879621E839E70002A3C04 /* Frameworks */,
 				148879641E839E70002A3C04 /* Resources */,
 				1488796C1E839E70002A3C04 /* ShellScript */,
 				1488796D1E839E70002A3C04 /* Embed Frameworks */,
-				12EFCC1279DD2355C71CF7E3 /* [CP] Embed Pods Frameworks */,
-				43808CE88CAD8C6C2A184FC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -656,7 +627,6 @@
 				148BFF2D1E6FCE9300E674D3 /* Resources */,
 				148879781E839EE0002A3C04 /* Embed Frameworks */,
 				2E6E884B573F4EFA3B3A9E9C /* [CP] Embed Pods Frameworks */,
-				D951ECBD21A4F8197940C042 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -676,7 +646,6 @@
 				148BFF451E6FCE9500E674D3 /* Frameworks */,
 				148BFF461E6FCE9500E674D3 /* Resources */,
 				57F06028B6B4614C2749D971 /* [CP] Embed Pods Frameworks */,
-				6A34600A041D35E611CC4E28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -692,13 +661,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2C9A7BD1E84CFE600ED0C80 /* Build configuration list for PBXNativeTarget "LrcSDK" */;
 			buildPhases = (
-				AEF2C212AC34D82091E92843 /* [CP] Check Pods Manifest.lock */,
 				D2C9A7AD1E84CFE600ED0C80 /* Sources */,
 				D2C9A7B11E84CFE600ED0C80 /* Frameworks */,
 				D2C9A7B31E84CFE600ED0C80 /* Resources */,
 				D2C9A7BB1E84CFE600ED0C80 /* Embed Frameworks */,
-				234B18A3184B4B433B1FEC1D /* [CP] Embed Pods Frameworks */,
-				5C82D3F045E3386CB41E898F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -851,21 +817,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12EFCC1279DD2355C71CF7E3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicLocal/Pods-MusicLocal-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1488796C1E839E70002A3C04 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -919,34 +870,28 @@
 			shellPath = /bin/sh;
 			shellScript = "pwd\nsh Products/CommonDylib.sh";
 		};
-		234B18A3184B4B433B1FEC1D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LrcSDK/Pods-LrcSDK-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2E6E884B573F4EFA3B3A9E9C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LogSwift/LogSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MusicLrc/MusicLrc.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LogSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicLrc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3DDA2F9D1C75A07727415E1E /* [CP] Check Pods Manifest.lock */ = {
@@ -955,28 +900,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LrcTestTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		43808CE88CAD8C6C2A184FC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicLocal/Pods-MusicLocal-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		57F06028B6B4614C2749D971 /* [CP] Embed Pods Frameworks */ = {
@@ -985,28 +918,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C82D3F045E3386CB41E898F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LrcSDK/Pods-LrcSDK-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		68BE67DFD78BCE8C726598D5 /* [CP] Check Pods Manifest.lock */ = {
@@ -1015,103 +938,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicLrcUtil-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6A34600A041D35E611CC4E28 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B2CC689245448F1ED30B20B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicLRC/Pods-MusicLRC-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A337CB80AC59B8EE6C4782DA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AEF2C212AC34D82091E92843 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AF8BB8984A65F9BD971C2156 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D951ECBD21A4F8197940C042 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1270,7 +1106,6 @@
 /* Begin XCBuildConfiguration section */
 		140885861E76916D008B9466 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE22002DDFB6DA543C42C902 /* Pods-MusicLRC.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -1305,7 +1140,6 @@
 		};
 		140885871E76916D008B9466 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6974A9275155D19D7B0CA2FD /* Pods-MusicLRC.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -1335,7 +1169,6 @@
 		};
 		148879701E839E70002A3C04 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F68ADECB84F007AE87DEFFB /* Pods-MusicLocal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1357,7 +1190,6 @@
 		};
 		148879711E839E70002A3C04 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B66F8724AEA023D3892F8547 /* Pods-MusicLocal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1586,7 +1418,6 @@
 		};
 		D2C9A7BE1E84CFE600ED0C80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B839DA3158D8E71D217E576 /* Pods-LrcSDK.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1609,7 +1440,6 @@
 		};
 		D2C9A7BF1E84CFE600ED0C80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 391518674703C0356575A9DB /* Pods-LrcSDK.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

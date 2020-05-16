@@ -1,0 +1,40 @@
+PODS:
+  - LogSwift (1.8):
+    - RNCryptor (~> 5.1.0)
+    - SnapKit (~> 4.0.0)
+  - MusicLrc (3.2):
+    - LogSwift (~> 1.8.0)
+  - Nimble (8.0.7)
+  - Quick (2.2.0)
+  - RNCryptor (5.1.0)
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - MusicLrc (from `./`)
+  - Nimble
+  - Quick
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Nimble
+    - Quick
+    - RNCryptor
+    - SnapKit
+  https://github.com/it-boyer/PodRepo.git:
+    - LogSwift
+
+EXTERNAL SOURCES:
+  MusicLrc:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  LogSwift: d32ac95d97175a781b4e4ada4c3a1f12ed10cc8c
+  MusicLrc: 35e25c00f5cd546a131e55469de175cbe041b545
+  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: dd0116c88790a22ecd286092fe2408b11a3f7e70
+
+COCOAPODS: 1.9.1
