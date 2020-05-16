@@ -18,7 +18,7 @@ public class MusicLrcModel: NSObject
     var musiclyric_id:String?
     var localPath:String?
     
-    public init(username:String,token:String,lrcURL:String,musiclyric_id:String,localPath:String)
+    @objc public init(username:String,token:String,lrcURL:String,musiclyric_id:String,localPath:String)
     {
         self.username = username
         self.token = token

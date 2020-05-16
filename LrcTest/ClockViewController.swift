@@ -39,12 +39,12 @@ class ClockViewController: UIViewController,UIPopoverPresentationControllerDeleg
         
     }
     
-    func exit() {
+    @objc func exit() {
         //self.dismiss(animated: true, completion: nil)
         view.addSubview(ClockListView.shareInstance)
     }
 
-    func pushAnimar() {
+    @objc func pushAnimar() {
         //
          let animater = ClockTableViewController.shareInstance
         let delegate = ClockTransitioningDelegate()
@@ -73,7 +73,7 @@ class ClockViewController: UIViewController,UIPopoverPresentationControllerDeleg
         return nav
     }
 
-    func dismiss() {
+    @objc func dismiss() {
         //
         dismiss(animated: true, completion: nil)
     }

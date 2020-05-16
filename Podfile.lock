@@ -2,8 +2,8 @@ PODS:
   - LogSwift (1.8):
     - RNCryptor (~> 5.1.0)
     - SnapKit (~> 4.0.0)
-  - MusicLrc (3.2):
-    - LogSwift (~> 1.8.0)
+  - MusicLrc (3.3):
+    - LogSwift (~> 1.8)
   - Nimble (8.0.7)
   - Quick (2.2.0)
   - RNCryptor (5.1.0)
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   LogSwift: d32ac95d97175a781b4e4ada4c3a1f12ed10cc8c
-  MusicLrc: 35e25c00f5cd546a131e55469de175cbe041b545
+  MusicLrc: 9e984f721b92cf7ae2b150a6ded86790d3c959cb
   Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   RNCryptor: a369134686cd2ad391323cc856b62e591193ba79

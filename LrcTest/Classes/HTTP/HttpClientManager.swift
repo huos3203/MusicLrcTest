@@ -11,7 +11,7 @@ import LogSwift
 public class HttpClientManager:NSObject
 {
     
-    public class var shareInstance:HttpClientManager
+    @objc public class var shareInstance:HttpClientManager
     {
         struct Singleton {
             static let instance = HttpClientManager()
@@ -136,7 +136,7 @@ extension HttpClientManager
 {
     
     ///下载完成后，同步歌词
-    public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool,String)->Void)
+    @objc public func loadLrcBy(lrcModel:MusicLrcModel,player:AVAudioPlayer,lrcDelegate:MusicLrcDelegate,completion:@escaping (Bool,String)->Void)
     {
         MusicLrcView.shared().showindicatorView()
         downMusicLrcBy(lrcModel: lrcModel) { (lrcPath,logmessage) in

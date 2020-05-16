@@ -26,7 +26,7 @@ public protocol DelayClockDelegate
 //@objc(ClockTableViewController)
 public class ClockTableViewController: UITableViewController {
 
-    public weak var delayClockDelegate:DelayClockDelegate!
+    @objc public weak var delayClockDelegate:DelayClockDelegate!
     private var delayTime:Int = 0
     private var isDragMusic = false
     
@@ -35,7 +35,7 @@ public class ClockTableViewController: UITableViewController {
     
     var timer:Timer!
     
-    public class var shareInstance:ClockTableViewController
+    @objc public class var shareInstance:ClockTableViewController
     {
         struct Singleton{
             
@@ -124,7 +124,7 @@ public class ClockTableViewController: UITableViewController {
     
     
     //倒计时结束时，关闭播放器
-    func closeClock()
+    @objc func closeClock()
     {
         
         if timer != nil
@@ -158,7 +158,7 @@ public class ClockTableViewController: UITableViewController {
         refresh()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ClockTableViewController.refresh), userInfo: nil, repeats: true)
         // 将定时器添加到运行循环
-        RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
+        RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
     }
     
     //取消定延迟调用
@@ -193,7 +193,7 @@ public class ClockTableViewController: UITableViewController {
     }
     
     
-    public func refresh()
+    @objc public func refresh()
     {
         delayTime -= 1
         //分钟转为秒

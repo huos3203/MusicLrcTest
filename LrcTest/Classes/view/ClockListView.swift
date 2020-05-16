@@ -11,9 +11,9 @@ import UIKit
 public class ClockListView: UIView,UIGestureRecognizerDelegate
 {
 
-    public var delayClockVC:ClockTableViewController!
+    @objc public var delayClockVC:ClockTableViewController!
     var chrome:UIView!
-    public class var shareInstance:ClockListView
+    @objc public class var shareInstance:ClockListView
     {
         struct Singleton{
             
@@ -48,25 +48,25 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
     }
     
     var selfHeight:NSLayoutConstraint!
-    public func addIntoView(_ inView:UIView)
+    @objc public func addIntoView(_ inView:UIView)
     {
         inView.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let hVF = "H:|-0-[cview(==superview)]-0-|"
         let Hconstraint = NSLayoutConstraint.constraints(withVisualFormat: hVF,
-                                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                                         options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                          metrics: nil,
                                                          views: ["cview":self,"superview":inView])
         
         //纵向高度等于父视图
         let vVF = "V:[cview(==selfHeight)]-0-|"
         let Vconstraint = NSLayoutConstraint.constraints(withVisualFormat: vVF,
-                                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                                         options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                          metrics: ["selfHeight":UIScreen.main.bounds.height],
                                                          views: ["cview":self,"superview":inView])
         let constraint = Vconstraint[0]
-        if constraint.firstItem.isKind(of: ClockListView.self)
+        if (constraint.firstItem?.isKind(of: ClockListView.self))!
         {
             selfHeight = constraint
         }
@@ -91,7 +91,7 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         }
     }
     
-    func chromeTap(_ tap:UITapGestureRecognizer)
+    @objc func chromeTap(_ tap:UITapGestureRecognizer)
     {
 //        if tap.state == .ended
 //        {
@@ -139,14 +139,14 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         
         let hVF = "H:|-0-[cview(==superview)]-0-|"
         let Hconstraint = NSLayoutConstraint.constraints(withVisualFormat: hVF,
-                                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                                         options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                          metrics: nil,
                                                          views: ["cview":constraintView,"superview":superView])
         
         //纵向高度等于父视图
         let vVF = "V:|-0-[cview]-0-|"
         let Vconstraint = NSLayoutConstraint.constraints(withVisualFormat: vVF,
-                                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                                         options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                          metrics: nil,
                                                          views: ["cview":constraintView,"superview":superView])
         superView.addConstraints(Hconstraint)
@@ -161,16 +161,16 @@ public class ClockListView: UIView,UIGestureRecognizerDelegate
         chrome.addSubview(ClockView)
         ClockView.translatesAutoresizingMaskIntoConstraints = false
         let Hconstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[clock]-0-|",
-                                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                                         options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                          metrics: nil,
                                                          views: ["clock":ClockView])
         
         let Vconstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0@700-[clock(==0)]-0-|",
-                                                         options:  NSLayoutFormatOptions(rawValue: 0),
+                                                         options:  NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                          metrics: nil,
                                                          views: ["clock":ClockView])
         let constraint = Vconstraint[1]
-        if(constraint.firstItem.isKind(of: UITableView.self))
+        if((constraint.firstItem?.isKind(of: UITableView.self)) != nil)
         {
             tableHeight = constraint
         }

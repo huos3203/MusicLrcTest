@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
-#import <MusicLRC/MusicLrcView.h>
+#import <MusicLrc/MusicLrcView.h>
 #import "MusicLrcUtil-Swift.h"
 //#if LrcTest
 //#import "LrcTest-Swift.h"

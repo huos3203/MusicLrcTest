@@ -30,7 +30,10 @@ extension NSObject{
         var targetDic:[String:Any] = [:]
         var propsCount:UInt32 = 0;
         //object_getClass(self) 等价于type(of: self)
-        if let properties:UnsafeMutablePointer<objc_property_t?> = class_copyPropertyList(type(of: self), &propsCount)
+//        objc_property_t *propertys = class_copyPropertyList(YSClass, &propertyCount);
+        
+
+        if let properties : UnsafeMutablePointer <objc_property_t> = class_copyPropertyList(object_getClass(self), &propsCount)
         {
             for i in 0..<propsCount
             {
