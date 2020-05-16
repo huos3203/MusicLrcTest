@@ -265,11 +265,11 @@
 		14AF06C91E7BE6C00029DD34 /* MusicLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcView.h; sourceTree = "<group>"; };
 		14AF06CA1E7BE6C00029DD34 /* MusicLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLrcView.m; sourceTree = "<group>"; };
 		14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LrcTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		1EA3F3A3D2BE7E837931CBA1 /* Pods-MusicLrcUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.debug.xcconfig"; sourceTree = "<group>"; };
+		1EA3F3A3D2BE7E837931CBA1 /* Pods-MusicLrcUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.debug.xcconfig"; sourceTree = "<group>"; };
 		2BBB720736BB18DEDA9717C7 /* Pods-LrcTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTest/Pods-LrcTest.release.xcconfig"; sourceTree = "<group>"; };
 		315A994BBD4D7819B093B229 /* Pods_LrcTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LrcTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C354E49E3E73FC0888625 /* Pods-LrcTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTest/Pods-LrcTest.debug.xcconfig"; sourceTree = "<group>"; };
-		83B25AF64C616AE5285C556F /* Pods-MusicLrcUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.release.xcconfig"; sourceTree = "<group>"; };
+		83B25AF64C616AE5285C556F /* Pods-MusicLrcUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLrcUtil.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil.release.xcconfig"; sourceTree = "<group>"; };
 		84DD9E9F1EAC6FEE0067CD03 /* BananaHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaHelpers.swift; path = "Arrange+Act+Assert/BananaHelpers.swift"; sourceTree = "<group>"; };
 		84EB66941E8AA87400EA892A /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
 		84F0D65F1EAC94A00011D0DE /* Monkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Monkey.swift; path = "Arrange+Act+Assert/Monkey.swift"; sourceTree = "<group>"; };
@@ -280,8 +280,8 @@
 		84F0D6711EACE70C0011D0DE /* BananaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaViewController.swift; path = Spec/BananaViewController.swift; sourceTree = "<group>"; };
 		84F0D6731EACE8E80011D0DE /* BananaViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaViewControllerSpec.swift; path = Spec/BananaViewControllerSpec.swift; sourceTree = "<group>"; };
 		84FE2B451E87A3FE003CE93F /* LayerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTableView.swift; sourceTree = "<group>"; };
-		A165D5D8E5420C58BC44AE73 /* Pods-LrcTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A623B794164C5DA7208F8D19 /* Pods-LrcTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		A165D5D8E5420C58BC44AE73 /* Pods-LrcTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A623B794164C5DA7208F8D19 /* Pods-LrcTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LrcTestTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LrcTestTests/Pods-LrcTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		D221DB9F1E85282700444AE3 /* ClockListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockListView.swift; sourceTree = "<group>"; };
 		D221DBA81E88F36300444AE3 /* MusicLrcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLrcModel.swift; sourceTree = "<group>"; };
 		D272E2C71E9BAFD400CB887B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -877,10 +877,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MusicLrcUtil/Pods-MusicLrcUtil-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LogSwift/LogSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LogSwift-iOS/LogSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MusicLrc/MusicLrc.framework",
-				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor-iOS/RNCryptor.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
