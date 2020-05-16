@@ -249,7 +249,6 @@
 		14AF065E1E7A408D0029DD34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		14AF06601E7A40A80029DD34 /* buildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildNumber.sh; sourceTree = "<group>"; };
 		14AF06611E7A40A80029DD34 /* CommonDylib.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CommonDylib.sh; sourceTree = "<group>"; };
-		14AF06631E7A40A80029DD34 /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = MusicLrc.podspec; path = ../Products/MusicLrc.podspec; sourceTree = "<group>"; };
 		14AF06641E7A40A80029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
 		14AF06651E7A48E70029DD34 /* pushPodSpec.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pushPodSpec.sh; sourceTree = "<group>"; };
 		14AF068C1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "01爱与痛的边缘.lrc"; sourceTree = "<group>"; };
@@ -304,6 +303,7 @@
 		D2CAAAD41EA99F6F00785B37 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offer.swift; path = "Arrange+Act+Assert/Offer.swift"; sourceTree = "<group>"; };
 		D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaTests.swift; path = "Arrange+Act+Assert/BananaTests.swift"; sourceTree = "<group>"; };
 		E4911385D25DE07AC99859B6 /* Pods_MusicLRC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLRC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9258648246FD3DE0031EC3E /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; };
 		FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLrcUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE22002DDFB6DA543C42C902 /* Pods-MusicLRC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicLRC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicLRC/Pods-MusicLRC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -378,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				D272E2C71E9BAFD400CB887B /* Podfile */,
+				F9258648246FD3DE0031EC3E /* MusicLrc.podspec */,
 				148BFF311E6FCE9300E674D3 /* MusicLrcUtil */,
 				148BFF4B1E6FCE9500E674D3 /* MusicLrcUtilTests */,
 				1408857E1E76916D008B9466 /* MusicLRC */,
@@ -413,7 +414,6 @@
 				148BFF3E1E6FCE9400E674D3 /* Assets.xcassets */,
 				148BFF401E6FCE9400E674D3 /* LaunchScreen.storyboard */,
 				148BFF431E6FCE9400E674D3 /* Info.plist */,
-				14AF06631E7A40A80029DD34 /* MusicLrc.podspec */,
 				14C9EC361E80C613002364E2 /* LrcTest-Bridging-Header.h */,
 				148BFF321E6FCE9300E674D3 /* Supporting Files */,
 			);
@@ -766,6 +766,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -890,7 +891,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "pwd\n#sh Products/buildNumber.sh";
+			shellScript = "pwd\n#sh Products/buildNumber.sh\n";
 		};
 		14AF066A1E7A4B9D0029DD34 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1288,7 +1289,7 @@
 				);
 				INFOPLIST_FILE = MusicLRC/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.MusicLRC;
@@ -1296,7 +1297,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1319,14 +1320,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "MusicLRC=1";
 				INFOPLIST_FILE = MusicLRC/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.MusicLRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1483,13 +1484,13 @@
 					"LrcTest=1",
 				);
 				INFOPLIST_FILE = LrcTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/LrcTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1507,12 +1508,12 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "LrcTest=1";
 				INFOPLIST_FILE = LrcTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LrcTest/LrcTest-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
