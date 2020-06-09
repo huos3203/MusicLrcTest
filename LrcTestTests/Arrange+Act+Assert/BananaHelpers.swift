@@ -10,7 +10,8 @@ import UIKit
 
 class BananaHelpers: NSObject
 {
-    ///internal:只能访问自己模块的任何internal实体，不能访问其他模块中的internal实体。internal可以省略，换句话说，默认访问限定是internal。
+    ///internal:只能访问自己模块的任何internal实体，不能访问其他模块中的internal实体。
+    ///internal可以省略，换句话说，默认访问限定是internal。
     internal func createNewPeeledBanana() -> Banana
     {
         let banana = Banana()

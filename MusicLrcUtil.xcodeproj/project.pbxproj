@@ -148,6 +148,12 @@
 		D2CAAAD71EA9A0BC00785B37 /* BananaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */; };
 		D2E45CD51E84F50300674BA9 /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483B7C81E8114FB009D8C42 /* ClockTableViewCell.swift */; };
 		F7D83FC94796297A98FBF5FB /* Pods_LrcTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D289127C06DD578410ECEDF3 /* Pods_LrcTestTests.framework */; };
+		F9CAD8F2248F7F1500BBB898 /* EventDescriptionFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAD8F1248F7F1500BBB898 /* EventDescriptionFormatter.swift */; };
+		F9CAD8F6248F7FD400BBB898 /* EventDescriptionFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAD8F5248F7FD400BBB898 /* EventDescriptionFormatterSpec.swift */; };
+		F9CAD8FA248F816800BBB898 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAD8F9248F816800BBB898 /* DataProvider.swift */; };
+		F9CAD8FC248F82CA00BBB898 /* TextViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAD8FB248F82CA00BBB898 /* TextViewControllerSpec.swift */; };
+		F9CAD8FF248F887300BBB898 /* Text.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9CAD8FD248F87AB00BBB898 /* Text.storyboard */; };
+		F9CAD900248F892F00BBB898 /* Text.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9CAD8FD248F87AB00BBB898 /* Text.storyboard */; };
 		FEF04887340A31D4313A1DB8 /* Pods_MusicLrcUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */; };
 /* End PBXBuildFile section */
 
@@ -293,6 +299,12 @@
 		D2CAAAD41EA99F6F00785B37 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offer.swift; path = "Arrange+Act+Assert/Offer.swift"; sourceTree = "<group>"; };
 		D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BananaTests.swift; path = "Arrange+Act+Assert/BananaTests.swift"; sourceTree = "<group>"; };
 		F9258648246FD3DE0031EC3E /* MusicLrc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = MusicLrc.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F9CAD8EF248F787400BBB898 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F9CAD8F1248F7F1500BBB898 /* EventDescriptionFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventDescriptionFormatter.swift; path = MockInSwift/EventDescriptionFormatter.swift; sourceTree = "<group>"; };
+		F9CAD8F5248F7FD400BBB898 /* EventDescriptionFormatterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventDescriptionFormatterSpec.swift; path = MockInSwift/EventDescriptionFormatterSpec.swift; sourceTree = "<group>"; };
+		F9CAD8F9248F816800BBB898 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = MockInSwift/DataProvider.swift; sourceTree = "<group>"; };
+		F9CAD8FB248F82CA00BBB898 /* TextViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextViewControllerSpec.swift; path = MockInSwift/TextViewControllerSpec.swift; sourceTree = "<group>"; };
+		F9CAD8FD248F87AB00BBB898 /* Text.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Text.storyboard; path = MockInSwift/Text.storyboard; sourceTree = "<group>"; };
 		FD97B13C2A38083C41290B81 /* Pods_MusicLrcUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicLrcUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -422,14 +434,17 @@
 		148BFF4B1E6FCE9500E674D3 /* MusicLrcUtilTests */ = {
 			isa = PBXGroup;
 			children = (
-				84F0D66C1EACBAD20011D0DE /* Spec */,
+				F9CAD8F0248F7EA400BBB898 /* MockInSwift */,
 				D2CAAAD11EA99D6800785B37 /* Arrange+Act+Assert */,
+				F9CAD8EE248F774200BBB898 /* Nimble Assertions */,
+				84F0D66C1EACBAD20011D0DE /* Quick+Nimble */,
 				148BFF4C1E6FCE9500E674D3 /* LrcTestTests.m */,
 				148BFF4E1E6FCE9500E674D3 /* Info.plist */,
 				14AF068E1E7BB1A80029DD34 /* LRC.playground */,
 				1483B7E01E8238B5009D8C42 /* LrcTestTests-Bridging-Header.h */,
 				1483B7E31E82390F009D8C42 /* swiftTest.swift */,
 				D2CAAACF1EA99D2600785B37 /* testswift.swift */,
+				F9CAD8EF248F787400BBB898 /* README.md */,
 			);
 			name = MusicLrcUtilTests;
 			path = LrcTestTests;
@@ -520,7 +535,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84F0D66C1EACBAD20011D0DE /* Spec */ = {
+		84F0D66C1EACBAD20011D0DE /* Quick+Nimble */ = {
 			isa = PBXGroup;
 			children = (
 				84F0D66D1EACBBDD0011D0DE /* Dolphin.swift */,
@@ -528,7 +543,7 @@
 				84F0D6711EACE70C0011D0DE /* BananaViewController.swift */,
 				84F0D6731EACE8E80011D0DE /* BananaViewControllerSpec.swift */,
 			);
-			name = Spec;
+			name = "Quick+Nimble";
 			sourceTree = "<group>";
 		};
 		D2CAAAD11EA99D6800785B37 /* Arrange+Act+Assert */ = {
@@ -538,9 +553,6 @@
 				D2CAAAD21EA99DB300785B37 /* Banana.swift */,
 				D2CAAAD41EA99F6F00785B37 /* Offer.swift */,
 				D2CAAAD61EA9A0BC00785B37 /* BananaTests.swift */,
-				84F0D65F1EAC94A00011D0DE /* Monkey.swift */,
-				84F0D6671EAC9D040011D0DE /* SilliestMonkey.swift */,
-				84F0D6691EAC9D550011D0DE /* SilliestMonkeyTest.swift */,
 			);
 			name = "Arrange+Act+Assert";
 			sourceTree = "<group>";
@@ -556,6 +568,44 @@
 				83B25AF64C616AE5285C556F /* Pods-MusicLrcUtil.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9CAD8EE248F774200BBB898 /* Nimble Assertions */ = {
+			isa = PBXGroup;
+			children = (
+				84F0D65F1EAC94A00011D0DE /* Monkey.swift */,
+				84F0D6671EAC9D040011D0DE /* SilliestMonkey.swift */,
+				84F0D6691EAC9D550011D0DE /* SilliestMonkeyTest.swift */,
+			);
+			name = "Nimble Assertions";
+			sourceTree = "<group>";
+		};
+		F9CAD8F0248F7EA400BBB898 /* MockInSwift */ = {
+			isa = PBXGroup;
+			children = (
+				F9CAD8F8248F814B00BBB898 /* Demo2 */,
+				F9CAD8F7248F813E00BBB898 /* Demo1 */,
+			);
+			name = MockInSwift;
+			sourceTree = "<group>";
+		};
+		F9CAD8F7248F813E00BBB898 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				F9CAD8F1248F7F1500BBB898 /* EventDescriptionFormatter.swift */,
+				F9CAD8F5248F7FD400BBB898 /* EventDescriptionFormatterSpec.swift */,
+			);
+			name = Demo1;
+			sourceTree = "<group>";
+		};
+		F9CAD8F8248F814B00BBB898 /* Demo2 */ = {
+			isa = PBXGroup;
+			children = (
+				F9CAD8F9248F816800BBB898 /* DataProvider.swift */,
+				F9CAD8FB248F82CA00BBB898 /* TextViewControllerSpec.swift */,
+				F9CAD8FD248F87AB00BBB898 /* Text.storyboard */,
+			);
+			name = Demo2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -786,6 +836,7 @@
 				148BFF421E6FCE9400E674D3 /* LaunchScreen.storyboard in Resources */,
 				148BFF5D1E6FE54100E674D3 /* qbd.lrc in Resources */,
 				14AF068D1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc in Resources */,
+				F9CAD8FF248F887300BBB898 /* Text.storyboard in Resources */,
 				148BFF3F1E6FCE9400E674D3 /* Assets.xcassets in Resources */,
 				148BFF5E1E6FE54100E674D3 /* qbd.mp3 in Resources */,
 			);
@@ -795,6 +846,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9CAD900248F892F00BBB898 /* Text.storyboard in Resources */,
 				14AF068F1E7BDA720029DD34 /* 01爱与痛的边缘.lrc in Resources */,
 				14AF06901E7BDA770029DD34 /* qbd.lrc in Resources */,
 			);
@@ -1032,10 +1084,12 @@
 				84F0D6701EACBD080011D0DE /* DolphinSpec.swift in Sources */,
 				D2CAAAD51EA99F6F00785B37 /* Offer.swift in Sources */,
 				84F0D66E1EACBBDD0011D0DE /* Dolphin.swift in Sources */,
+				F9CAD8FC248F82CA00BBB898 /* TextViewControllerSpec.swift in Sources */,
 				1483B7E41E82390F009D8C42 /* swiftTest.swift in Sources */,
 				84F0D65E1EAC94470011D0DE /* BananaHelpers.swift in Sources */,
 				84F0D66A1EAC9D550011D0DE /* SilliestMonkeyTest.swift in Sources */,
 				D2CAAAD01EA99D2600785B37 /* testswift.swift in Sources */,
+				F9CAD8FA248F816800BBB898 /* DataProvider.swift in Sources */,
 				D2378DB71E8DF83400F859D7 /* MusicLrcLabel.m in Sources */,
 				D221DBA61E88CC4000444AE3 /* HttpClientManager.swift in Sources */,
 				144B8E181E978531009969E8 /* VerifyAppTool.m in Sources */,
@@ -1043,6 +1097,7 @@
 				D2CAAAD31EA99DB300785B37 /* Banana.swift in Sources */,
 				1483B7EC1E824BC9009D8C42 /* CLLrcTool.m in Sources */,
 				D221DBA71E88CC4200444AE3 /* ConvertToDictionary.swift in Sources */,
+				F9CAD8F6248F7FD400BBB898 /* EventDescriptionFormatterSpec.swift in Sources */,
 				84F0D6601EAC94A00011D0DE /* Monkey.swift in Sources */,
 				84F0D6681EAC9D040011D0DE /* SilliestMonkey.swift in Sources */,
 				D2378DB81E8DF89400F859D7 /* MusicLrcParser.m in Sources */,
@@ -1050,6 +1105,7 @@
 				84F0D6741EACE8E80011D0DE /* BananaViewControllerSpec.swift in Sources */,
 				D221DBA51E88CC3C00444AE3 /* VerifyAppVersionModel.swift in Sources */,
 				D221DBA41E88C09900444AE3 /* CLLrcLine.m in Sources */,
+				F9CAD8F2248F7F1500BBB898 /* EventDescriptionFormatter.swift in Sources */,
 				D2378DB61E8DF83200F859D7 /* MusicLrcCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
