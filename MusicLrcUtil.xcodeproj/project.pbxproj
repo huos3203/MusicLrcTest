@@ -249,7 +249,7 @@
 		14AF06641E7A40A80029DD34 /* 全局变量.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "全局变量.sh"; sourceTree = "<group>"; };
 		14AF06651E7A48E70029DD34 /* pushPodSpec.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pushPodSpec.sh; sourceTree = "<group>"; };
 		14AF068C1E7B83BD0029DD34 /* 01爱与痛的边缘.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "01爱与痛的边缘.lrc"; sourceTree = "<group>"; };
-		14AF068E1E7BB1A80029DD34 /* LRC.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LRC.playground; sourceTree = "<group>"; };
+		14AF068E1E7BB1A80029DD34 /* LRC.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LRC.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		14AF06BB1E7BE6C00029DD34 /* CLLrcTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLrcTool.h; sourceTree = "<group>"; };
 		14AF06BC1E7BE6C00029DD34 /* CLLrcTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLrcTool.m; sourceTree = "<group>"; };
 		14AF06BD1E7BE6C00029DD34 /* MusicLrcParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLrcParser.h; sourceTree = "<group>"; };
@@ -1232,6 +1232,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1280,6 +1281,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1354,16 +1356,18 @@
 			baseConfigurationReference = A165D5D8E5420C58BC44AE73 /* Pods-LrcTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LrcTestTests/LrcTestTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicLrcUtil.app/LrcTest";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicLrcUtil.app/MusicLrcUtil";
 			};
 			name = Debug;
 		};
@@ -1372,15 +1376,17 @@
 			baseConfigurationReference = A623B794164C5DA7208F8D19 /* Pods-LrcTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = LrcTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.LrcTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LrcTestTests/LrcTestTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicLrcUtil.app/LrcTest";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicLrcUtil.app/MusicLrcUtil";
 			};
 			name = Release;
 		};

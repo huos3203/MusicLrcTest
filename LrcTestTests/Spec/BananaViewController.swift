@@ -31,7 +31,7 @@ class BananaViewController: UIViewController {
         button.addTarget(self, action: #selector(BananaViewController.buttonAction), for: .touchUpInside)
     }
 
-    func buttonAction() {
+    @objc func buttonAction() {
         
         let bananaCount = Int(bananaCountLabel.text!)
         bananaCountLabel.text = String(bananaCount! + 1)
