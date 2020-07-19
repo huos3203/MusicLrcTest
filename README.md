@@ -37,7 +37,7 @@ NSString *lrcc = [lineText substringFromIndex:lastRange.location + lastRange.len
 直接在Podfile文件使用pod方法
 ---
 ```ruby
-pod 'MusicLrc', :git => 'https://github.com/huos3203/MusicLrcTest.git'
+pod 'MusicLrc', :git => 'https://github.com/it-boyer/MusicLrcTest.git'
 ```
 然后，在项目目录pod安装
 ```ruby 
@@ -56,8 +56,8 @@ $ pod install
         -> MusicLrc (0.0.2)
         使用正则表达式，重新定义解析歌词的算法
         pod 'MusicLrc', '~> 3.2'
-        - Homepage: https://github.com/huos3203/MusicLrcTest
-        - Source:   https://github.com/huos3203/MusicLrcTest.git
+        - Homepage: https://github.com/it-boyer/MusicLrcTest
+        - Source:   https://github.com/it-boyer/MusicLrcTest.git
         - Versions: 3.2, 3.0, 2.0, 0.0.2 [podRepo repo]
 3. 配置Podfile文件：
     source 'https://github.com/huos3203/PodRepo.git'
