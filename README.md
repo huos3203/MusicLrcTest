@@ -48,7 +48,7 @@ $ pod install
 ---
 1. 加入你的pod本地私有库中：
 
-    $ pod repo add PodRepo https://github.com/huos3203/PodRepo.git
+    $ pod repo add PodRepo https://github.com/it-boyer/PodRepo.git
 2. 在终端查询`MusicLrc`
 
     $ pod search MusicLrc
@@ -60,7 +60,7 @@ $ pod install
         - Source:   https://github.com/it-boyer/MusicLrcTest.git
         - Versions: 3.2, 3.0, 2.0, 0.0.2 [podRepo repo]
 3. 配置Podfile文件：
-    source 'https://github.com/huos3203/PodRepo.git'
+    source 'https://github.com/it-boyer/PodRepo.git'
     
     pod 'MusicLrc', '~> 3.2'
 4. 在项目根目录安装
